@@ -8,12 +8,28 @@
             "Target": "Data/TriggerActions",
             "Entries": {
 
+                "{{ModId}}_SVECalderaRemoverDay1Off": {
+                    "Id": "{{ModId}}_SVECalderaRemoverDay1Off",
+                    "Trigger": "DayStarted",
+                    "Conditions": "PLAYER_VISITED_LOCATION Current IslandEast, {{Day 1 Toggle|contains=false}}",
+                    "Actions": [
+                        "MarkEventSeen Current 6951319 true" //SVE FORGE
+                    ]
+                },
+                "{{ModId}}_SVECalderaRemoverDay1On": {
+                    "Id": "{{ModId}}_SVECalderaRemoverDay1On",
+                    "Trigger": "DayStarted",
+                    "Conditions": "PLAYER_VISITED_LOCATION Current WizardHouse, {{Day 1 Toggle|contains=true}}",
+                    "Actions": [
+                        "MarkEventSeen Current 6951319 true" //SVE FORGE
+                    ]
+                },
+
                 //Remove SVE Lance Events: global toggle
                 "{{ModId}}_SVEHHRemover": {
                     "Id": "{{ModId}}_SVEHHRemover",
                     "Trigger": "DayStarted",
                     "Actions": [
-                        "MarkEventSeen Current 6951319 true", //SVE FORGE
                         "MarkEventSeen Current 6951321 true", //LANCE COMBAT MAGE
                         "MarkEventSeen Current 65360186 true", //2heart pt3
                         "MarkEventSeen Current 65360187 true", //2HEART FAKE
@@ -27,7 +43,7 @@
                         "MarkEventSeen Current 65360196 true", //10 HEART NO TIME
                         "MarkEventSeen Current 65360197 true", //12 HEART RETURN SCEPTER
                         "MarkEventSeen Current 65360198 true", //12 HEART MEETING KROBUS
-                        "MarkEventSeen Current 65360185 true", //replacing original 2 heart pt1
+                        "MarkEventSeen Current 65360185 true" //replacing original 2 heart pt1
                     ]
                 },
 
@@ -36,8 +52,8 @@
                     "Trigger": "DayStarted",
                     "Condition": "PLAYER_HAS_SEEN_EVENT Current LEHighlandsPredicament_together",
                     "Actions": [
-                        "MarkEventSeen Current 55134259 true", //flags highland dwarf event as watched
-                    ],
+                        "MarkEventSeen Current 55134259 true" //flags highland dwarf event as watched
+                    ]
                 },
 
                 //Reset Lance Events
@@ -85,7 +101,7 @@
                         "MarkEventSeen Current LESicknessnHealth false",
                         "MarkEventSeen Current LEForsakingAllOthers false",
                         "MarkEventSeen Current LEToLovenCherish false",
-                        "MarkEventSeen Current LEUntilDeath false",
+                        "MarkEventSeen Current LEUntilDeath false"
                     ]
                 }
             }
