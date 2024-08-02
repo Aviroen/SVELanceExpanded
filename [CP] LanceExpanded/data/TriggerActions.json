@@ -1,0 +1,94 @@
+// /// T R I G G E R   A C T I O N S /////
+{
+    "Changes": [
+
+        {
+            "LogName": "Trigger Actions: Base",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+
+                //Remove SVE Lance Events: global toggle
+                "{{ModId}}_SVEHHRemover": {
+                    "Id": "{{ModId}}_SVEHHRemover",
+                    "Trigger": "DayStarted",
+                    "Actions": [
+                        "MarkEventSeen Current 6951319 true", //SVE FORGE
+                        "MarkEventSeen Current 6951321 true", //LANCE COMBAT MAGE
+                        "MarkEventSeen Current 65360186 true", //2heart pt3
+                        "MarkEventSeen Current 65360187 true", //2HEART FAKE
+                        "MarkEventSeen Current 65360188 true", //2 HEART DIAMOND WAND
+                        "MarkEventSeen Current 6951320 true", //4 HEART BLINK RELIC
+                        "MarkEventSeen Current 65360190 true", //6 HEART MONSTER STUDIES
+                        "MarkEventSeen Current 65360193 true", //JOLYNE EVENT
+                        "MarkEventSeen Current 65360194 true", //10 heart invite
+                        "MarkEventSeen Current 65360195 true", //10 HEART EXPLORE
+                        "MarkEventSeen Current 65360195_CuddleLance true", //10 HEART STAY
+                        "MarkEventSeen Current 65360196 true", //10 HEART NO TIME
+                        "MarkEventSeen Current 65360197 true", //12 HEART RETURN SCEPTER
+                        "MarkEventSeen Current 65360198 true", //12 HEART MEETING KROBUS
+                        "MarkEventSeen Current 65360185 true", //replacing original 2 heart pt1
+                    ]
+                },
+
+                "{{ModId}}_SVEHDwarf": {
+                    "Id": "{{ModId}}_SVEHDwarf",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Current LEHighlandsPredicament_together",
+                    "Actions": [
+                        "MarkEventSeen Current 55134259 true", //flags highland dwarf event as watched
+                    ],
+                },
+
+                //Reset Lance Events
+                "{{ModId}}_LeEExodus": {
+                    "Id": "{{ModId}}_LeEExodus",
+                    "Trigger": "DayStarted",
+                    "Condition": "{{HeartEvents |contains=LanceExpanded}}",
+                    "Actions": [
+                        "MarkEventSeen Current LECaldera false",
+                        "MarkEventSeen Current LEIntroduction false",
+                        "MarkEventSeen Current LEPredicament false",
+                        "MarkEventSeen Current LeIntroduction false",
+                        "MarkEventSeen Current LEPredicament false",
+                        "MarkEventSeen Current LEHighlandsBoat false",
+                        "MarkEventSeen Current LEHighlandsIntro false",
+                        "MarkEventSeen Current LEMonsterCrops false",
+                        "MarkEventSeen Current LEMonsterCropsReward false",
+                        "MarkEventSeen Current LEHighlandsPredicament false",
+                        "MarkEventSeen Current LEHighlandsPredicament_handle false",
+                        "MarkEventSeen Current LEHighlandsPredicament_offer false",
+                        "MarkEventSeen Current LEHighlandsPredicament_together false",
+                        "MarkEventSeen Current LEArtifactsMentors false",
+                        "MarkEventSeen Current LECamillaAppearance false",
+                        "MarkEventSeen Current LEWarRecollection false",
+                        "MarkEventSeen Current LECreed false",
+                        "MarkEventSeen Current LECreed_wandering false",
+                        "MarkEventSeen Current LECreed_gil false",
+                        "MarkEventSeen Current LECreed_resupply false",
+                        "MarkEventSeen Current LEFirstSlash false",
+                        "MarkEventSeen Current LEFirstInvitation false",
+                        "MarkEventSeen Current LEWizardWarp false",
+                        "MarkEventSeen Current LEJolyne false",
+                        "MarkEventSeen Current LEAnInvitation false",
+                        "MarkEventSeen Current LEWorkday false",
+                        "MarkEventSeen Current LEWorkday_cuddle false",
+                        "MarkEventSeen Current LEMissed false",
+                        "MarkEventSeen Current LEBattleground false",
+                        "MarkEventSeen Current LEReturn false",
+                        "MarkEventSeen Current LEKrobus false",
+                        "MarkEventSeen Current LEShadowpeople false",
+                        "MarkEventSeen Current LECamillaTutelage false",
+                        "MarkEventSeen Current LEMagnusTutelage false",
+                        "MarkEventSeen Current LELanceVow false",
+                        "MarkEventSeen Current LESoulBonding false",
+                        "MarkEventSeen Current LESicknessnHealth false",
+                        "MarkEventSeen Current LEForsakingAllOthers false",
+                        "MarkEventSeen Current LEToLovenCherish false",
+                        "MarkEventSeen Current LEUntilDeath false",
+                    ]
+                }
+            }
+        }
+    ]
+}

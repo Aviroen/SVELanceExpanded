@@ -1,0 +1,164 @@
+{
+    "Changes": [
+
+        //Death event
+        { //PlayerKilled
+            "LogName": "Player Died: Relationship With Razzy Universal",
+            "Action": "EditData",
+            "Target": "Data/Events/custom_HighlandsOutpost",
+            "Entries": {
+                "PlayerKilled": "cracklingFire/-1000 -1000/farmer 4 6 2 Lance 2 6 1/showFrame Lance 20/positionOffset Lance -3 0/playSound wand/pause 400/speak Lance \"{{i18n:LanceRelationship.Death1 {{expressionList}}}}\"/pause 1000/playSound dwoop/pause 1000/message \"{{i18n:LanceRelationship.Death2 {{expressionList}}}}\"/pause 3000/playSound healSound/pause 2000/playSound healSound/pause 1700/playSound healSound/pause 3000/fade/viewport 7 9 clamp/showFrame farmer 5/pause 1500/emote farmer 12/pause 500/showFrame farmer 4/pause 250/positionOffset farmer 0 18/showFrame farmer 0/pause 800/faceDirection farmer 3/pause 400/emote farmer 8/pause 800/speak Lance \"{{i18n:LanceRelationship.Death3 {{expressionList}}}}\"/pause 400/faceDirection farmer 2/pause 200/emote farmer 60/pause 800/showFrame Lance 4/pause 400/speak Lance \"{{i18n:LanceRelationship.Death4 {{expressionList}}}}\"/pause 400/facedirection farmer 3/pause 400quickQuestion {{i18n:LanceRelationship.Deathq {{expressionList}} }}(break)pause 300(break)pause 300(break)pause 300(break)pause 1000/emote Lance 40/pause 400/speak Lance \"{{i18n:LanceRelationship.Death5 {{expressionList}}}}\"/pause 400/emote farmer 60/pause 700/facedirection farmer 2/pause 500/farmerEat 773/pause 400/facedirection farmer 3/pause 400/emote farmer 32/pause 400/speak Lance \"{{i18n:LanceRelationship.Death6 {{expressionList}}}}\"/pause 400/playmusic sadpiano/speak Lance \"{{i18n:LanceRelationship.Death7 {{expressionList}}}}\"/pause 500/emote farmer 60/pause 400/speak Lance \"{{i18n:LanceRelationship.Death8 {{expressionList}}}}\"/pause 400/emote farmer 28/pause 400/speak Lance \"{{i18n:LanceRelationship.Death9 {{expressionList}}}}\"/pause 400/emote farmer 60/stopmusic/pause 1400/facedirection Lance 2/pause 1000/speak Lance \"{{i18n:LanceRelationship.Death10 {{expressionList}}}}\"/pause 1000/advancedMove Lance false 0 2 4 0 0 -3 2 0 0 13 2 10/pause 1000/facedirection farmer 2/waitForAllStationary/emote farmer 40/pause 800/message \"{{i18n:LanceRelationship.Death11 {{expressionList}}}}\"/globalFade/viewport -1000 -1000/end dialogue Lance \"{{i18n:LanceRelationship.Death12 {{expressionList}}}}\""
+            },
+        },
+
+
+        {
+            "LogName": "Has Relationship with Lance: Passout and Death Adjustments",
+            "Action": "EditData",
+            "Target": "Data/LocationContexts",
+            "Fields": {
+                "Default": {
+                    "PassOutMail": [
+                        {
+                            "Id": "Lance_DatingPassout2",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Mail": "Lance_PassOut",
+                            "MaxPassOutCost": 0,
+                            "SkipRandomSelection": true
+                        },
+                    ],
+                    "PassOutLocations": [
+                        {
+                            "Id": "Lance_DatingPassoutIntimate",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            },
+                        },
+                    ],
+
+                    "ReviveLocations": [
+                        {
+                            "Id": "Lance_RelationshipDeath",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            }
+                        },
+                        {
+                            "Id": "Mines",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            }
+                        },
+                        {
+                            "Id": "Lance_RelationshipDeathDesert",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            }
+                        },
+                    ],
+                },
+
+                "Desert": {
+                    "PassOutMail": [
+                        {
+                            "Id": "Lance_DatingPassout2",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Mail": "Lance_PassOut",
+                            "MaxPassOutCost": 0,
+                            "SkipRandomSelection": true
+                        },
+                    ],
+                    "PassOutLocations": [
+                        {
+                            "Id": "Lance_DatingPassoutIntimate",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            },
+                        },
+                    ],
+                    "ReviveLocations": [
+                        {
+                            "Id": "Lance_RelationshipDeathDesertInsurance",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            }
+                        },
+                    ],
+                },
+
+                "Island": {
+                    "PassOutMail": [
+                        {
+                            "Id": "Lance_DatingPassout2",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Mail": "Lance_PassOut",
+                            "MaxPassOutCost": 0,
+                            "SkipRandomSelection": true
+                        },
+                    ],
+                    "PassOutLocations": [
+                        {
+                            "Id": "Lance_DatingPassoutIntimate",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            },
+                        },
+                    ],
+                    "ReviveLocations": [
+                        {
+                            "Id": "Lance_RelationshipDeathIslandInsurance",
+                            "Condition": "PLAYER_HAS_SEEN_EVENT Current LEUntilDeath",
+                            "Location": "custom_HighlandsOutpost",
+                            "Position": {
+                                "X": 4,
+                                "Y": 6
+                            }
+                        },
+                    ],
+                }
+            }
+        },
+
+        {
+            "LogName": "Trigger Actions: Base",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+
+                "{{ModId}}_PassoutConvo": {
+                    "Id": "{{ModId}}_PassOutConvo",
+                    "Trigger": "DayEnding",
+                    "Condition": "PLAYER_HAS_MAIL Current Lance_PassOut Any",
+                    "Actions": [
+                        "AddConversationTopic Lance_Passout 0",
+                        "MarkActionApplied Current {{ModId}}_MiscClear false",
+                        "MarkEventSeen Current LE_PassOutLecture true"
+
+                    ]
+                },
+
+            }
+        }
+    ]
+}

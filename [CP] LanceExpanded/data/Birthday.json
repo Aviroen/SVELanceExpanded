@@ -1,0 +1,104 @@
+{
+    "Changes": [
+
+        // FARMER BIRTHDAYS POST MARRIAGE
+        //Birthday Lead in (Don't have happy birthday mod)
+        {
+            "LogName": "Farmer Birthday Qi Events Ongoing",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+                "HasMod |contains=Omegasis.HappyBirthday": false,
+            },
+            "Entries": {
+                "19927101/O Lance/y 4": "none/-500 -500/farmer -100 -100 0/pause 1/end dialogue Lance \"{{i18n:Qi.Birthday {{expressionList}} }}\""
+            }
+        },
+        {
+            "LogName": "Farmer Birthday Intro - No HappyBirthday",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+                "HasMod |contains=Omegasis.HappyBirthday": false,
+            },
+            "Entries": {
+                "1992710/O Lance/!ActiveDialogueEvent BirthdayPause/!ActiveDialogueEvent BirthdayPause2/!ActiveDialogueEvent BirthdayPause3/!ActiveDialogueEvent BirthdayPause4/y 2": ""
+            }
+        },
+        //Birthday Lead in (Does have happy birthday mod)
+        {
+            "LogName": "Farmer Birthday Intro - Yes HappyBirthday",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+                "HasMod": "Omegasis.HappyBirthday",
+            },
+            "Entries": {
+                "1992710/O Lance/!ActiveDialogueEvent BirthdayPause/!ActiveDialogueEvent BirthdayPause2/!ActiveDialogueEvent BirthdayPause3/!ActiveDialogueEvent BirthdayPause4/y 2": ""
+            }
+        },
+        {
+            "LogName": "2nd Year farmer Birthday Event",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+            },
+            "Entries": {
+                "199271/O Lance/y 2/t 1800 2500": ""
+            }
+        },
+        //Third year Farmer Birthday date.
+        {
+            "LogName": "3rd Year farmer Birthday",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+            },
+            "Entries": {
+                "199272/O Lance/y 3/e 199271/!ActiveDialogueEvent BirthdayPause/t 1800 2500": ""
+            }
+        },
+
+        //Lance comments the next morning.
+        {
+            "LogName": "Wear Earrings Next Morning Comments",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "Entries": {
+                "1992733/e 1992731/n wearEarrings/O Lance": "none/-500 -500/farmer -100 -100 0/end dialogue Lance \"{{i18n:WearEarring.01 {{expressionList}} }}\""
+            },
+        },
+
+        {
+            "LogName": "fighting the Balloon",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "PatchMode": "Replace",
+            "Priority": "Late",
+            "FromFile": "assets/Characters/CarpetPatch.png",
+            "ToArea": {
+                "X": 0,
+                "Y": 1183,
+                "Width": 128,
+                "Height": 180
+            },
+            "When": {
+                "Season": "{{Birthday Season}}",
+                "Day": "{{Birthday Day}}",
+                "Relationship:Lance": "Married",
+                "BDayEvents": "RepeatBirthday"
+
+            },
+        },
+    ]
+}

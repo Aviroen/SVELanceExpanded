@@ -1,0 +1,129 @@
+{
+    "Changes": [
+        //Always active when married
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "When": {
+                "Relationship:Lance": "Married",
+                "Override Generic Dialogue": "true",
+            },
+            "Entries": {
+                "Event.cs.1691": "{{i18n:Welwick.Base}}",
+                "Event.cs.1695": "{{i18n:Welwick.Money}}",
+                "Event.cs.1831": "{{i18n:Welwick.Prediction.1}}",
+                "Event.cs.1832": "{{i18n:Welwick.Prediction.1}}",
+                "Event.cs.1852": "{{i18n:Welwick.Prediction.2}}",
+                "Event.cs.1827": "{{i18n:Welwick.Prediction.3}}",
+                "Event.cs.1829": "{{i18n:Welwick.Prediction.4}}",
+                "Event.cs.1694": "{{i18n:Welwick.End}}",
+                "NPC.cs.4486": "{{i18n:Lance.HouseDeco.1 {{expressionList}} }}",
+                "NPC.cs.4488": "{{i18n:Lance.HouseDeco.2 {{expressionList}} }}",
+                "NPC.cs.4489": "{{i18n:Lance.HouseDeco.3 {{expressionList}} }}",
+                "NPC.cs.4496": "{{i18n:Lance.HouseDeco.4 {{expressionList}} }}",
+                "NPC.cs.4497": "{{i18n:Lance.HouseDeco.5 {{expressionList}} }}",
+                "NPC.cs.4498": "{{i18n:Lance.BadMood.1 {{expressionList}} }}",
+                "NPC.cs.4500": "{{i18n:Lance.HouseMess.1 {{expressionList}} }}",
+                "PathFindController.cs.4579": "{{i18n:Lance.HouseMess.2 {{expressionList}} }}",
+            }
+        },
+        { //Wedding Dialogue - (used to be No UCR) "HasMod |contains=misscoriel.UCRFix": false
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Priority": "Late",
+            "When": {
+                "Override Generic Dialogue": "true",
+                "Relationship:Lance": "Dating",
+            },
+            "Entries": {
+                "NPC.cs.3980": "{{i18n:Lance.Propose {{expressionList}} }}",
+            },
+        },
+        //Welwick predictions fourth year and beyond
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "When": {
+                "Relationship:Lance": "Married",
+                "Override Generic Dialogue": "true",
+                "Query: '{{TheMightyAmondee.CustomTokens/YearsMarried}}' >= 2": true
+            },
+            "Entries": {
+                "Event.cs.1831": "{{i18n:Welwick.Prediction.5}}",
+                "Event.cs.1832": "{{i18n:Welwick.Prediction.6}}",
+                "Event.cs.1827": "{{i18n:Welwick.Prediction.7}}",
+                "Event.cs.1829": "{{i18n:Welwick.Prediction.8}}",
+            }
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Strings/Events",
+            "Entries": {
+                "HaveBabyQuestion": "{{i18n:NewBaby.Question}} ",
+                "HaveBabyQuestion_Adoption": "{{i18n:NewAdopt.Question}} ",
+                "BirthMessage_Adoption": "{{i18n:AdoptMessage.Player}} ",
+                "BirthMessage_PlayerMother": "{{i18n:BirthMessage.Player}} ",
+                "BabyNamingTitle_Male": "{{i18n:BabyNaming.Male}} ",
+                "BabyNamingTitle_Female": "{{i18n:BabyNaming.Female}} ",
+            },
+            "When": {
+                "Override Generic Dialogue": "true",
+                "Relationship:Lance": "Married"
+            },
+        },
+
+        // S T R I N G S   F R O M   M A P S
+        //Jello: I've fixed this with the correct strings locations from SVE. I let a few out because it doesn't really make sense to label an owl statue like this lol.
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+                "LanceSpouseRoom.1": "{{i18n:SpouseRoom.1}}",
+                "LanceSpouseRoom.2": "{{i18n:SpouseRoom.2}}",
+                "LanceSpouseRoom.3": "{{i18n:SpouseRoom.3}}",
+                "LanceSpouseRoom.4": "{{i18n:SpouseRoom.4}}",
+                "LanceSpouseRoom.5": "{{i18n:SpouseRoom.5}}",
+                "LanceSpouseRoom.6": "{{i18n:SpouseRoom.6}}",
+                "LanceSpouseRoom.7": "{{i18n:SpouseRoom.7}}",
+                "LanceSpouseRoom.8": "{{i18n:SpouseRoom.8}}",
+                "LanceSpouseRoom.9": "{{i18n:SpouseRoom.9}}",
+            },
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "strings/StringsFromCSFiles",
+            "Entries": {
+                "Utility.cs.5367": "{{i18n:Wedding.MCall.01{{expressionList}}}}", //male farmer
+                "Utility.cs.5369": "{{i18n:Wedding.FCall.01{{expressionList}}}}", //female farmer
+                "Utility.cs.5371": "{{i18n:Wedding.MCall.02{{expressionList}}}}", //male farmer
+                "Utility.cs.5377": "{{i18n:Wedding.FCall.02{{expressionList}}}}", //female farmer
+            },
+            "When": { "Relationship:Lance": "Engaged" },
+        },
+        { //strings from cs files
+            "Action": "EditData",
+            "Target": "strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.3962": "{{i18n:NPC.cs.3962 {{expressionList}}}}",
+                "NPC.cs.3963": "{{i18n:NPC.cs.3963 {{expressionList}}}}",
+                "NPC.cs.3965": "{{i18n:NPC.cs.3965 {{expressionList}}}}",
+                "NPC.cs.3966": "{{i18n:NPC.cs.3966 {{expressionList}}}}",
+                "NPC.cs.3967": "{{i18n:NPC.cs.3967 {{expressionList}}}}",
+                "NPC.cs.3968": "{{i18n:NPC.cs.3968 {{expressionList}}}}",
+                "NPC.cs.3969": "{{i18n:NPC.cs.3969 {{expressionList}}}}",
+                "NPC.cs.3970": "{{i18n:NPC.cs.3970 {{expressionList}}}}",
+                "NPC.cs.3971": "{{i18n:NPC.cs.3971 {{expressionList}}}}",
+                "NPC.cs.3972": "{{i18n:NPC.cs.3972 {{expressionList}}}}",
+                "NPC.cs.3973": "{{i18n:NPC.cs.3973 {{expressionList}}}}",
+                "NPC.cs.3974": "{{i18n:NPC.cs.3974 {{expressionList}}}}",
+                "NPC.cs.3975": "{{i18n:NPC.cs.3975 {{expressionList}}}}",
+                "NPC.cs.3980": "{{i18n:NPC.cs.3980 {{expressionList}}}}",
+                "NPC.cs.3981": "{{i18n:NPC.cs.3981 {{expressionList}}}}",
+                "NPC.cs.3985": "{{i18n:NPC.cs.3985 {{expressionList}}}}",
+                "NPC.cs.3987": "{{i18n:NPC.cs.3987 {{expressionList}}}}",
+            }
+        },
+    ]
+}

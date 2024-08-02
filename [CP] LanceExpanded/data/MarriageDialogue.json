@@ -1,0 +1,303 @@
+{
+    "Changes": [
+        {
+            "LogName": "Load Marriage Dialogue",
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "FromFile": "data/Blank.json",
+        },
+        {
+            "LogName": "Marriage Dialogue - Base",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "Entries": {
+                //SPECIAL DIALOGUE
+                "patio_Lance": "{{i18n:LancepatioMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                //weather_Day_<random> 0-4
+                "Indoor_Day_0": "{{i18n:LanceindoorMarriageDialogue_0 {{expressionList}}}}",
+                "Indoor_Day_1": "{{i18n:LanceindoorMarriageDialogue_1 {{expressionList}}}}",
+                "Indoor_Day_2": "{{i18n:LanceindoorMarriageDialogue_2 {{expressionList}}}}",
+                "Indoor_Day_3": "{{i18n:LanceindoorMarriageDialogue_3 {{expressionList}}}}",
+                "Indoor_Day_4": "{{i18n:LanceindoorMarriageDialogue_4 {{expressionList}}}}",
+
+                "Rainy_Day_0": "{{i18n:LancerainyMarriageDialogue_0 {{expressionList}}}}",
+                "Rainy_Day_1": "{{i18n:LancerainyMarriageDialogue_1 {{expressionList}}}}",
+                "Rainy_Day_2": "{{i18n:LancerainyMarriageDialogue_2 {{expressionList}}}}",
+                "Rainy_Day_3": "{{i18n:LancerainyMarriageDialogue_3 {{expressionList}}}}",
+                "Rainy_Day_4": "{{i18n:LancerainyMarriageDialogue_4 {{expressionList}}}}",
+
+                "Indoor_Night_Lance": "{{i18n:LanceIndoor_NightMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Indoor_Night_0": "{{i18n:LanceIndoor_NightMarriageDialogue_0 {{expressionList}}}}",
+                "Indoor_Night_1": "{{i18n:LanceIndoor_NightMarriageDialogue_1 {{expressionList}}}}",
+                "Indoor_Night_2": "{{i18n:LanceIndoor_NightMarriageDialogue_2 {{expressionList}}}}",
+                "Indoor_Night_3": "{{i18n:LanceIndoor_NightMarriageDialogue_3 {{expressionList}}}}",
+                "Indoor_Night_4": "{{i18n:LanceIndoor_NightMarriageDialogue_4 {{expressionList}}}}",
+
+                "Rainy_Night_Lance": "{{i18n:LanceRainy_NightMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Rainy_Night_0": "{{i18n:LanceRainy_NightMarriageDialogue_0 {{expressionList}}}}",
+                "Rainy_Night_1": "{{i18n:LanceRainy_NightMarriageDialogue_1 {{expressionList}}}}",
+                "Rainy_Night_2": "{{i18n:LanceRainy_NightMarriageDialogue_2 {{expressionList}}}}",
+                "Rainy_Night_3": "{{i18n:LanceRainy_NightMarriageDialogue_3 {{expressionList}}}}",
+                "Rainy_Night_4": "{{i18n:LanceRainy_NightMarriageDialogue_4 {{expressionList}}}}",
+                "Rainy_Night_5": "{{i18n:LanceRainy_NightMarriageDialogue_5 {{expressionList}}}}",
+
+                "funLeave_Lance": "{{i18n:LancefunLeaveMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+
+                //"jobLeave_Lance": "{{i18n:LancejobLeaveMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+
+                "funReturn_Lance": "{{i18n:LancefunReturnMarriageDialogue_{{Random:{{Range: 0, 2}}}} {{expressionList}}}}",
+
+                //"jobReturn_Lance": "{{i18n:LancejobReturnMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+
+                "Outdoor_Lance": "{{i18n:LanceOutdoorMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Outdoor_0": "{{i18n:LanceOutdoorMarriageDialogue_0 {{expressionList}}}}",
+                "Outdoor_1": "{{i18n:LanceOutdoorMarriageDialogue_1 {{expressionList}}}}",
+                "Outdoor_2": "{{i18n:LanceOutdoorMarriageDialogue_2 {{expressionList}}}}",
+                "Outdoor_3": "{{i18n:LanceOutdoorMarriageDialogue_3 {{expressionList}}}}",
+                "Outdoor_4": "{{i18n:LanceOutdoorMarriageDialogue_4 {{expressionList}}}}",
+
+                "spouseRoom_Lance": "{{i18n:LancespouseRoomMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+
+                "OneKid_0": "{{i18n:LanceOneKidMarriageDialogue_0 {{expressionList}}}}",
+                "OneKid_1": "{{i18n:LanceOneKidMarriageDialogue_1 {{expressionList}}}}",
+                "OneKid_2": "{{i18n:LanceOneKidMarriageDialogue_2 {{expressionList}}}}",
+                "OneKid_3": "{{i18n:LanceOneKidMarriageDialogue_3 {{expressionList}}}}",
+                "OneKid_4": "{{i18n:LanceOneKidMarriageDialogue_4 {{expressionList}}}}",
+
+                "TwoKids_0": "{{i18n:LanceTwoKidsMarriageDialogue_0 {{expressionList}}}}",
+                "TwoKids_1": "{{i18n:LanceTwoKidsMarriageDialogue_1 {{expressionList}}}}",
+                "TwoKids_2": "{{i18n:LanceTwoKidsMarriageDialogue_2 {{expressionList}}}}",
+                "TwoKids_3": "{{i18n:LanceTwoKidsMarriageDialogue_3 {{expressionList}}}}",
+                "TwoKids_4": "{{i18n:LanceTwoKidsMarriageDialogue_4 {{expressionList}}}}",
+
+                "Good_0": "{{i18n:LancegoodMarriageDialogue_0 {{expressionList}}}}",
+                "Good_1": "{{i18n:LancegoodMarriageDialogue_1 {{expressionList}}}}",
+                "Good_2": "{{i18n:LancegoodMarriageDialogue_2 {{expressionList}}}}",
+                "Good_3": "{{i18n:LancegoodMarriageDialogue_3 {{expressionList}}}}",
+                "Good_4": "{{i18n:LancegoodMarriageDialogue_4 {{expressionList}}}}",
+                "Good_5": "{{i18n:LancegoodMarriageDialogue_5 {{expressionList}}}}",
+                "Good_6": "{{i18n:LancegoodMarriageDialogue_6 {{expressionList}}}}",
+                "Good_7": "{{i18n:LancegoodMarriageDialogue_7 {{expressionList}}}}",
+
+                "Neutral_0": "{{i18n:LanceneutMarriageDialogue_0 {{expressionList}}}}",
+                "Neutral_1": "{{i18n:LanceneutMarriageDialogue_1 {{expressionList}}}}",
+                "Neutral_2": "{{i18n:LanceneutMarriageDialogue_2 {{expressionList}}}}",
+                "Neutral_3": "{{i18n:LanceneutMarriageDialogue_3 {{expressionList}}}}",
+                "Neutral_4": "{{i18n:LanceneutMarriageDialogue_4 {{expressionList}}}}",
+                "Neutral_5": "{{i18n:LanceneutMarriageDialogue_5 {{expressionList}}}}",
+                "Neutral_6": "{{i18n:LanceneutMarriageDialogue_6 {{expressionList}}}}",
+                "Neutral_7": "{{i18n:LanceneutMarriageDialogue_7 {{expressionList}}}}",
+
+                "Bad_0": "{{i18n:LancebadMarriageDialogue_0 {{expressionList}}}}",
+                "Bad_1": "{{i18n:LancebadMarriageDialogue_1 {{expressionList}}}}",
+                "Bad_2": "{{i18n:LancebadMarriageDialogue_2 {{expressionList}}}}",
+                "Bad_3": "{{i18n:LancebadMarriageDialogue_3 {{expressionList}}}}",
+                "Bad_4": "{{i18n:LancebadMarriageDialogue_4 {{expressionList}}}}",
+                "Bad_5": "{{i18n:LancebadMarriageDialogue_5 {{expressionList}}}}",
+                "Bad_6": "{{i18n:LancebadMarriageDialogue_6 {{expressionList}}}}",
+                "Bad_7": "{{i18n:LancebadMarriageDialogue_7 {{expressionList}}}}",
+                //"Indoor_Day_Lance": "{{i18n:LanceIndoor_DayMarriageDialogue_{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "SpouseFarmhouseClutter_Lance": "{{i18n:LanceSpouseFarmhouseClutterMarriageDialogue_0 {{expressionList}}}}",
+                "SpouseGiftJealous_Lance": "{{i18n:LanceSpouseGiftJealousMarriageDialogue_0 {{expressionList}}}}",
+                "Spouse_MonstersInHouse_Lance": "{{i18n:LanceSpouse_MonstersInHouseMarriageDialogue_0 {{expressionList}}}}",
+                "SpouseStardrop_Lance": "{{i18n:LanceSpouseStardropMarriageDialogue_0 {{expressionList}}}}",
+                "DesertFestival_Lance_marriage": "{{i18n:DesertFestival_Lance_marriage{{Random:{{Range: 0, 2}}}} {{expressionList}}}}",
+
+                //SEASONAL DIALOGUE
+                "spring_1": "{{i18n:Lance.MarriageDialogue.016{{expressionList}} }}",
+                "spring_13": "{{i18n:Lance.MarriageDialogue.017{{expressionList}} }}",
+                "spring_24": "{{i18n:Lance.MarriageDialogue.018{{expressionList}} }}",
+                "summer_1": "{{i18n:Lance.MarriageDialogue.020{{expressionList}} }}",
+                "summer_11": "{{i18n:Lance.MarriageDialogue.021{{expressionList}} }}",
+                "summer_28": "{{i18n:Lance.MarriageDialogue.022{{expressionList}} }}",
+                "fall_1": "{{i18n:Lance.MarriageDialogue.024{{expressionList}} }}",
+                "fall_6": "{{i18n:Lance.MarriageDialogue.025{{expressionList}} }}",
+                "fall_16": "{{i18n:Lance.MarriageDialogue.026{{expressionList}} }}",
+                "fall_27": "{{i18n:Lance.MarriageDialogue.spirit.{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                //DAY DIALOGUE
+                "spring_Lance": "{{i18n:Lance.MarriageDialogue_Spring{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "summer_Lance": "{{i18n:Lance.MarriageDialogue_Summer{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "fall_Lance": "{{i18n:Lance.MarriageDialogue_Fall{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "winter_Lance": "{{i18n:Lance.MarriageDialogue_Winter{{Random:{{Range: 0, 5}},{{Hotspring}}_9}} {{expressionList}}}}",
+                "Sun": "{{i18n:Lance.MarriageDialogue_sun{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Mon": "{{i18n:Lance.MarriageDialogue_mon{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Tue": "{{i18n:Lance.MarriageDialogue_tue{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Wed": "{{i18n:Lance.MarriageDialogue_wed{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Thu": "{{i18n:Lance.MarriageDialogue_thu{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Fri": "{{i18n:Lance.MarriageDialogue_fri{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+                "Sat": "{{i18n:Lance.MarriageDialogue_sat{{Random:{{Range: 0, 5}}}} {{expressionList}}}}",
+            },
+        },
+        {
+            //Lance meets with Krobus dialogue 1
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Spring 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18n:LanceKrobus.1}}",
+            }
+        },
+        {
+            //Lance meets with Krobus dialogue 2
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Spring 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18n:LanceKrobus.2}}",
+            }
+        },
+        {
+            //Lance meets with Krobus dialogue 3
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Summer 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18n:LanceKrobus.3}}",
+            }
+        },
+        {
+            //Lance meets with Krobus dialogue 4
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Summer 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18N:LanceKrobus.4}}",
+            }
+        },
+        {
+            //Lance meets with Krobus dialogue 5
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Fall 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18N:LanceKrobus.5}}",
+            }
+        },
+
+        {
+            //Lance meets with Krobus dialogue 6
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Fall 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18n:LanceKrobus.6}}",
+            }
+        },
+
+        {
+            //Lance meets with Krobus dialogue 7
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLance",
+            "When": {
+                "Date": "Winter 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "funLeave_Lance": "{{i18n:LanceKrobus.7}}",
+            }
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Spring 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.8}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Spring 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.9}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Summer 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.10}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Summer 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.11}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Fall 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.12}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Fall 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.13}}",
+            },
+        },
+        {
+            //Krobus' dialogue
+            "Action": "EditData",
+            "Target": "Characters/dialogue/Krobus",
+            "When": {
+                "Date": "Winter 10",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "Entries": {
+                "Forest_98_91": "{{i18n:LanceKrobus.14}}",
+            },
+        },
+    ]
+}

@@ -1,0 +1,1123 @@
+{
+    "Format": "2.3.0",
+    // C O N F I G
+    "ConfigSchema": {
+        "Override Generic Dialogue": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Content",
+            "Description": "Overrides generic universal dialogue. Still alters certain dialogue like Welwick's predictions and summit dialogue. Please disable this if you aren't planning to date Lance. "
+        },
+        "Sprite": {
+            "AllowValues": "Use included, Use custom",
+            "Default": "Use included",
+            "Section": "Appearance",
+            "Description": "This toggles the Portrait + Sprite combination, if you toggle this off, you will be missing out on 90+ emotes and the dialogue will act strange. You have been warned."
+        },
+        "Use Beach Sprites": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Appearance",
+            "Description": "Toggles on and off whether or not the game calls a beach sprite. Please change this to false if you do not have beach sprites and are using a custom sprite set."
+        },
+        "Earring Colour": {
+            "AllowValues": "turquoise, red",
+            "Default": "turquoise",
+            "Section": "Appearance",
+            "Description": "Changes the colour of Lance' eventual earring gift in the event. Please pick which suit you better. To actually wear them in game, please install the Fashion sense pack."
+        },
+        "Darker Plot Events(Y4)": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Content",
+            "Description": "Enables the somewhat darker string of critical plot events where Lance' trauma response is on full display. If you would prefer a more light-hearted experience I suggest you turn this off. TW: Overt self-destructive  tendencies and vague suicidal tendency implications. Potentially may possess triggering scenarios. (The farmer is briefly kidnapped and sealed into silence about the event.) Toggling this off in the middle of said events will stop them from continuing so you may test it out to see if it's for you."
+        },
+        "Spicier Content": {
+            "AllowValues": "Bell Pepper, Habanero, Carolina Reaper, Pepper X",
+            "Default": "Habanero",
+            "Section": "Content",
+            "Description": "You are warned that Pepper X is [Aviroen] letting the muzzle off my writer who is a thirsty dog. Carolina Reaper is more explicit than Habanero, Habanero is akin to RRRR's 'wine event' spice. Bell Pepper is rated-E for everyone."
+        },
+
+        "HeartEvents": {
+            "AllowValues": "LanceExpanded, pause",
+            "Default": "pause",
+            "Section": "Content",
+            "Description": "Resets ALL of my mod's heart events, default 'inactive', toggle and save to activate."
+        },
+
+        "LanceNewRoom": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Content",
+            "Description": "Changed Lance's room to be less morbid and actually useful for him lorewise."
+        },
+        "Custom Wedding": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Section": "Content",
+            "Description": "Changes and mutes the original wedding event, adds Camilla in, moves it to Fable Reef. Specific to Lance. Turn this off if you're not marrying Lance."
+        },
+        "Aviroen Magnus": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Content",
+            "Description": "Integrating just the basic clothes from my mod that followed Eskbl's art style for Magnus. Default Off."
+        },
+        "Day 1 Toggle": {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Section": "Content",
+            "Description": "Default, you will meet Lance after the volcano event, change to true if you want to meet Lance after the Wizard junimo note. If you turn on the day 1 toggle you will still need to get to the volcano for his heart events, but you can at least gift and marry him early."
+        }
+    },
+    "DynamicTokens": [
+        /////P O R T R A I T   C A L L S/////
+        //Portrait calls for LFL expression mode
+        //Base calls for Full expression
+        {
+            "Name": "e0",
+            "Value": "0",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e1",
+            "Value": "1",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e2",
+            "Value": "2",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e3",
+            "Value": "3",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e4",
+            "Value": "4",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e5",
+            "Value": "5",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e6",
+            "Value": "6",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e7",
+            "Value": "7",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e8",
+            "Value": "8",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e9",
+            "Value": "9",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e10",
+            "Value": "10",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e11",
+            "Value": "11",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e12",
+            "Value": "12",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e13",
+            "Value": "13",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e14",
+            "Value": "14",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e15",
+            "Value": "15",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e16",
+            "Value": "16",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e17",
+            "Value": "17",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e18",
+            "Value": "18",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e19",
+            "Value": "19",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e20",
+            "Value": "20",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e21",
+            "Value": "21",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e22",
+            "Value": "22",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e23",
+            "Value": "23",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e24",
+            "Value": "24",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e25",
+            "Value": "25",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e26",
+            "Value": "26",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e27",
+            "Value": "27",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e28",
+            "Value": "28",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e29",
+            "Value": "29",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e30",
+            "Value": "30",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e31",
+            "Value": "31",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e32",
+            "Value": "32",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e33",
+            "Value": "33",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e34",
+            "Value": "34",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e35",
+            "Value": "35",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e36",
+            "Value": "36",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e37",
+            "Value": "37",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e38",
+            "Value": "38",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e39",
+            "Value": "39",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e40",
+            "Value": "40",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e41",
+            "Value": "41",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e42",
+            "Value": "42",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e43",
+            "Value": "43",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e44",
+            "Value": "44",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e45",
+            "Value": "45",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e46",
+            "Value": "46",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e47",
+            "Value": "47",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e48",
+            "Value": "48",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e49",
+            "Value": "49",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e50",
+            "Value": "50",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e51",
+            "Value": "51",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e52",
+            "Value": "52",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e53",
+            "Value": "53",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e54",
+            "Value": "54",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e55",
+            "Value": "55",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e56",
+            "Value": "56",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e57",
+            "Value": "57",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e58",
+            "Value": "58",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e59",
+            "Value": "59",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e60",
+            "Value": "60",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e61",
+            "Value": "61",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e62",
+            "Value": "62",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e63",
+            "Value": "63",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e64",
+            "Value": "64",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e65",
+            "Value": "65",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e66",
+            "Value": "66",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e67",
+            "Value": "67",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e68",
+            "Value": "68",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e69",
+            "Value": "69",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e70",
+            "Value": "70",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e71",
+            "Value": "71",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e72",
+            "Value": "72",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e73",
+            "Value": "73",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e74",
+            "Value": "74",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e75",
+            "Value": "75",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e76",
+            "Value": "76",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e77",
+            "Value": "77",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e78",
+            "Value": "78",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e79",
+            "Value": "79",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e80",
+            "Value": "80",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e81",
+            "Value": "81",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e82",
+            "Value": "82",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e83",
+            "Value": "83",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e84",
+            "Value": "84",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e85",
+            "Value": "85",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e86",
+            "Value": "86",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e87",
+            "Value": "87",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e88",
+            "Value": "88",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e89",
+            "Value": "89",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e90",
+            "Value": "90",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e91",
+            "Value": "91",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e92",
+            "Value": "92",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e93",
+            "Value": "93",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e94",
+            "Value": "94",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e95",
+            "Value": "95",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e96",
+            "Value": "96",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e97",
+            "Value": "97",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e98",
+            "Value": "98",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e99",
+            "Value": "99",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e100",
+            "Value": "100",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e101",
+            "Value": "101",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e102",
+            "Value": "102",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+        {
+            "Name": "e103",
+            "Value": "103",
+            "When": {
+                "Sprite": "Use Included"
+            }
+        },
+
+        /////////////////////////////////////////////////////////////////////////
+        {
+            "Name": "Date",
+            "Value": "{{Season}} {{Day}}"
+        },
+        //Expression list Compression
+        {
+            "Name": "expressionList",
+            "Value": "|e0={{e0}} |e1={{e1}} |e2={{e2}} |e3={{e3}} |e4={{e4}} |e5={{e5}} |e6={{e6}} |e7={{e7}} |e8={{e8}} |e9={{e9}} |e10={{e10}} |e11={{e11}} |e12={{e12}} |e13={{e13}} |e14={{e14}} |e15={{e15}} |e16={{e16}} |e17={{e17}} |e18={{e18}} |e19={{e19}} |e20={{e20}} |e21={{e21}} |e22={{e22}} |e23={{e23}} |e24={{e24}} |e25={{e25}} |e26={{e26}} |e27={{e27}} |e28={{e28}} |e29={{e29}} | e30={{e30}} |e31={{e31}} |e32={{e32}} |e33={{e33}} |e34={{e34}} |e35={{e35}} |e36={{e36}} |e37={{e37}} |e38={{e38}} |e39={{e39}} |e40={{e40}} |e41={{e41}} |e42={{e42}} |e43={{e43}} |e44={{e44}} |e45={{e45}} |e46={{e46}} |e47={{e47}} |e48={{e48}} |e49={{e49}} |e50={{e50}} |e51={{e51}} |e52={{e52}} |e53={{e53}} |e54={{e54}} |e55={{e55}} |e56={{e56}} |e57={{e57}} |e58={{e58}} |e59={{e59}} |e60={{e60}} |e61={{e61}} |e62={{e62}} |e63={{e63}} |e64={{e64}} |e65={{e65}} |e66={{e66}} |e67={{e67}} |e68={{e68}} |e69={{e69}} |e70={{e70}} |e71={{e71}} |e72={{e72}} |e73={{e73}} |e74={{e74}} |e75={{e75}} |e76={{e76}} |e77={{e77}} |e78={{e78}} |e79={{e79}} |e80={{e80}} |e81={{e81}} |e82={{e82}} |e83={{e83}} |e84={{e84}} |e85={{e85}} |e86={{e86}} |e87={{e87}} |e88={{e88}} |e89={{e89}} |e90={{e90}} |e91={{e91}} |e92={{e92}} |e93={{e93}} |e94={{e94}} |e95={{e95}} |e96={{e96}} |e97={{e97}} |e98={{e98}} |e99={{e99}} |e100={{e100}} |e101={{e101}} |e102={{e102}} |e103={{e103}}"
+        },
+        //Attempted MP patching.
+        {
+            "Name": "FarmHouse",
+            "Value": "FarmHouse"
+        },
+        {
+            "Name": "FarmHouse",
+            "Value": "Cabin",
+            "When": {
+                "IsMainPlayer": "false"
+            }
+        },
+        //Summit Patching
+        {
+            "Name": "Summit",
+            "Value": "Summit"
+        },
+        {
+            "Name": "Summit",
+            "Value": "Custom_SVESummit",
+            "When": {
+                "HasFlag |contains=Farm_Eternal": false
+            }
+        },
+        ///// D Y N A M I C  C A L L S/////
+        //Day of the Week shortened
+        {
+            "Name": "DayWeekShort",
+            "Value": "Sun"
+
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Mon",
+            "When": {
+                "DayOfWeek": "Monday"
+            }
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Tue",
+            "When": {
+                "DayOfWeek": "Tuesday"
+            }
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Wed",
+            "When": {
+                "DayOfWeek": "Wednesday"
+            }
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Thu",
+            "When": {
+                "DayOfWeek": "Thursday"
+            }
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Fri",
+            "When": {
+                "DayOfWeek": "Friday"
+            }
+        },
+        {
+            "Name": "DayWeekShort",
+            "Value": "Sat",
+            "When": {
+                "DayOfWeek": "Saturday"
+            }
+        },
+        //wedding token
+        {
+            "Name": "WeddingDay",
+            "Value": false
+        },
+        {
+            "Name": "WeddingDay",
+            "Value": true,
+            "When": {
+                "DayEvent": "wedding"
+            }
+        },
+        //SPICE FACTOR
+        {
+            "Name": "Spice",
+            "Value": "light",
+            "When": {
+                "Spicier Content": "Bell Pepper"
+            }
+        },
+        {
+            "Name": "Spice",
+            "Value": "moderate",
+            "When": {
+                "Spicier Content": "Habanero"
+            }
+        },
+        {
+            "Name": "Spice",
+            "Value": "spicy",
+            "When": {
+                "Spicier Content": "Carolina Reaper"
+            }
+        },
+        {
+            "Name": "Spice",
+            "Value": "pain",
+            "When": {
+                "Spicier Content": "Pepper X"
+            }
+        }
+    ],
+
+
+    ////////////////////////////////////////////////////////// START OF CHANGES
+    "Changes": [
+
+        { //Load Sparkle sprite
+            "LogName": "Load EarringSparkle",
+            "Action": "Load",
+            "Target": "Characters/EarringSparkle",
+            "FromFile": "assets/Characters/EarringSparkle.png"
+        },
+
+        { //Load Player Earrings
+            "LogName": "Load PlayerEarring",
+            "Action": "Load",
+            "Target": "Characters/PlayerEarring",
+            "When": {
+                "Earring Colour": "turquoise"
+            },
+            "FromFile": "assets/Characters/PlayerEarring.png"
+        },
+        { //Load Player Earrings
+            "LogName": "Load PlayerEarring Alt",
+            "Action": "Load",
+            "Target": "Characters/PlayerEarring",
+            "When": {
+                "Earring Colour": "red"
+            },
+            "FromFile": "assets/Characters/PlayerEarringAlt.png"
+        },
+        {
+            "LogName": "Lance Edits",
+            "Action": "EditData",
+            "Target": "data/Characters/Lance",
+            "Fields": {
+                "Lance": {
+                    "Manner": "Rude",
+                    "IsDarkSkinned": true,
+                    "CanGreetNearbyCharacters": true,
+                    "SpouseGiftJealousy": true,
+                    "SpouseGiftJealousyFriendshipChange": -30
+                }
+            }
+        },
+        {
+            "LogName": "Lance Edits",
+            "Action": "EditData",
+            "Target": "data/Characters/Lance",
+            "When": {
+                "Day 1 Toggle": false
+            },
+            "Fields": {
+                "Lance": {
+                    "UnlockConditions": "PLAYER_HAS_SEEN_EVENT ANY LECaldera"
+                }
+            }
+        },
+        {
+            "LogName": "Lance Edits",
+            "Action": "EditData",
+            "Target": "data/Characters/Lance",
+            "When": {
+                "Day 1 Toggle": true
+            },
+            "Fields": {
+                "Lance": {
+                    "UnlockConditions": "PLAYER_HAS_SEEN_EVENT ANY 112"
+                }
+            }
+        },
+        {
+            "LogName": "Joja Bad",
+            "Action": "EditData",
+            "Target": "data/Characters/Lance",
+            "When": {
+                "HasFlag": "jojaMember"
+            },
+            "Fields": {
+                "Lance": {
+                    "CanBeRomanced": false
+                }
+            }
+        },
+
+        //////// BEGIN THE INCLUDE WAVE
+        {
+            "Action": "Include",
+            "FromFile": "data/MarriageDialogue.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/CustomDates/Unique/Lance.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/StringsFromCSFiles.json"
+        },
+        //////reg dialogue
+        {
+            "Action": "Include",
+            "FromFile": "data/Dialogue.json"
+        },
+        //////outfits
+        {
+            "Action": "Include",
+            "FromFile": "data/Outfits.json"
+        },
+        // ///heart event include//////
+        {
+            "Action": "Include",
+            "FromFile": "data/HeartEvents.json"
+        },
+        /////death insurance include/////
+        {
+            "Action": "Include",
+            "FromFile": "data/DeathInsurance.json"
+        },
+        // ///G I F T   R E L A T E D///
+        {
+            "Action": "Include",
+            "FromFile": "data/GiftsInfo.json"
+        },
+        // ///mail   R E L A T E D///
+        /*
+		{
+			"Action": "Include",
+			"FromFile": "data/Mail.json",
+		},
+		*/
+        {
+            "Action": "Include",
+            "FromFile": "data/TriggerActions.json"
+        },
+        // ///E N G A G E M E N T   D I A L O G U E/////
+        {
+            //Lance's Engagement Dialogue
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "When": {
+                "HasSeenEvent": "LECaldera"
+            },
+            "Entries": {
+                "Lance0": "{{i18n:Engagement.Lance.1.1 {{expressionList}} ${{e99}}}}",
+                "Lance2": "{{i18n:Engagement.Lance.1.2 {{expressionList}} ${{e13}}}}"
+            }
+        },
+        // ///T O W N   D I A L O G U E///// (Adjusted so the entire town has comments about it they're willing to share once they're close enough.)
+        //Loads from file
+        /*
+		{
+			"Action": "Include",
+			"FromFile": "data/TownComments.json",
+		},
+
+///////////////////spicy includes
+		{
+			"Action": "Include",
+			"FromFile": "data/{{Spice}}/dates.json",
+		},
+*/
+        //////////////////////////////////////WEDDING CODE
+        //custom wedding toggler
+        {
+            "Action": "Load",
+            "Target": "data/Weddings",
+            "FromFile": "data/Blank.json",
+            "Priority": "Low",
+            "When": {
+                "Relationship:Lance": "Engaged",
+                "Custom Wedding": true
+            }
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/Weddings.json",
+            "When": {
+                "Relationship:Lance": "Engaged",
+                "Custom Wedding": true
+            }
+        },
+        //spouse room edit
+        {
+            "Action": "Load",
+            "Priority": "High",
+            "Target": "Maps/Custom_LancesRoom",
+            "FromFile": "Assets/Maps/LancesRoom.tbin",
+            "When": {
+                "LanceNewRoom": "true"
+            }
+        }
+    ]
+}

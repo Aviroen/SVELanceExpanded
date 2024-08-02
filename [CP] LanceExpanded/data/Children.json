@@ -1,0 +1,878 @@
+{
+    "Changes": [
+
+
+
+        // B A B Y    S P R I T E S
+        // BABY LOAD
+        //Loads invisible baby before seeing birth event
+        {
+            "LogName": "Baby: Load Invisible",
+            "Action": "Load",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Invisibaby.png",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent, LEAdoptEvent": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": false,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Load Invisible dark",
+            "Action": "Load",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Invisibaby.png",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent, LEAdoptEvent": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": false,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance"
+            },
+        },
+        //Loads fake baby for cutscene
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeBaby",
+            "FromFile": "assets/Characters/Children/FakeBaby.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeBabydark",
+            "FromFile": "assets/Characters/Children/FakeBabydark.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeBabygirl",
+            "FromFile": "assets/Characters/Children/FakeBaby.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/FakeBabydarkgirl",
+            "FromFile": "assets/Characters/Children/FakeBabydark.png",
+        },
+        //Adjusts the fake baby's hair colour
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBaby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=none": false
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBabydark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=none": false
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBabygirl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=none": false
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBabydarkgirl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=none": false
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBabygirl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "Characters/FakeBabydarkgirl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+            }
+        },
+        //FIRST BORNS
+        //Girl first born
+        {
+            "LogName": "Baby: Firstborn Female",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Children/Baby.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Female dark",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Children/Baby_dark.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        //Girl Overlay
+        {
+            "LogName": "Baby: Firstborn Female Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Female Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Female Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Female Dark Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        //Boy first born
+        {
+            "LogName": "Baby: Firstborn Male",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Children/Baby_boy.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Male Dark",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Children/Baby_boy_dark.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        //Boy overlay
+        {
+            "LogName": "Baby: Firstborn Male Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Firstborn Male Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "ChildGenders |valueAt=0": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        //Loads invisible baby before seeing birth event
+        {
+            "LogName": "Baby: Invisible Baby 2nd Child",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Invisibaby.png",
+            "When": {
+                "Lance Babies": "true",
+                "HasFlag": "Child2Pregnant",
+                "HasSeenEvent |contains=LEPregEvent2, LEAdoptEvent2": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance",
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >=  56": true,
+            },
+        },
+        {
+            "LogName": "Baby: Invisible Baby 2nd Child Dark",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Invisibaby.png",
+            "When": {
+                "Lance Babies": "true",
+                "HasFlag": "Child2Pregnant",
+                "HasSeenEvent |contains=LEPregEvent2, LEAdoptEvent2": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance",
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 56": true,
+            },
+        },
+        //SECOND BORNS
+        //Girl second born
+        {
+            "LogName": "Baby: Secondborn Female",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Children/Baby.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Female Dark",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Children/Baby_dark.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        //Girl Overlay
+        {
+            "LogName": "Baby: Secondborn Female Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Female Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Female Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, 64780431": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Female Dark Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Baby/BabyEyes_{{Lance Baby Eye Colour}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Female",
+                "Spouse": "Lance"
+            },
+        },
+        //Boy second born
+        {
+            "LogName": "Baby: Secondborn Male",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "FromFile": "assets/Characters/Children/Baby_boy.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Male Dark",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "FromFile": "assets/Characters/Children/Baby_boy_dark.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        //Boy overlay
+        {
+            "LogName": "Baby: Secondborn Male Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Secondborn Male Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Baby_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Baby/BabyHair_{{Lance Baby Hair Strip}}.png",
+            "Update": "OnLocationChange",
+            "When": {
+                "Lance Babies": "true",
+                "Lance Baby Hair Strip |contains=None": false,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": true,
+                "ChildGenders |valueAt=1": "Male",
+                "Spouse": "Lance"
+            },
+        },
+        //Toddlers
+        {
+            "LogName": "Baby: Toddler Load",
+            "Action": "Load",
+            "Target": "Characters/Toddler",
+            "FromFile": "assets/Characters/Children/Toddler.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Dark Load",
+            "Action": "Load",
+            "Target": "Characters/Toddler_dark",
+            "FromFile": "assets/Characters/Children/Toddler_dark.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Girl Load",
+            "Action": "Load",
+            "Target": "Characters/Toddler_girl",
+            "FromFile": "assets/Characters/Children/Toddler_girl.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance"
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Girl Dark Load",
+            "Action": "Load",
+            "Target": "Characters/Toddler_girl_dark",
+            "FromFile": "assets/Characters/Children/Toddler_girl_dark.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance"
+            },
+        },
+        //Children overlays
+        //Boy hair overlay
+        {
+            "LogName": "Baby: Toddler Male Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Boy/BoyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+                "Lance Baby Hair Strip |contains=None": false,
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Male Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Boy/BoyHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+                "Lance Baby Hair Strip |contains=None": false,
+            },
+        },
+        //Girl overlay
+        {
+            "LogName": "Baby: Toddler Female Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_girl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Girl/GirlHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+                "Lance Baby Hair Strip |contains=None": false,
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Female Dark Hair",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_girl_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Hair/Girl/GirlHair_{{Lance Baby Hair Strip}}.png",
+            "When": {
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+                "Lance Baby Hair Strip |contains=None": false,
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Female Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_girl",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Girl/GirlEyes_{{Lance Baby Eye Colour}}.png",
+            "When": {
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+            },
+        },
+        {
+            "LogName": "Baby: Toddler Female Dark Eyes",
+            "Action": "EditImage",
+            "Target": "Characters/Toddler_girl_dark",
+            "PatchMode": "Overlay",
+            "FromFile": "assets/Characters/Children/Eyes/Girl/GirlEyes_{{Lance Baby Eye Colour}}.png",
+            "When": {
+                "Lance Baby Eye Colour |contains=Turquoise": false,
+                "Lance Babies": "true",
+                "Spouse": "Lance",
+            },
+        },
+
+
+        // B I R T H,  A D O P T I O N  AND  P R E G N A N C Y EVENTS.
+        {
+            "LogName": "Wizard Pregnancy Event First Child",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Relationship:Wizard": "Married",
+                "Pregnant": "@{{playerName}}",
+                "HavingChild": "@{{playerName}}",
+                "HasMod |contains=Nom0ri.RasmodiaRRRR": false
+            },
+            "Entries": {
+                "LEPregEvent/k LEAdoptEvent/O Lance": "continue/47 25/farmer 49 25 1 Lance 54 25 1 Harvey 0 0 0/addConversationTopic FarmerPregnantLance1Talk 7/addConversationTopic FarmerPregnantLance1 13/mail Pregnant1_Lance/ignoreCollisions farmer/skippable/pause 500/viewport move 2 0 2500/move farmer 4 0 1/pause 200/faceDirection Lance 3/pause 200/speak Lance \"{{i18n:Lance.Pregnant1.01 {{expressionList}} }}\"/pause 200/emote farmer 40/pause 500/emote Lance 8/pause 400/speak Lance \"{{i18n:Lance.Pregnant1.02 {{expressionList}} }}\"/pause 500/faceDirection farmer 2 true/playSound croak/animate farmer false false 350 104 105/pause 100/emote Lance 16/pause 1100/faceDirection farmer 1 true/pause 400/emote farmer 28/pause 300/positionOffset Lance -1 0/pause 25/positionOffset Lance -1 0/pause 25/positionOffset Lance -1 0/pause 25/positionOffset Lance -1 0/pause 25/positionOffset Lance -1 0/pause 25/positionOffset Lance -1 0/pause 25/emote Lance 12/pause 300/speak Lance \"{{i18n:Lance.Pregnant1.03 {{expressionList}} }}\"/animate Lance true true 100 32/pause 200/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/playSound pickUpItem/pause 1200/shake Lance 1000/pause 200/startJittering/pause 300/playSound wand/screenFlash 1/warp farmer -200 -200/warp Lance -200 -200/pause 500/globalFade/viewport -1000 -1000/pause 400/stopAnimation Lance 0/stopJittering/changeLocation Hospital/viewport 5 5/warp farmer 3 5/warp Lance 2 5/showFrame Lance 4/warp Harvey 5 8/fade/pause 400/move Harvey 0 -3 3 false/speak Harvey \"{{i18n:Lance.Pregnant1.04 {{expressionList}} }}\"/emote Lance 8/speak Harvey \"{{i18n:Lance.Pregnant1.05 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.Pregnant1.06 {{expressionList}} }}\"/pause 500/emote farmer 20/end dialogue Lance \"{{i18n:Lance.Pregnant1.07 {{expressionList}} }}\""
+            },
+        },
+        { //First child Adoption Intro Event
+            "LogName": "Adoption Intro 1",
+            "Action": "EditData",
+            "Target": "Data/Events/farm",
+            "When": {
+                "Relationship:Wizard": "Married",
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild": "@{{playerName}}",
+                "HasMod |contains=Nom0ri.RasmodiaRRRR": false
+            },
+            "Entries": {
+                "LEAdoptEvent/k LEPregEvent/O Lance": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/mail Adoption1_Lance/addConversationTopic Adoption_LanceMid 3/skippable/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/playSound doorClose/warp Lance 64 15/pause 300/faceDirection farmer 1 true/pause 100/faceDirection farmer 0/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.Adopt.Intro1.01 {{expressionList}} }}\"/pause 100/advancedMove farmer false 0 -1 1 0 0 -1/pause 1000/faceDirection Lance 1/faceDirection farmer 3/pause 200/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro1.02 {{expressionList}} }}\"/pause 400/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro1.03 {{expressionList}} }}\"/stopMusic/pause 200/emote farmer 16/pause 600/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro1.04 {{expressionList}} }}\"/pause 600/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.Adopt.Intro1.05 {{expressionList}} }}\"/pause 500/emote farmer 40/pause 1000/emote farmer 8/pause 700/emote Lance 40/pause 400/speak Lance \"{{i18n:Lance.Adopt.Intro1.06 {{expressionList}} }}\"/pause 500/emote Lance 40/pause 500/faceDirection Lance 2/pause 400/showframe Lance 21/pause 300/shake Lance 200/playMusic desolate/pause 600/speak Lance \"{{i18n:Lance.Adopt.Intro1.07 {{expressionList}} }}\"/pause 600/emote farmer 40/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro1.08 {{expressionList}} }}\"/pause 200/shake Lance 500/pause 400/stopMusic/pause 600/emote farmer 40/pause 700/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/positionOffset farmer -2 0/pause 35/pause 500/playSound pickUpItem/showFrame Lance 32/showFrame farmer 35 true/pause 800/emote farmer 32/pause 600/playMusic sweet/emote Lance 16/pause 300/speak Lance \"{{i18n:Lance.Adopt.Intro1.09 {{expressionList}} }}\"/pause 200/emote farmer 20 true/emote Lance 20/pause 900/positionOffset farmer 0 5/playSound pickUpItem/showFrame Lance 28/showFrame farmer 101 true/pause 1200/globalFade 0.01/viewport -400 -400 true/message \"{{i18n:Lance.Adopt.Intro1.10 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.Adopt.Intro1.11 {{expressionList}} }}\""
+            }
+        },
+        { //First Child Adoption Update Event
+            "LogName": "Adoption Mid 1",
+            "Action": "EditData",
+            "Target": "Data/Events/Custom_WizardBasement",
+            "When": {
+                "Relationship:Wizard": "Married",
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild": "@{{playerName}}",
+                "HasMod |contains=Nom0ri.RasmodiaRRRR": false
+            },
+            "Entries": {
+                "LEAdoptpt1/e LEAdoptEvent/k LEAdoptpt1/!ActiveDialogueEvent Adoption_LanceMid/d Fri Sat Sun/w sunny/t 1000 1600": "sweet/16 6/farmer 7 9 0 Lance 9 6 0/skippable/move farmer 0 -3 1/pause 300/faceDirection Lance 3/emote Lance 20/pause 200/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid1.01 {{expressionList}} }}\"/pause 400/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid1.02 {{expressionList}} }}\"/pause 200/emote farmer 32/pause 600/speak Lance \"{{i18n:Lance.Adopt.Mid1.03 {{expressionList}} }}\"/pause 300/stopMusic/globalFade/viewport -1000 -1000/faceDirection farmer 2/warp farmer 11 5/warp Lance 11 5/positionOffset farmer 28 -18/positionOffset Lance -15 -28/showframe farmer 29/showframe Lance 34/pause 300/fade/viewport 11 5/playMusic breezy/pause 1400/emote farmer 56/pause 300/emote Lance 32/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid1.04 {{expressionList}} }}\"/pause 100/emote farmer 8/pause 600/speak Lance \"{{i18n:Lance.Adopt.Mid1.05 {{expressionList}} }}\"/pause 200/emote farmer 60/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid1.06 {{expressionList}} }}\"/pause 300/emote farmer 40/pause 400/emote farmer 28/pause 400/speak Lance \"{{i18n:Lance.Adopt.Mid1.07 {{expressionList}} }}\"/pause 200/emote farmer 60/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid1.08 {{expressionList}} }}\"/pause 500/emote farmer 20 true/emote Lance 20/pause 1200/globalFade/viewport -400 -400 true/message \"{{i18n:Lance.Adopt.Mid1.09 {{expressionList}} }}\"/pause 500/message \"{{i18n:Lance.Adopt.Mid1.10 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.Adopt.Mid1.11 {{expressionList}} }}\""
+            }
+        },
+        //Invisible Baby string
+        {
+            "Action": "EditData",
+            "Target": "Strings/Locations",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent, LEAdoptEvent": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": false,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "FarmHouse_Crib_NewbornSleeping": "{{i18n:Married.Lance.Crib1}} ",
+            }
+        },
+        //Invisible baby extra dialogue //CFD OVERRIDE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent, LEAdoptEvent": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": false,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance"
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "ExtraDialogue_NewChild_Adoption": "{{i18n:Married.Lance.NewChild_Adoption_Invisibaby1_1}} ${{e6}}#$b#{{i18n:Married.Lance.NewChild_Adoption_Invisibaby1_2}} ${{e6}}",
+                "ExtraDialogue_NewChild_FirstChild": "{{i18n:Married.Lance.NewChild_FirstChild_Invisibaby1_1}} ${{e2}}#$b#{{i18n:Married.Lance.NewChild_FirstChild_Invisibaby1_2}} ${{e2}}#$b#{{i18n:Married.Lance.NewChild_FirstChild_Invisibaby1_3}} ${{e3}}#$b#{{i18n:Married.Lance.NewChild_FirstChild_Invisibaby1_4}} ${{e2}}",
+            }
+        },
+        {
+            "LogName": "Lance Birth Event First Child Pt 1",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild |contains=Lance": "false",
+                "HasSeenEvent": "64780030",
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 0": true
+
+            },
+            "Entries": {
+                "LEBirthEvent/e LEPregEvent/k LEAdoptpt1/O Lance": "none/-1000 -1000/farmer -100 -100 2 Lance -100 -100 3/viewport -1000 -1000/warp Lance -100 -100/warp farmer -100 -100/addConversationTopic Lance_BabySleep1 11/addConversationTopic Lance_BabyBorn1Talk 7/skippable/pause 500/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 1 0 2/positionOffset farmer 0 10/pause 400/emote farmer 40/pause 300/message \"{{i18n:Lance.Birth1.Pt1.01 {{expressionList}} }}\"/pause 200/message \"{{i18n:Lance.Birth1.Pt1.02 {{expressionList}} }}\"/pause 800/playSound doorClose/pause 100/warp Lance 64 15/pause 300/faceDirection farmer 3 true/pause 100/faceDirection Lance 1/speak Lance \"{{i18n:Lance.Birth1.Pt1.03 {{expressionList}} }}\"/pause 200/emote farmer 8/pause 200/speak Lance \"{{i18n:Lance.Birth1.Pt1.04 {{expressionList}} }}\"/pause 100/emote farmer 16/pause 100/startJittering/pause 100/emote Lance 16/pause 300/stopJittering/emote farmer 12/pause 200/speak Lance \"{{i18n:Lance.Birth1.Pt1.05 {{expressionList}} }}\"/pause 200/startJittering/pause 200/emote farmer 28/pause 500/stopJittering/pause 100/speak Lance \"{{i18n:Lance.Birth1.Pt1.06 {{expressionList}} }}\"/pause 200/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/playSound pickUpItem/showFrame Lance 32/pause 300/shake Lance 1500/pause 300/startJittering/pause 300/playSound wand/screenFlash 1/warp Lance -100 -100/warp farmer -100 -100/pause 800/globalFade/viewport -1000 -1000/pause 300/changeLocation HarveyRoom/end warpOut"
+            },
+        },
+        {
+            "LogName": "Wizard Birth Event First Child Pt 2",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "LEBirthpt2/e LEBirthEvent/k LEAdoptpt1/k LEAdoptEvent/O Lance": "none/-100 -100/farmer 19 12 2 Lance 20 12 3 Harvey 5 15 2/skippable/showFrame 5/ambientLight 150 150 150/fade/viewport 14 14 true/playMusic sappypiano/pause 1000/speak Lance \"{{i18n:Lance.Birth1.Pt2.01 {{expressionList}} }}\"/pause 500/emote farmer 60/emote Lance 28/pause 500/faceDirection Lance 2/speak Lance \"{{i18n:Lance.Birth1.Pt2.02 {{expressionList}} }}\"/pause 500/move Lance 0 1 3/pause 500/speak Lance \"{{i18n:Lance.Birth1.Pt2.03 {{expressionList}} }}\"/pause 500/move Lance 0 -1 3/speak Lance \"{{i18n:Lance.Birth1.Pt2.04 {{expressionList}} }}\"/pause 500/emote farmer 20/pause 500/move Lance 0 1 3/positionOffset Lance -2 0/pause 25/positionOffset Lance -2 -1/pause 25/positionOffset Lance -2 -1/pause 25/positionOffset Lance -2 -1/pause 200/positionOffset Lance -2 -2/positionOffset Lance -2 -2/pause 25/positionOffset Lance -2 -2/pause 25/positionOffset Lance -2 -2/positionOffset Lance -2 -2/pause 25/pause 500/playSound pickUpItem/animate Lance true true 500 32/speak Lance \"{{i18n:Lance.Birth1.Pt2.05 {{expressionList}} }}\"/pause 500/emote farmer 60/pause 500/speak Lance \"{{i18n:Lance.Birth1.Pt2.06 {{expressionList}} }}\"/pause 1000/fade/viewport -100 -100 true/stopAnimation Lance 0/warp Harvey 21 12/faceDirection Harvey 3/warp Lance 20 11/faceDirection Lance 2/speak Lance \"{{i18n:Lance.Birth1.Pt2.07 {{expressionList}} }}\"/pause 1500/speak Harvey \"{{i18n:Lance.Birth1.Pt2.08 {{expressionList}} }}\"/addTemporaryActor FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 22 15 20 12 2 False Character/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 0 -50/pause 500/message \"{{i18n:Lance.Birth1.Pt2.09 {{expressionList}} }}\"/pause 500/speak Harvey \"{{i18n:Lance.Birth1.Pt2.10 {{expressionList}} }}\"/fade/viewport 12 14 true/pause 500/emote Lance 20/pause 2000/speak Lance \"{{i18n:Lance.Birth1.Pt2.11 {{expressionList}} }}\"/emote farmer 20/pause 500/emote Harvey 32/pause 1500/viewport -100 -100 true/message \"{{i18n:Lance.Birth1.Pt2.12 {{expressionList}} }}\"/pause 1000/changeLocation FarmHouse/end dialogueWarpOut Lance \"{{i18n:Lance.Birth1.Pt2.13 {{expressionList}} }}\""
+            },
+        },
+        { //First child adoption Part 1
+            "LogName": "First Child Adoption Part 1",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild |contains=@{{playerName}}": "false",
+                "HasSeenEvent": "LEAdoptEvent",
+                "HasMod |contains=Nom0ri.RasmodiaRRRR": false,
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 0": true
+            },
+            "Entries": {
+                "LEAdoptpt1/e LEAdoptEvent/k LEPregEvent/O Lance": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/warp Lance 63 16/warp farmer -100 -100/faceDirection Lance 2/addConversationTopic Lance_Adoption1Talk 7/viewport 64 15 clamp true/pause 500/skippable/pause 2000/playSound doorClose/warp farmer 64 15/pause 100/faceDirection Lance 1 true/pause 50/faceDirection Lance 0/emote Lance 20/move farmer 0 1 3 true/faceDirection Lance 1/pause 500/speak Lance \"{{i18n:Lance.Adopt.Pt1.01 {{expressionList}} }}\"/pause 400/emote farmer 56/pause 500/speak Lance \"{{i18n:Lance.Adopt.Pt1.02 {{expressionList}} }}\"/pause 200/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/playSound pickUpItem/showFrame Lance 32/pause 300/shake Lance 1500/pause 300/startJittering/pause 300/playSound wand/screenFlash 1/warp Lance -100 -100/warp farmer -100 -100/pause 800/globalFade/viewport -1000 -1000/pause 300/changeLocation Custom_LanceBasement/end warpOut"
+            }
+        },
+        { //First child Adoption Part 2
+            "LogName": "First Child Adoption Part 2",
+            "Action": "EditData",
+            "Target": "Data/Events/farm",
+            "Entries": {
+                "LEAdoptpt2/e LEAdoptpt1/e LEAdoptEvent/k LEPregEvent/O Lance": "sweet/-1000 -1000/farmer 7 9 0 Lance 9 6 0 Avi -100 -100 2/skippable/changeLocation Custom_HighlandsOutpost/fade/viewport 7 9 clamp/pause 1500/speak Lance \"{{i18n:Lance.Adopt.Pt2.01 {{expressionList}} }}\"/pause 400/emote farmer 20/pause 600/speak Lance \"{{i18n:Lance.Adopt.Pt2.02 {{expressionList}} }}\"/pause 200/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Adopt.Pt2.03 {{expressionList}} }}\"/playSound wand/screenFlash 1/warp Avi 23 18/faceDirection farmer 0 true/faceDirection Lance 0 true/pause 300/stopMusic/emote farmer 16 true/playSound dwop/showFrame farmer 94/jump farmer/emote Lance 16 true/pause 1500/faceDirection farmer 3 true/pause 100/startJittering/emote farmer 28/pause 200/stopJittering/pause 800/move Avi 0 1 2/faceDirection farmer 0/emote farmer 12/pause 300/playMusic LanceSong/speak Lance \"{{i18n:Lance.Adopt.Pt2.04 {{expressionList}} }}\"/speak Avi \"{{i18n:Lance.Adopt.Pt2.05 {{expressionList}} }}\"/pause 800/faceDirection farmer 3/emote farmer 8/pause 300/faceDirection Lance 1/speak Lance \"{{i18n:Lance.Adopt.Pt2.06 {{expressionList}} }}\"/pause 300/emote farmer 8/speak Lance \"{{i18n:Lance.Adopt.Pt2.07 {{expressionList}} }}\"/changeName Avi Admin???/faceDirection farmer 0/pause 400/emote farmer 40/pause 500/speak Avi \"{{i18n:Lance.Adopt.Pt2.08 {{expressionList}} }}\"/pause 400/advancedMove Lance false 0 -1 1 0/pause 1000/faceDirection Lance 0/speak Lance \"{{i18n:Lance.Adopt.Pt2.09 {{expressionList}} }}\"/pause 100/move Avi 0 2 3 true/pause 100/advancedMove Lance false -1 0/pause 500/showFrame Lance 4/faceDirection Lance 1/pause 400/speak Avi \"{{i18n:Lance.Adopt.Pt2.10 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.Adopt.Pt2.11 {{expressionList}} }}\"/speak Avi \"{{i18n:Lance.Adopt.Pt2.12 {{expressionList}} }}\"/pause 500/emote farmer 40/pause 200/faceDirection Avi 2/speak Avi \"{{i18n:Lance.Adopt.Pt2.13 {{expressionList}} }}\"/pause 200/stopMusic/playSound wand/screenFlash 1/faceDirection Lance 2 true/addTemporaryActor FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 22 15 22 22 2 False Character/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 0 -50/pause 600/emote Lance 16 true/emote farmer 16/pause 500/speak Lance \"{{i18n:Lance.Adopt.Pt2.14 {{expressionList}} }}\"/pause 200/advancedMove farmer false -1 0/pause 500/faceDirection farmer 0/emote farmer 20/pause 500/speak Avi \"{{i18n:Lance.Adopt.Pt2.15 {{expressionList}} }}\"/move Avi 0 -3 0/playSound wand/screenFlash 1/warp Avi 500 500/pause 800/emote farmer 40/pause 200/advancedMove farmer false 1 0 0 -1/pause 1000/faceDirection farmer 3/pause 400/speak Lance \"{{i18n:Lance.Adopt.Pt2.16 {{expressionList}} }}\"/playMusic sweet/pause 200/emote farmer 56/pause 500/speak Lance \"{{i18n:Lance.Adopt.Pt2.17 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 400/speak Lance \"{{i18n:Lance.Adopt.Pt2.18 {{expressionList}} }}\"/pause 300/emote Lance 40/pause 300/emote Lance 20/speak Lance \"{{i18n:Lance.Adopt.Pt2.19 {{expressionList}} }}\"/pause 500/emote farmer 20 true/emote Lance 20/pause 1200/globalFade/viewport -400 -400 true/message \"{{i18n:Lance.Adopt.Pt2.20 {{expressionList}} }}\"/pause 500/message \"{{i18n:Lance.Adopt.Pt2.21 {{expressionList}} }}\"/pause 1000/changeLocation FarmHouse/end"
+            }
+        },
+        // Pregnant with second child.
+        {
+            "LogName": "Lance Pregnancy Event Second Child",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Relationship:Lance": "Married",
+                "Pregnant": "@{{playerName}}",
+                "HavingChild": "@{{playerName}}",
+                "HasSeenEvent": "64780031",
+            },
+            "Entries": {
+                "LESecondBirth/k LEFirstAdoptpt1/O Lance": "continue/47 25/farmer 49 25 1 Lance 54 25 1 Harvey 0 0 0/addConversationTopic FarmerPregnantLance2 13/addConversationTopic FarmerPregnantLance2Talk 7/mail Pregnant2_Lance/addMailReceived Child2Pregnant/ignoreCollisions farmer/skippable/pause 500/viewport move 2 0 2500/move farmer 4 0 1/pause 200/faceDirection Lance 3/pause 200/speak Lance \"{{i18n:Lance.Pregnant2.01 {{expressionList}} }}\"/pause 500/faceDirection farmer 2 true/playSound croak/animate farmer false false 350 104 105/pause 1500/faceDirection farmer 1 true/pause 400/emote farmer 28/pause 500/speak Lance \"{{i18n:Lance.Pregnant2.02 {{expressionList}} }}\"/pause 200/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/positionOffset farmer 2 0/pause 50/playSound pickUpItem/animate Lance true true 100 32/pause 500/shake Lance 1000/pause 200/startJittering/pause 300/playSound wand/screenFlash 1/warp farmer -200 -200/warp Lance -200 -200/pause 500/globalFade/viewport -1000 -1000/pause 400/stopAnimation Lance 0/stopJittering/changeLocation Hospital/viewport 5 5/warp farmer 3 5/warp Lance 2 5/showFrame Lance 4/warp Harvey 5 8/fade/pause 400/move Harvey 0 -3 3 false/speak Harvey \"{{i18n:Lance.Pregnant2.03 {{expressionList}} }}\"/emote Lance 8/speak Harvey \"{{i18n:Lance.Pregnant2.04 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.Pregnant2.05 {{expressionList}} }}\"/pause 500/emote farmer 20/end dialogue Lance \"{{i18n:Lance.Pregnant2.06 {{expressionList}} }}\""
+            }
+        },
+        { //Second child Adoption Intro Event
+            "LogName": "Adoption Intro 2",
+            "Action": "EditData",
+            "Target": "Data/Events/farm",
+            "When": {
+                "Relationship:Lance": "Married",
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild": "@{{playerName}}",
+                "HasSeenEvent": "LEAdoptpt1",
+            },
+            "Entries": {
+                "LEAdoptEvent2/e LEAdoptEvent/k LEBirthEvent/e LEAdoptpt1": "none/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/mail Adoption2_Lance/addConversationTopic Adoption_LanceMid 3/skippable/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/playSound doorClose/warp Lance 64 15/pause 300/faceDirection farmer 1 true/pause 100/faceDirection farmer 0/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.Adopt.Intro2.01 {{expressionList}} }}\"/pause 100/advancedMove farmer false 0 -1 1 0 0 -1/pause 1000/faceDirection Lance 1/faceDirection farmer 3/pause 200/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro2.02 {{expressionList}} }}\"/pause 400/emote farmer 32/playMusic sweet/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro2.03 {{expressionList}} }}\"/pause 200/emote farmer 56/pause 600/speak Lance \"{{i18n:Lance.Adopt.Intro2.04 {{expressionList}} }}\"/pause 500/emote farmer 32/pause 300/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/positionOffset Lance 2 0/pause 35/pause 500/playSound pickUpItem/showFrame Lance 32/showFrame farmer 35 true/pause 800/speak Lance \"{{i18n:Lance.Adopt.Intro2.05 {{expressionList}} }}\"/pause 200/emote farmer 12/pause 200/speak Lance \"{{i18n:Lance.Adopt.Intro2.06 {{expressionList}} }}\"/pause 200/emote farmer 28/pause 500/speak Lance \"{{i18n:Lance.Adopt.Intro2.07 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 200/speak Lance \"{{i18n:Lance.Adopt.Intro2.08 {{expressionList}} }}\"/emote farmer 20 true/emote Lance 20/pause 900/positionOffset farmer 0 5/playSound pickUpItem/showFrame Lance 28/showFrame farmer 101 true/pause 1200/globalFade 0.01/viewport -400 -400 true/message \"{{i18n:Lance.Adopt.Intro2.09 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.Adopt.Intro2.10 {{expressionList}} }}\""
+            }
+        },
+        { //Second child Adoption Update Event
+            "LogName": "Adoption Mid 2",
+            "Action": "EditData",
+            "Target": "Data/Events/Custom_HighlandsOutpost",
+            "When": {
+                "Relationship:Lance": "Married",
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild": "@{{playerName}}",
+                "HasSeenEvent": "LEAdoptEvent2",
+            },
+            "Entries": {
+                "LESecondAdoptpt1/e LEFirstAdopt/e LEFirstAdoptpt1/e LESecondAdopt/!ActiveDialogueEvent Adoption_LanceMid/d Fri Sat Sun/w sunny/t 1000 1600": "sweet/16 6/farmer 7 9 0 Lance 9 6 0/skippable/move farmer 0 -3 1/pause 300/faceDirection Lance 3/emote Lance 20/pause 200/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid2.01 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 500/stopMusic/globalFade/viewport -1000 -1000/faceDirection farmer 2/warp farmer 11 5/warp Lance 11 5/positionOffset farmer 28 -15/positionOffset Lance -15 -28/showframe farmer 29/showframe Lance 34/pause 300/fade/viewport 11 5/playMusic breezy/pause 1400/emote farmer 56/pause 300/emote Lance 32/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid2.02 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 300/speak Lance \"{{i18n:Lance.Adopt.Mid2.03 {{expressionList}} }}\"/pause 100/emote farmer 8/pause 600/speak Lance \"{{i18n:Lance.Adopt.Mid2.04 {{expressionList}} }}\"/pause 300/emote farmer 40/pause 300/speak Lance \"{{i18n:Lance.Adopt.Mid2.05 {{expressionList}} }}\"/pause 200/emote farmer 12/pause 300/speak Lance \"{{i18n:Lance.Adopt.Mid2.06 {{expressionList}} }}\"/pause 200/emote farmer 60/pause 500/speak Lance \"{{i18n:Lance.Adopt.Mid2.07 {{expressionList}} }}\"/pause 300/emote farmer 40/pause 400/speak Lance \"{{i18n:Lance.Adopt.Mid2.08 {{expressionList}} }}\"/pause 200/emote farmer 28/pause 1200/stopMusic/globalFade/viewport -400 -400 true/message \"{{i18n:Lance.Adopt.Mid2.09 {{expressionList}} }}\"/pause 500/message \"{{i18n:Lance.Adopt.Mid2.10 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.Adopt.Mid2.11 {{expressionList}} }}\""
+            }
+        },
+        //Invisible Baby string 2
+        {
+            "Action": "EditData",
+            "Target": "Strings/Locations",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent2, LEAdoptEvent2": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 56": true,
+                "Spouse": "Lance",
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "FarmHouse_Crib_NewbornSleeping": "{{i18n:Married.Lance.Crib2}} ",
+            }
+        },
+        //Invisible baby extra dialogue CFD CONVERTED
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lance",
+            "When": {
+                "Lance Babies": "true",
+                "HasSeenEvent |contains=LEPregEvent2, LEAdoptEvent2": true,
+                "HasSeenEvent |contains=LEBirthEvent, LEAdoptpt1": true,
+                "HasSeenEvent |contains=LESecondBirth, LeSecondAdoptpt1": false,
+                "Spouse": "Lance",
+            },
+            "Update": "OnLocationChange",
+            "Entries": {
+                "ExtraDialogue_NewChild_Adoption": "{{i18n:Married.Lance.NewChild_Adoption_Invisibaby2_1}} ${{e4}}#$b#{{i18n:Married.Lance.NewChild_Adoption_Invisibaby2_2}} ${{e6}}",
+                "ExtraDialogue_NewChild_SecondChild1": "{{i18n:Married.Lance.NewChild_SecondChild1_Invisibaby2.1}} ${{e6}}#$b#{{i18n:Married.Lance.NewChild_SecondChild1_Invisibaby2.2}} ${{e3}}#$b#{{i18n:Married.Lance.NewChild_SecondChild1_Invisibaby2.3}} ${{e3}}",
+                "ExtraDialogue_NewChild_SecondChild2": "{{i18n:Married.Lance.NewChild_SecondChild2_Invisibaby3.1}} ${{e9}}#$b#{{i18n:Married.Lance.NewChild_SecondChild2_Invisibaby3.2}} ${{e1}}#$e#{{i18n:Married.Lance.NewChild_SecondChild2_Invisibaby3.3}} ${{e3}}",
+            },
+        },
+        {
+            "LogName": "Lance Birth Event Second Child Pt1",
+            "Action": "EditData",
+            "Target": "Data/Events/farm",
+            "Update": "OnTimeChange, OnLocationChange",
+            "When": {
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild |contains=Lance": "false",
+                "HasSeenEvent": "LESecondBirth",
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 0": true
+            },
+            "Entries": {
+                "LESecondBirth/e LESecondBio/O Lance": "none/-1000 -1000/farmer -100 -100 2 Lance -100 -100 3/viewport -1000 -1000/warp Lance -100 -100/warp farmer -100 -100/addConversationTopic Lance_BabyBorn2Talk 7/addConversationTopic Lance_BabySleep2Talk 14/skippable/pause 500/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 1 0 2/positionOffset farmer 0 10/pause 400/emote farmer 40/pause 300/message \"{{i18n:Lance.Birth2.Pt1.01 {{expressionList}} }}\"/pause 200/message \"{{i18n:Lance.Birth2.Pt1.02 {{expressionList}} }}\"/pause 800/playSound doorClose/pause 100/warp Lance 64 15/pause 300/faceDirection farmer 3 true/pause 100/faceDirection Lance 1/speak Lance \"{{i18n:Lance.Birth2.Pt1.03 {{expressionList}} }}\"/pause 200/emote farmer 8/pause 200/speak Lance \"{{i18n:Lance.Birth2.Pt1.04 {{expressionList}} }}\"/pause 100/emote farmer 16/pause 100/startJittering/pause 100/emote Lance 16/pause 300/stopJittering/emote farmer 12/pause 200/speak Lance \"{{i18n:Lance.Birth2.Pt1.05 {{expressionList}} }}\"/pause 200/startJittering/pause 200/emote farmer 28/pause 500/stopJittering/pause 100/speak Lance \"{{i18n:Lance.Birth2.Pt1.06 {{expressionList}} }}\"/pause 200/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/playSound pickUpItem/showFrame Lance 32/pause 300/shake Lance 1500/pause 300/startJittering/pause 300/playSound wand/screenFlash 1/warp Lance -100 -100/warp farmer -100 -100/pause 800/globalFade/viewport -1000 -1000/pause 300/changeLocation HarveyRoom/end warpOut"
+            },
+        },
+        {
+            "LogName": "Lance Birth Event Second Child Pt2",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "LESecondpt2/e LEPregEvent2/e LESecondBirth": "sappypiano/-100 -100/farmer 19 12 2 Lance 20 12 3 Harvey 5 15 2/skippable/showFrame 5/ambientLight 150 150 150/viewport 14 14 true/pause 1000/speak Lance \"{{i18n:Lance.Birth2.Pt2.01 {{expressionList}} }}\"/pause 500/emote farmer 60/emote Lance 28/pause 500/speak Lance \"{{i18n:Lance.Birth2.Pt2.02 {{expressionList}} }}\"/pause 300/move Lance 0 1 3/positionOffset Lance -2 0/pause 25/positionOffset Lance -2 -1/pause 25/positionOffset Lance -2 -1/pause 25/positionOffset Lance -2 -1/pause 200/positionOffset Lance -2 -2/positionOffset Lance -2 -2/pause 25/positionOffset Lance -2 -2/pause 25/positionOffset Lance -2 -2/positionOffset Lance -2 -2/pause 25/pause 500/playSound pickUpItem/animate Lance true true 500 32/speak Lance \"{{i18n:Lance.Birth2.Pt2.03 {{expressionList}} }}\"/pause 500/emote Lance 40/pause 600/speak Lance \"{{i18n:Lance.Birth2.Pt2.04 {{expressionList}} }}\"/pause 500/emote farmer 12/pause 500/speak Lance \"{{i18n:Lance.Birth2.Pt2.05 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.Birth2.Pt2.06 {{expressionList}} }}\"/pause 500/emote farmer 20/pause 500/speak Lance \"{{i18n:Lance.Birth2.Pt2.07 {{expressionList}} }}\"/pause 500/emote farmer 60/pause 500/speak Lance \"{{i18n:Lance.Birth2.Pt2.08 {{expressionList}} }}\"/pause 200/emote farmer 20/pause 1000/fade/viewport -100 -100 true/warp Harvey 21 12/faceDirection Harvey 3/warp Lance 20 11/faceDirection Lance 2/speak Lance \"{{i18n:Lance.Birth2.Pt2.09 {{expressionList}} }}\"/pause 1500/speak Harvey \"{{i18n:Lance.Birth2.Pt2.10 {{expressionList}} }}\"/stopAnimation Lance 0/addTemporaryActor FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 22 15 20 12 2 False Character/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 0 -50/pause 500/message \"{{i18n:Lance.Birth2.Pt2.11 {{expressionList}} }}\"/pause 500/speak Harvey \"{{i18n:Lance.Birth2.Pt2.12 {{expressionList}} }}\"/fade/viewport 12 14 true/pause 500/emote Lance 20/pause 2000/speak Lance \"{{i18n:Lance.Birth2.Pt2.13 {{expressionList}} }}\"/emote farmer 20/pause 500/emote Harvey 32/pause 1500/globalFade/viewport -100 -100 true/message \"{{i18n:Lance.Birth2.Pt2.14 {{expressionList}} }}\"/pause 1000/pause 1000/changeLocation FarmHouse/end dialogueWarpOut Lance \"{{i18n:Lance.Birth2.Pt2.{{Face}}.15 {{expressionList}} }}\""
+            },
+        },
+        { //Second child adoption Part 1
+            "LogName": "Second Child Adoption Part 1",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "When": {
+                "Pregnant |contains=@{{playerName}}": "false",
+                "HavingChild |contains=@{{playerName}}": "false",
+                "HasSeenEvent": "LEAdoptpt1",
+                "HasSeenEvent": "LEAdoptEvent2",
+                "Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 0": true
+            },
+            "Entries": {
+                "LESecondAdoptp1e LEAdoptEvent2/e LEAdoptpt1/O Lance": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/warp Lance 63 16/addConversationTopic Lance_Adoption2Talk 7/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 500/skippable/pause 2000/playSound doorClose/warp farmer 64 15/pause 100/faceDirection Lance 1 true/pause 50/faceDirection Lance 0/emote Lance 20/move farmer 0 1 3 true/faceDirection Lance 1/pause 500/speak Lance \"{{i18n:Lance.Adopt2.Pt1.01 {{expressionList}} }}\"/pause 400/emote farmer 56/pause 500/speak Lance \"{{i18n:Lance.Adopt2.Pt1.02 {{expressionList}} }}\"/pause 200/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/positionOffset Lance 2 0/pause 25/playSound pickUpItem/showFrame Lance 32/pause 300/shake Lance 1500/pause 300/startJittering/pause 300/playSound wand/screenFlash 1/warp Lance -100 -100/warp farmer -100 -100/pause 800/globalFade/viewport -1000 -1000/pause 300/changeLocation Custom_LanceBasement/end warpOut"
+            }
+        },
+        { //Second child Adoption Part 2
+            "LogName": "Second Child Adoption Part 2",
+            "Action": "EditData",
+            "Target": "Data/Events/farm",
+            "Entries": {
+                "LESecondAdoptpt2/e LEAdoptpt1/e LEAdoptEvent/e LEAdoptEvent2/O Lance": "sweet/-1000 -1000/farmer 7 9 0 Lance 9 6 0 Avi -100 -100 2/skippable/changeLocation Custom_HighlandsOutpost/fade/viewport 7 9 clamp/pause 1500/changeName Avi Admin???/speak Lance \"{{i18n:Lance.Adopt2.Pt2.01 {{expressionList}} }}\"/pause 200/emote farmer 12/pause 500/speak Lance \"{{i18n:Lance.Adopt2.Pt2.02 {{expressionList}} }}\"/pause 200/emote farmer 40/speak Lance \"{{i18n:Lance.Adopt2.Pt2.03 {{expressionList}} }}\"/pause 500/emote farmer 32/pause 500/playSound wand/screenFlash 1/warp Avi 23 18/faceDirection farmer 0 true/faceDirection Lance 0 true/pause 300/stopMusic/emote farmer 16 true/emote Lance 16/pause 1500/move Avi 0 1 2/pause 300/playMusic LanceSong/speak Lance \"{{i18n:Lance.Adopt2.Pt2.04 {{expressionList}} }}\"/speak Avi \"{{i18n:Lance.Adopt2.Pt2.05 {{expressionList}} }}\"/pause 400/advancedMove Lance false 0 -1 1 0/pause 1000/faceDirection Lance 0/speak Lance \"{{i18n:Lance.Adopt2.Pt2.06 {{expressionList}} }}\"/pause 100/move Avi 0 2 3 true/pause 100/advancedMove Lance false -1 0/pause 500/showFrame Lance 4/faceDirection Lance 1/pause 400/speak Avi \"{{i18n:Lance.Adopt2.Pt2.07 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.Adopt2.Pt2.08 {{expressionList}} }}\"/speak Avi \"{{i18n:Lance.Adopt2.Pt2.09 {{expressionList}} }}\"/pause 500/emote farmer 40/pause 200/faceDirection Avi 2/speak Avi \"{{i18n:Lance.Adopt2.Pt2.10 {{expressionList}} }}\"/pause 200/stopMusic/playSound wand/screenFlash 1/faceDirection Lance 2 true/addTemporaryActor FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 22 15 22 22 2 False Character/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 0 -50/pause 600/emote Lance 16 true/emote farmer 16/pause 500/speak Lance \"{{i18n:Lance.Adopt2.Pt2.11 {{expressionList}} }}\"/pause 200/advancedMove farmer false -1 0/pause 500/faceDirection farmer 0/emote farmer 20 true/emote Lance 20/pause 500/speak Avi \"{{i18n:Lance.Adopt2.Pt2.12 {{expressionList}} }}\"/move Avi 0 -3 0/playSound wand/screenFlash 1/warp Avi 500 500/pause 800/emote farmer 40/pause 200/advancedMove farmer false 1 0 0 -1/pause 1000/faceDirection farmer 3/pause 400/playMusic sweet/speak Lance \"{{i18n:Lance.Adopt2.Pt2.13 {{expressionList}} }}\"/pause 200/emote farmer 56/pause 500/speak Lance \"{{i18n:Lance.Adopt2.Pt2.14 {{expressionList}} }}\"/pause 500/emote farmer 20 true/emote Lance 20/pause 1200/globalFade/viewport -400 -400 true/message \"{{i18n:Lance.Adopt2.Pt2.15 {{expressionList}} }}\"/pause 500/message \"{{i18n:Lance.Adopt2.Pt2.16 {{expressionList}} }}\"/pause 1000/changeLocation FarmHouse/end dialogueWarpOut Lance \"{{i18n:Lance.Adopt2.Pt2.17 {{expressionList}} }}\""
+            }
+        },
+
+        //CHILD EVENT: FIRST CHILD CRAWLING: The baby starts to crawl around the house.
+        {
+            "LogName": "Lance First Child Crawl",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Relationship:Lance": "Married"
+            },
+            "Entries": {
+                "LEFirstCrawl/!ActiveDialogueEvent Lance_BabyCrawl1/e LECrawlingBaby/O Lance": "continue/30 16/farmer 25 16 1 Lance 32 16 3/makeInvisible 25 14 8 6/addTemporaryActor FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 22 16 31 16 1 False Character/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} -70 5/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 28/ignoreCollisions farmer/skippable/pause 500/move farmer 2 0 1/emote Lance 20/pause 400/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Baby1Crawl.01 {{expressionList}} }}\"/pause 200/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 30/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 31/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 28/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 30/pause 500/emote farmer 16/pause 500/emote Lance 56/pause 500/speak Lance \"{{i18n:Lance.Baby1Crawl.02 {{expressionList}} }}\"/pause 500/pause 200/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 30/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 31/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 28/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 4 0/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 30/pause 300/emote FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 20/pause 200/speak Lance \"{{i18n:Lance.Baby1Crawl.03 {{expressionList}} }}\"/pause 200/emote Lance 20/pause 500/emote farmer 32/pause 500/move farmer 3 0 1/pause 500/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 32/pause 75/showframe FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 36/pause 200/emote FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 20/pause 300/emote farmer 56/showFrame FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} 42/animate FakeBaby{{BabyColourEvent}}{{Baby1GenderEvent}} false true 200 44 44 44 45 44 44 44 46/pause 200/speak Lance \"{{i18n:Lance.Baby1Crawl.04 {{expressionList}} }}\"/pause 400/speak Lance \"{{i18n:Lance.Baby1Crawl.05 {{expressionList}} }}\"/pause 200/emote farmer 32/pause 500/stopMusic/speak Lance \"{{i18n:Lance.Baby1Crawl.06 {{expressionList}} }}\"/pause 200/emote farmer 28/pause 600/speak Lance \"{{i18n:Lance.Baby1Crawl.07 {{expressionList}} }}\"/playMusic sweet/pause 200/emote farmer 32/pause 500/emote Lance 40/pause 500/speak Lance \"{{i18n:Lance.Baby1Crawl.08 {{expressionList}} }}\"/emote farmer 20 true/emote Lance 20/pause 600/speak Lance \"{{i18n:Lance.Baby1Crawl.09 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/pause 1000/end dialogue Lance \"{{i18n:Lance.Baby1Crawl.10 {{expressionList}} }}\""
+            }
+        },
+        //CHILD EVENT: FIRST CHILD WALKING - First child
+
+        {
+            "LogName": "Lance First Child Walk",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Relationship:Lance": "Married",
+            },
+            "Entries": {
+                "LEFirstWalk/O Lance/e LEWalkingBaby/!ActiveDialogueEvent Lance_BabyWalk1": "continue/33 16/farmer 35 14 2 Lance 34 14 2 Toddler{{Baby1Gender}}{{BabyColour}} 34 17 0/positionOffset farmer -15 0/addConversationTopic Lance_ChildGrowUp1 144/ignoreCollisions farmer/skippable/makeInvisible 19 4 4 4/pause 1250/emote Lance 60/pause 400/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.01 {{expressionList}} }}\"/pause 200/emote Toddler{{Baby1Gender}}{{BabyColour}} 60/pause 600/showframe Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 9/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 10/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 11/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 9/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 500/emote farmer 20/pause 500/emote Lance 56/pause 500/emote Toddler{{Baby1Gender}}{{BabyColour}} 56/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.02 {{expressionList}} }}\"/pause 500/showframe Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 9/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 10/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showframe Toddler{{Baby1Gender}}{{BabyColour}} 11/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 85/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -5/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 9/pause 100/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -6/showFrame Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 300/pause 200/faceDirection farmer 3 true/playSound dwop/showFrame Lance 21/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -10/pause 20/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -10/pause 20/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -10/pause 20/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} 0 -10/shake Lance 200/emote Toddler{{Baby1Gender}}{{BabyColour}} 20/emote farmer 56/pause 1500/speak Lance \"{{i18n:Lance.Child1.Walk.03 {{expressionList}} }}\"/pause 400/emote Lance 20/pause 500/showFrame Lance 4/faceDirection Lance 1 true/faceDirection Toddler{{Baby1Gender}}{{BabyColour}} 1/pause 200/emote Toddler{{Baby1Gender}}{{BabyColour}} 20/pause 300/emote farmer 20/pause 200/speak Lance \"{{i18n:Lance.Child1{{Baby1Gender}}.Walk.04 {{expressionList}} }}\"/stopMusic/pause 400/shake Lance 500/pause 1000/faceDirection Toddler{{Baby1Gender}}{{BabyColour}} 0/emote Lance 28/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.05 {{expressionList}} }}\"/playMusic sweet/pause 200/emote farmer 16/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.06 {{expressionList}} }}\"/pause 600/emote Toddler{{Baby1Gender}}{{BabyColour}} 28/pause 500/faceDirection Lance 2/pause 300/speak Lance \"{{i18n:Lance.Child1.Walk.07 {{expressionList}} }}\"/pause 200/emote Toddler{{Baby1Gender}}{{BabyColour}} 8/pause 500/emote Lance 20/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.08 {{expressionList}} }}\"/pause 500/emote Toddler{{Baby1Gender}}{{BabyColour}} 20/pause 500/emote farmer 32/pause 200/faceDirection Lance 1/pause 500/speak Lance \"{{i18n:Lance.Child1.Walk.09 {{expressionList}} }}\"/pause 500/emote Lance 20 true/emote farmer 20/pause 800/positionOffset farmer -3 10/pause 10/playSound pickUpItem/faceDirection farmer 3/showFrame farmer 101 true/animate Lance false true 500 28/pause 1500/globalFade/viewport -1000 -1000/stopAnimation Lance 4/positionOffset farmer 10 10/showFrame farmer 6/faceDirection farmer 3/pause 1000/speak Lance \"{{i18n:Lance.Child1.Walk.10 {{expressionList}} }}\"/pause 1000/end dialogue Lance \"{{i18n:Lance.Child1{{Baby1Gender}}.Walk.11 {{expressionList}} }}\""
+            }
+        },
+        //CHILD EVENT: SECOND CHILD CRAWLING: The baby starts to crawl around the house.
+
+        {
+            "LogName": "Lance Second Child Crawl",
+            "Action": "EditData",
+            "Target": "data/events/{{FarmHouse}}",
+            "When": {
+                "Relationship:Lance": "Married",
+            },
+            "Entries": {
+                "LESecondCrawl/O Lance/!ActiveDialogueEvent Lance_BabyCrawl2/e LECrawlingBaby2": "continue/30 16/farmer 25 16 1 Lance 32 16 3/makeInvisible 25 14 8 6/addTemporaryActor FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 22 16 31 16 1 False Character/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} -70 5/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 28/makeInvisible 28 24 7 1/ignoreCollisions farmer/skippable/pause 500/move farmer 2 0 1/emote Lance 20/pause 400/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.01 {{expressionList}} }}\"/pause 200/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 30/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 31/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 28/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 30/pause 500/emote farmer 16/pause 500/emote Lance 56/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.02 {{expressionList}} }}\"/pause 500/pause 200/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 30/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 31/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 28/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 29/pause 125/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 3 0/pause 100/positionOffset FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 4 0/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 30/pause 300/emote FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 20/pause 200/speak Lance \"{{i18n:Lance.Baby2Crawl.03 {{expressionList}} }}\"/pause 200/emote Lance 20/pause 500/emote farmer 32/pause 500/move farmer 3 0 1/pause 500/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 32/pause 75/showframe FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 36/pause 200/emote FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 20/pause 300/emote farmer 56/showFrame FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} 42/animate FakeBaby{{BabyColour2Event}}{{Baby2GenderEvent}} false true 200 44 44 44 45 44 44 44 46/pause 200/speak Lance \"{{i18n:Lance.Baby2Crawl.04 {{expressionList}} }}\"/pause 400/speak Lance \"{{i18n:Lance.Baby2Crawl.05 {{expressionList}} }}\"/pause 500/stopMusic/emote Lance 40/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.06 {{expressionList}} }}\"/pause 200/emote farmer 8/pause 600/speak Lance \"{{i18n:Lance.Baby2Crawl.07 {{expressionList}} }}\"/playMusic sweet/pause 200/pause 500/emote Lance 40/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.08 {{expressionList}} }}\"/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.09 {{expressionList}} }}\"/pause 400/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Baby2Crawl.10 {{expressionList}} }}\"/emote farmer 20 true/emote Lance 20/pause 600/speak Lance \"{{i18n:Lance.Baby2Crawl.11 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/pause 1000/end dialogue Lance \"{{i18n:Lance.Baby2Crawl.12 {{expressionList}} }}\""
+            }
+        },
+        {
+            "LogName": "Lance Second Child Walk",
+            "Action": "EditData",
+            "When": {
+                "Relationship:Lance": "Married",
+            },
+            "Target": "data/events/{{FarmHouse}}",
+            "Entries": {
+                "LESecondWalk/!ActiveDialogueEvent Lance_BabyWalk2/e LEWalkingBaby2/O Lance": "continue/33 16/farmer 35 14 2 Lance 34 14 2/addTemporaryActor Toddler{{Baby2Gender}}{{BabyColour2}} 16 32 34 17 0 false/addTemporaryActor Toddler{{Baby1Gender}}{{BabyColour}} 16 32 35 15 2 false/ignoreCollisions farmer/positionOffset farmer -15 0/makeInvisible 33 14 4 5/addConversationTopic Lance_ChildGrowUp2 144/positionOffset Toddler{{Baby1Gender}}{{BabyColour}} -20 -40/skippable/pause 1250/emote Lance 60/pause 400/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.01 {{expressionList}} }}\"/pause 200/emote Toddler{{Baby2Gender}}{{BabyColour2}} 60/pause 200/emote Toddler{{Baby1Gender}}{{BabyColour}} 32/pause 500/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 9/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 10/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 11/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 9/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 500/emote farmer 56 true/emote Lance 56/pause 500/emote Toddler{{Baby2Gender}}{{BabyColour2}} 32/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.02 {{expressionList}} }}\"/pause 500/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 9/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 10/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showframe Toddler{{Baby2Gender}}{{BabyColour2}} 11/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 85/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -5/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 9/pause 100/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -6/showFrame Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 500/playSound dwop/showFrame Lance 21/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -10/pause 20/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -10/pause 20/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -10/pause 20/positionOffset Toddler{{Baby2Gender}}{{BabyColour2}} 0 -10/faceDirection Toddler{{Baby1Gender}}{{BabyColour}} 3 true/faceDirection farmer 3 true/emote Toddler{{Baby2Gender}}{{BabyColour2}} 20/shake Lance 200/pause 300/emote Toddler{{Baby1Gender}}{{BabyColour}} 32/pause 1500/speak Lance \"{{i18n:Lance.Child2{{Baby2Gender}}.Walk.03 {{expressionList}} }}\"/pause 400/emote Lance 20/pause 500/emote farmer 32/showFrame Lance 4/faceDirection Lance 1/pause 500/faceDirection Toddler{{Baby2Gender}}{{BabyColour2}} 1/pause 200/emote Toddler{{Baby2Gender}}{{BabyColour2}} 32 true/emote Toddler{{Baby1Gender}}{{BabyColour}} 32/pause 200/speak Lance \"{{i18n:Lance.Child2.{{TypeChildCall}}.Walk.04 {{expressionList}} }}\"/stopMusic/pause 400/shake Lance 500/pause 1000/faceDirection Toddler{{Baby2Gender}}{{BabyColour2}} 0/faceDirection Toddler{{Baby1Gender}}{{BabyColour}} 0/emote Lance 28/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.05 {{expressionList}} }}\"/playMusic musicboxsong/pause 200/emote farmer 32/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.06 {{expressionList}} }}\"/pause 600/emote Toddler{{Baby1Gender}}{{BabyColour}} 16/emote Toddler{{Baby2Gender}}{{BabyColour2}} 28/pause 500/faceDirection Lance 2/pause 300/speak Lance \"{{i18n:Lance.Child2.Walk.07 {{expressionList}} }}\"/pause 200/emote Toddler{{Baby2Gender}}{{BabyColour2}} 8/pause 500/emote Lance 20/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.08 {{expressionList}} }}\"/pause 500/emote Toddler{{Baby2Gender}}{{BabyColour2}} 20 true/emote Toddler{{Baby1Gender}}{{BabyColour}} 20/pause 500/emote farmer 32/pause 200/faceDirection Lance 1 true/faceDirection Toddler{{Baby2Gender}}{{BabyColour2}} 1/pause 500/speak Lance \"{{i18n:Lance.Child2.Walk.09 {{expressionList}} }}\"/pause 500/emote Lance 20 true/emote farmer 20/pause 800/positionOffset farmer -3 10/pause 10/playSound pickUpItem/showFrame farmer 101 true/animate Lance false true 500 28/pause 1500/globalFade/viewport -1000 -1000/stopAnimation Lance 4/positionOffset farmer 10 10/showFrame farmer 6/faceDirection farmer 3/pause 1000/speak Lance \"{{i18n:Lance.Child2.Walk.10 {{expressionList}} }}\"/pause 1000/end dialogue Lance \"{{i18n:Lance.Child2.Walk.11 {{expressionList}} }}\""
+            }
+        },
+    ]
+}

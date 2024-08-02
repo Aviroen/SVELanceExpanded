@@ -1,0 +1,727 @@
+{
+    "Changes": [
+        ////////////////CHANGED HEART EVENTS STARTING HERE
+
+        { //Lance introduction EVENT - The Caldera
+            "LogName": "Heart Event - 0",
+            "Action": "EditData",
+            "Target": "data/events/caldera",
+            "When": {
+
+            },
+            "Entries": {
+                "LECaldera/": "continue/-500 -500/farmer 22 37 0 Lance -100 -100 2/skippable/pause 1250/showFrame Lance 0 true/viewport 22 32 true/viewport move 0 -1 4000 true/move farmer 0 -8 0/pause 650/faceDirection farmer 1/pause 1250/faceDirection farmer 0/faceDirection farmer 3/pause 1100/faceDirection farmer 0/pause 600/move farmer 0 -3 0 true/viewport move 0 -1 3000 true/pause 1500/warp Lance 22 22/screenFlash 1/playSound wand/speak Lance \"{{i18n:Lance.0Heart.02 {{expressionList}} }}\"/pause 1000/move Lance 0 2 2/pause 300/speak Lance \"{{i18n:Lance.0Heart.03 {{expressionList}} }}\"/pause 500/showFrame Lance 1 true/warp Lance -100 -100/screenFlash 1/playSound wand/message \"{{i18n:Lance.0Heart.04}}\"/pause 400/startJittering/globalFade/viewport -1000 -1000/pause 50/stopJittering/end position 22 25"
+            }
+        },
+
+        { //Lance 0 heart EVENT - An Introduction
+            "LogName": "Heart Event - 0",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "When": {
+                "HasFlag": "Island_FirstParrot",
+            },
+            "Entries": {
+                "LEIntroduction/e LECaldera/": "continue/-500 -500/farmer -50 -50 2 Lance -100 -100 0/skippable/pause 1250/emote farmer 16/pause 100/speak Lance \"{{i18n:Lance.0heart.05 {{expressionList}} }}\"/pause 750/faceDirection Lance 3 true/pause 900/faceDirection Lance 0 true/pause 275/faceDirection Lance 1 true/pause 825/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance.0heart.06 {{expressionList}} }}\"/pause 750/emote farmer 8/pause 250/speak Lance \"{{i18n:Lance.0heart.07 {{expressionList}} }}\"/pause 900/speak Lance \"{{i18n:Lance.0heart.08 {{expressionList}} }}[FlashShifter.StardewValleyExpandedCP_Lance's_Schedule]\"/pause 350/emote farmer 32/pause 250/speak Lance \"{{i18n:Lance.0Heart.09 {{expressionList}} }}\"/pause 400/addConversationTopic \"{{i18n:Lance.0heart.011 {{expressionList}} }}\" 0/end dialogue Lance \"{{i18n:Lance.0Heart.10 {{expressionList}} }}\""
+            }
+        },
+
+        { //Lance 1 heart EVENT - Lance's Predicament
+            "LogName": "Heart Event - 1",
+            "Action": "EditData",
+            "Target": "data/events/Custom_AdventurerSummit",
+            "Entries": {
+                "LEPredicament/e LEIntroduction/f Lance 250/": "continue/-500 -500/farmer 38 26 2 Lance 37 18 3/skippable/pause 1250/showFrame Lance 19/viewport 38 22 true/viewport move 0 -1 4000 true/move farmer 0 -8 0/pause 650/faceDirection farmer 3/pause 1250/emote farmer 8/pause 1000/speak Lance \"{{i18n:Lance.1Heart.01 {{expressionList}}}}\"/pause 300/emote farmer 8/emote farmer 16/shake Lance 200/speak Lance \"{{i18n:Lance.1Heart.02 {{expressionList}}}}\"/pause 600/showFrame Lance 4/faceDirection Lance 1/emote Lance 28/speak Lance \"{{i18n:Lance.1Heart.03 {{expressionList}} }}\"/pause 600/emote Lance 12/shake Lance 50/faceDirection Lance 3/message \"{{i18n:Lance.1Heart.04 {{expressionList}}}}\"/emote Lance 12/pause 300/jump Lance 3/emote Lance 16/message \"{{i18n:Lance.1Heart.05 {{expressionList}}}}\"/faceDirection Lance 1/pause 600/speak Lance \"{{i18n:Lance.1Heart.06 {{expressionList}}}}\"/message \"{{i18n:Lance.1Heart.07 {{expressionList}}}}\"/pause 300/speak Lance \"{{i18n:Lance.1Heart.08 {{expressionList}}}}\"/jump Lance 2/emote Lance 20/speak Lance \"{{i18n:Lance.1Heart.09 {{expressionList}}}}\"/faceDirection Lance 3/pause 50/faceDirection Lance 1/message \"{{i18n:Lance.1Heart.10 {{expressionList}}}}\"/pause 200/speak Lance \"{{i18n:Lance.1Heart.11 {{expressionList}}}}\"/end",
+            }
+        },
+
+        {
+            //Lance 2 heart event (part 1) - 'The Highlands'        <<ID tagged by quest
+            "Action": "EditData",
+            "Target": "data/events/Custom_AdventurerSummit",
+            "Entries": {
+                "LEHighlandsBoat/e 65360184/": "continue/-50 -50/farmer 51 19 2 MarlonFay 52 30 1 Lance -40 -40 3/positionOffset MarlonFay 0 5 true/skippable/viewport 51 30 clamp true/move farmer 0 9 2/pause 1000/faceDirection MarlonFay 0 true/pause 850/speak MarlonFay \"{{i18n:Lance2heart1.01 {{expressionList}}}}\"/pause 500/jump farmer/pause 1000/speak MarlonFay \"{{i18n:Lance2heart1.02 {{expressionList}}}}\"/pause 500/faceDirection MarlonFay 1 true/pause 500/move farmer 0 1 1/move farmer 1 0 1 true/globalFade/viewport -1000 -1000/changeLocation Custom_Highlands/warp farmer 130 143/faceDirection farmer 3 true/warp MarlonFay 129 143/faceDirection MarlonFay 1 true/warp Lance 120 111/pause 500/viewport 0 143 clamp true/viewport move 2 0 8000 true/pause 5500/globalFade/viewport -1000 -1000/pause 500/viewport 95 143 clamp true/viewport move -2 0 8000 true/pause 5500/globalFade/viewport -1000 -1000/pause 1000/viewport 129 144 clamp true/pause 1500/speak MarlonFay \"{{i18n:Lance2heart1.03 {{expressionList}}}}\"/pause 500/emote farmer 32/pause 300/speak MarlonFay \"{{i18n:Lance2heart1.04 {{expressionList}}}}\"/pause 750/faceDirection MarlonFay 0 true/pause 500/viewport move 0 -1 6000 true/move MarlonFay 0 -13 0 true/pause 500/move farmer -1 0 0 true/pause 500/move farmer 0 -11 0 true/pause 3000/globalFade/viewport -1000 -1000/pause 500/warp MarlonFay 125 113/warp farmer 128 113/viewport 125 112 true/move MarlonFay 0 -3 3 true/move farmer -3 0 0 true/pause 1500/move farmer 0 -1 3 true/pause 1000/speak Lance \"{{i18n:Lance2heart1.05 {{expressionList}}}}\"/pause 500/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/speak Lance \"{{i18n:Lance2heart1.06 {{expressionList}}}}\"/pause 500/speak MarlonFay \"{{i18n:Lance2heart1.07 {{expressionList}}}}\"/pause 500/speak Lance \"{{i18n:Lance2heart1.08 {{expressionList}}}}\"/pause 650/speed Lance 1/move Lance 2 0 1 true/viewport move 1 0 2000 true/pause 2500/shake Lance 500/pause 300/speak Lance \"{{i18n:Lance2heart1.09 {{expressionList}}}}\"/pause 500/globalFade/viewport -1000 -1000/changeLocation Custom_HighlandsOutpost/warp Lance 7 5/faceDirection Lance 2 true/warp MarlonFay 7 7/faceDirection MarlonFay 0 true/warp farmer 8 7/faceDirection farmer 0 true/positionOffset Lance 32 -6 true/stopMusic/playSound doorClose/pause 500/playSound doorClose/pause 350/playMusic doorClose/pause 250/playMusic FlashShifter.StardewValleyExpandedCP_SDV_FireplaceMusic/pause 1250/positionOffset farmer 25 15 true/viewport 7 7 true/pause 1000/speak Lance \"{{i18n:Lance2heart1.10 {{expressionList}}}}\"/pause 500/emote Lance 40/pause 300/speak Lance \"{{i18n:Lance2heart1.11 {{expressionList}}}}\"/pause 500/shake MarlonFay 400/pause 200/speak MarlonFay \"{{i18n:Lance2heart1.12 {{expressionList}}}}\"/pause 500/faceDirection farmer 3 true/pause 750/showFrame farmer 97 true/pause 1000/faceDirection farmer 3 true/pause 500/faceDirection farmer 0 true/pause 500/speak Lance \"{{i18n:Lance2heart1.13 {{expressionList}}}}\"/pause 300/globalFade/viewport -1000 -1000/stopMusic/pause 1000/message \"{{i18n:Lance2heart1.14 {{expressionList}}}}\"/pause 1000/message \"{{i18n:Lance2heart1.15 {{expressionList}}}}\"/pause 500/end dialogue MarlonFay \"{{i18n:Lance2heart1.16 {{expressionList}}}}\"",
+            },
+        },
+        { //Lance 2 heart pt2 EVENT - Highlands Introduction
+            "LogName": "Heart Event - 2.2",
+            "Action": "EditData",
+            "Target": "data/events/Custom_Highlands",
+            "Entries": {
+                "LEHighlandsIntro/e LEHighlandsBoat/f Lance 500/": "continue/-500 -500/farmer 129 121 0 Lance 129 106 0/skippable/addMailReceived lanceMonsterCrops/pause 750/viewport 129 111 clamp true/move farmer 0 -7 0/pause 750/faceDirection Lance 1 true/pause 250/faceDirection Lance 2 true/pause 500/move Lance 0 3 2/positionOffset Lance 0 1 true/pause 300/shake Lance 400/pause 200/speak Lance \"{{i18n:Lance.2Heart.01 {{expressionList}}}}\"/pause 400/emote farmer 32/pause 300/move farmer 0 -1 0/pause 500/warp farmer -20 -20/playSound doorClose/globalFade/viewport -1000 -1000/warp farmer 129 107/faceDirection farmer 3 true/warp Lance 127 108/faceDirection Lance 1 true/pause 500/viewport 129 108 true/pause 1000/speak Lance \"{{i18n:Lance.2Heart.02 {{expressionList}}}}\"/pause 100/emote farmer 32/pause 500/faceDirection Lance 2 true/pause 250/faceDirection Lance 3 true/pause 500/move farmer -2 0 3 true/viewport move -1 0 5000 true/pause 2500/globalFade/viewport -1000 -1000/pause 1000/globalFade/viewport -1000 -1000/positionOffset farmer 0 -50 true/viewport 128 108 true/pause 1500/faceDirection Lance 0 true/pause 550/faceDirection farmer 2 true/pause 250/message \"{{i18n:Lance.2Heart.03 {{expressionList}}}}\"/pause 500/speak Lance \"{{i18n:Lance.2Heart.04 {{expressionList}}}}\"/pause 500/jump farmer/pause 500/message \"{{i18n:Lance.2Heart.05 {{expressionList}}}}\"/pause 500/showFrame Lance 12 true/pause 500/showFrame Lance 16 true/playSound dwop/pause 1000/showFrame Lance 17 true/pause 300/showFrame Lance 18 true/pause 650/shake Lance 1000/pause 400/playSound healSound/glow 0 0 200/pause 200/startJittering/pause 1000/stopJittering/pause 300/showFrame Lance 17 true/pause 250/showFrame Lance 16 true/pause 300/showFrame Lance 12 true/playSound dwop/pause 600/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance.2Heart.06 {{expressionList}}}}\"/pause 600/speed Lance 1/move Lance 0 -1 0/pause 500/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame Lance 9 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/showFrame farmer 1 true/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 50/positionOffset Lance 0 -2 true/pause 750/screenFlash 1/playSound wand/warp farmer -50 -50/warp Lance -49 -49/showFrame Lance 0 true/showFrame farmer 0 true/pause 2000/globalFade/viewport -1000 -1000/playMusic Cloth/warp Lance 30 129/warp farmer 29 129/positionOffset Lance 20 -20 true/positionOffset farmer 14 -16 true/globalFade/viewport -1000 -1000/halt/pause 500/warp farmer 109 66/faceDirection farmer 1 true/warp Lance 109 67/faceDirection Lance 1 true/positionOffset Lance 20 15 true/globalFade/viewport -1000 -1000/warp farmer 105 13/faceDirection farmer 0 true/warp Lance 107 13/faceDirection Lance 0 true/positionOffset Lance 0 -20 true/viewport 106 13 clamp true/pause 3000/faceDirection Lance 3 true/pause 1000/faceDirection farmer 1 true/pause 1000/emote Lance 32/message \"{{i18n:Lance.2Heart.07 {{expressionList}}}}\"/pause 600/speak Lance \"{{i18n:Lance.2Heart.08 {{expressionList}}}}\" /pause 400/faceDirection Lance 0 true/pause 1000/faceDirection farmer 0 true/pause 1000/globalFade/viewport -1000 -1000/stopMusic/changeLocation Custom_HighlandsCavern/playMusic Upper_Ambient/warp Lance 46 20/warp farmer 46 22/faceDirection Lance 3 true/faceDirection farmer 3 true/makeInvisible 46 20 2 3/viewport 44 124 true/viewport move 2 -2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 0 0 clamp true/viewport move 2 2 6000 true/pause 3500/globalFade/viewport -1000 -1000/viewport 42 21 true/viewport move 1 0 4000 true/pause 5000/message \"{{i18n:Lance.2Heart.09 {{expressionList}}}}\"/pause 300/speak Lance \"{{i18n:Lance.2Heart.10 {{expressionList}}}}\"/pause 300/speak Lance \"{{i18n:Lance.2Heart.11 {{expressionList}}}}\"/pause 1000/faceDirection farmer 0 true/pause 1000/faceDirection Lance 2 true/pause 800/emote farmer 40/pause 250/shake Lance 500/pause 150/speak Lance \"{{i18n:Lance.2Heart.12 {{expressionList}}}}\"/pause 750/playSound healSound/glow 123 63 0/pause 1000/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.2Heart.13 {{expressionList}}}}\"/pause 500/playSound shadowpeep/pause 400/playSound shadowpeep/pause 125/faceDirection farmer 1 true/pause 300/playSound shadowpeep/pause 100/showFrame Lance 43 true/pause 300/playSound shadowpeep/pause 400/faceDirection farmer 2 true/pause 100/playSound shadowpeep/pause 400/playSound shadowpeep/pause 300/playSound shadowpeep/showFrame Lance 0 true/pause 300/speak Lance \"{{i18n:Lance.2Heart.14 {{expressionList}}}}\"/playSound shadowpeep/pause 350/playSound shadowpeep/pause 350/faceDirection farmer 1 true/pause 250/speed Lance 1/move Lance 0 2 2 true/pause 300/faceDirection farmer 0 true/pause 200/playSound shadowpeep/pause 500/playSound wand/screenFlash 1/warp farmer -30 -30/warp Lance -30 -30/pause 350/playSound shadowpeep/pause 300/playSound shadowpeep/globalFade/viewport -1000 -1000/stopMusic/pause 1000/speak Lance \"{{i18n:Lance.2Heart.15 {{expressionList}}}}\"/pause 1000/end",
+            }
+        },
+        { //Lance 2 heart pt3 EVENT - Lance's Appreciation
+            "LogName": "Heart Event - 2.3",
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasFlag": "lanceMonsterCrops",
+            },
+            "Entries": {
+                "LEMonsterCrops/e LEHighlandsIntro/u 3 6 7 8 9 12 14 15 17 20 23 26 28/": "continue/-1000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance 64 17/warp farmer 64 15/faceDirection Lance 0/fade/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/speak Lance \"{{i18n:Lance.2Heart.01.a.1 {{expressionList}} }}\"/friendship Lance 50/end",
+            }
+        },
+        { //Lance 2 heart pt4 EVENT - Lance's Reward
+            "LogName": "Heart Event - 2.4",
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasFlag": "lanceMonsterCrops",
+            },
+            "Entries": {
+                "LEMonsterCropsReward/e LEMonsterCrops/": "continue/-1000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance 64 17/warp farmer 64 15/faceDirection Lance 0/fade/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/speak Lance \"{{i18n:Lance.2Heart.01.b.1 {{expressionList}} }}\"/pause 1000/question fork0 \"{{i18n:Lance.2Heart.01.response.q {{expressionList}} }}#{{i18n:Lance.2Heart.01.response.y {{expressionList}} }}#{{i18n:Lance.2Heart.01.response.n {{expressionList}} }}#\"/fork yes/pause 1000/emote Lance 28/speak Lance \"{{i18n:Lance.2Heart.01.b.2 {{expressionList}}}}\"/end",
+                "yes": "globalFade/viewport -1000 -1000/pause 2000/speak Lance \"{{i18n:Lance.2Heart.01.yes.1 {{expressionList}} }}\"/globalFade/playSound wand/changeLocation custom_HighlandsOutpost/viewport 7 9 clamp/warp farmer 6 9/warp Lance 7 9/pause 1000/move Lance 0 -1 0/move Lance 3 0 1/pause 1000/emote Lance 56/move farmer 0 -1 0/move farmer 3 0 1/emote farmer 8/pause 500/speak Lance \"{{i18n:Lance.2Heart.01.yes.2 {{expressionList}} }}\"/pause 500/move Lance 0 0 2/pause 50/move Lance 0 0 3/pause 300/emote Lance 56/speak Lance \"{{i18n:Lance.2Heart.01.yes.3 {{expressionList}} }}\"/shake Lance 50/showFrame Lance 15/playSound pickUpItem/pause 300/showFrame farmer 89/playSound pickUpItem/showFrame Lance 12/faceDirection farmer 1/startJittering/pause 50/stopJittering/emote farmer 20/speak Lance \"{{i18n:Lance.2Heart.01.yes.4 {{expressionList}} }}\"/pause 500/emote Lance 56/pause 300/friendship Lance 50/end",
+            }
+        },
+
+        { //Lance 3 pt1 heart EVENT - Highlands Predicament WRITE QUEST ABOUT SAVING DWARF 100 friendship for going with him bc why wouldn't you???
+            "LogName": "Heart Event - 3.1",
+            "Action": "EditData",
+            "Target": "data/events/Custom_Highlands",
+            "Entries": {
+                "LEHighlandsPredicament/e LEHighlandsIntro/f Lance 750/": "continue/-1000 -1000/farmer -100 -100 2 Lance 129 113 0/skippable/playSound doorClose/viewport 129 111 clamp true/emote Lance 40/warp farmer 129 124/move farmer 0 -9 0/pause 50/emote farmer 8/faceDirection Lance 2/pause 50/emote Lance 16/speak Lance \"{{i18n:Lance.3Heart.01 {{expressionList}} }}\"/pause 500/speak Lance \"{{i18n:Lance.3Heart.02 {{expressionList}} }}\"/pause 500/emote farmer 56/pause 500/quickQuestion {{i18n:Lance.3Heart.03.q}}(break)switchEvent LEHighlandsPredicament_handle(break)switchEvent LEHighlandsPredicament_offer(break)switchEvent LEHighlandsPredicament_together",
+                "LEHighlandsPredicament_handle": "pause 200/speak Lance \"{{i18n:Lance.3Heart.03.h.1 {{expressionList}} }}\"/pause 1000/emote farmer 40/message \"{{i18n:Lance.3Heart.03.h.2 {{expressionList}} }}\"/pause 300/emote Lance 16/jump Lance 2/pause 300/speak Lance \"{{i18n:Lance.3Heart.03.h.3 {{expressionList}} }}\"/pause 100/faceDirection Lance 1/emote Lance 40/pause 100/emote Lance 28/pause 200/mail Mail.3Heart.handle/end",
+                "LEHighlandsPredicament_offer": "pause 200/speak Lance \"{{i18n:Lance.3Heart.03.od.1 {{expressionList}} }}\"/pause 1000/emote farmer 40/message \"{{i18n:Lance.3Heart.03.od.2 {{expressionList}} }}\"/pause 300/emote Lance 16/jump Lance 2/pause 300/speak Lance \"{{i18n:Lance.3Heart.03.od.3 {{expressionList}} }}\"/pause 100/faceDirection Lance 1/emote Lance 40/pause 100/emote Lance 28/pause 200/mail Mail.3Heart.offer/end",
+                "LEHighlandsPredicament_together": "pause 200/speak Lance \"{{i18n:Lance.3Heart.03.tg.1 {{expressionList}} }}\"/pause 200/faceDirection Lance 1/shake Lance 50/pause 200/emote Lance 16/faceDirection Lance 3/pause 1000/emote farmer 40/message \"{{i18n:Lance.3Heart.03.tg.2 {{expressionList}} }}\"/pause 300/emote Lance 16/jump Lance 2/pause 300/speak Lance \"{{i18n:Lance.3Heart.03.tg.3 {{expressionList}} }}\"/faceDirection Lance 2/move farmer 0 -1 0/pause 200/shake Lance 100/startJittering/globalFade/viewport -1000 -1000/pause 2000/playSound wand/stopJittering/playSound wand/ignoreCollisions Lance/ignoreCollisions farmer/viewport 49 42 clamp/warp Lance 50 37/warp farmer 49 37/faceDirection Lance 3/emote Lance 40/faceDirection farmer 1/emote farmer 56/pause 200/faceDirection Lance 0/faceDirection farmer 0/globalFade/viewport -1000 -1000/playSound dwop/pause 2000/playSound dwop/changeLocation custom_HighlandsCavern/makeInvisible 67 117 64 64/viewport 67 117 clamp/warp Lance 67 117/warp farmer 66 117/move Lance 0 -9 0/move farmer 0 -9 0/globalFade/viewport -1000 -1000/playSound dwop/pause 2000/playSound dwop/changeLocation custom_HighlandsCavernPrison/viewport 21 23 clamp/warp Lance 21 23/warp farmer 20 23/move Lance 0 -3 0/emote Lance 16/move farmer 0 -3 0/emote farmer 16/pause 300/playSound dwop/speak Lance \"{{i18n:Lance.3Heart.03.tg.4 {{expressionList}} }}\"/pause 200/speak Dwarf \"{{i18n:Lance.3Heart.03.tg.5 {{expressionList}} }}\"/pause 200/playSound dwop/speak Lance \"{{i18n:Lance.3Heart.03.tg.6 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.3Heart.03.tg.7 {{expressionList}} }}\"/pause 300/move Lance 0 -1 0/shake Lance 25/speak Lance \"{{i18n:Lance.3Heart.03.tg.8 {{expressionList}} }}\"/pause 300/playSound dwop/jump Lance 2/globalFade/viewport -1000 -1000/playSound wand/pause 400/message \"{{i18n:Lance.3Heart.03.tg.9 {{expressionList}} }}\"/globalFade/friendship Lance 100/changeLocation AdventureGuild/viewport 6 20 clamp/warp Lance 6 18/warp farmer 6 19/move Lance 0 -5 0/move farmer 0 -5 0/pause 400/emote Lance 40/faceDirection Lance 2/speak Lance \"{{i18n:Lance.3Heart.03.tg.10 {{expressionList}} }}\"/end",
+            }
+        },
+
+        /*
+//meeting the dwarf WILL CODE THIS ONE LAST I DO NOT CARE ABOUT IT
+		{ //Lance 3 pt2 heart EVENT - MEETING DWARF
+		"LogName": "Heart Event - 3.2",
+			"Action": "EditData",
+			"Target": "data/events/Custom_Highlands",
+			"When": {
+				"HasSeenEvent": "252653007",
+			},
+			"Entries": {
+				"252653008/": ""
+			}
+		},
+*/
+
+        { //Blink Relic image load
+            "Action": "Load",
+            "Priority": "Low",
+            "Target": "Mods/Aviroen.LanceExpanded/BlinkRelic",
+            "FromFile": "Assets/Characters/BlinkRelic.png"
+        },
+        {
+            //changes joja soda machine into a blink relic.
+            "Action": "EditImage",
+            "Target": "Tilesheets/Craftables",
+            "FromFile": "Assets/Characters/BlinkRelic.png",
+            "ToArea": {
+                "X": 80,
+                "Y": 448,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "IslandWest",
+                "HasFlag |contains=Island_UpgradeHouse": true,
+                "HasFlag |contains=Island_Resort": true,
+                "HasFlag |contains=Island_UpgradeBridge": true,
+                "Hearts:Lance": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14",
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                "117": {
+                    "Name": "Blink Relic",
+                    "DisplayName": "Blink Relic",
+                    "Description": "The Joja soda machine mysteriously formed into a Blink Relic",
+                    "Price": 2500,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "Mods\\Aviroen.LanceExpanded\\BlinkRelic",
+                    "SpriteIndex": 0,
+                }
+            },
+            "When": {
+                "LocationName": "IslandWest",
+                "HasFlag |contains=Island_UpgradeHouse": true,
+                "HasFlag |contains=Island_Resort": true,
+                "HasFlag |contains=Island_UpgradeBridge": true,
+                "Hearts:Lance": "4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14",
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Lance 4 heart EVENT - Artifacts and Mentors
+            "LogName": "4Heart Edited",
+            "Action": "EditData",
+            "Target": "data/events/islandwest",
+            "When": {
+                "HasFlag |contains=Island_UpgradeHouse": true,
+                "HasFlag |contains=Island_Resort": true,
+                "HasFlag |contains=Island_UpgradeBridge": true,
+            },
+            "Entries": {
+                "LEArtifactsMentors/e LEHighlandsPredicament/f Lance 1000/": "continue/-500 -500/farmer 80 80 2 Lance -100 -100 2/skippable/viewport 80 83 clamp/viewport move 0 1 5650/move farmer 0 7 2/pause 8000/playSound wand/warp Lance 83 87/pause 1500/speak Lance \"{{i18n:Lance.4Heart.01{{expressionList}}}}\"/pause 650/faceDirection farmer 1/pause 400/emote farmer 16/pause 800/faceDirection Lance 3/pause 750/speak Lance \"{{i18n:Lance.4Heart.02{{expressionList}}}}\"/pause 500/emote farmer 40/pause 1000/speak Lance \"{{i18n:Lance.4Heart.03{{expressionList}}}}\"/pause 1000/speed Lance 1/move Lance -1 0 3/pause 500/speak Lance \"{{i18n:Lance.4Heart.04{{expressionList}}}}\"/pause 500/emote farmer 8/pause 1000/speak Lance \"{{i18n:Lance.4Heart.05{{expressionList}}}}\"/pause 500/emote Lance 40/pause 1000/speak Lance \"{{i18n:Lance.4Heart.06{{expressionList}}}}\"/pause 500/speed Lance 1/move Lance -1 0 3/pause 500/showFrame Lance 15/shake Lance 500/pause 100/playSound dwop/pause 500/showFrame Lance 12/pause 500/faceDirection farmer 2/pause 500/showFrame farmer 57/itemAboveHead joja/pause 3300/faceDirection farmer 2/pause 700/faceDirection farmer 1/pause 1650/faceDirection Lance 2/pause 500/speak Lance \"{{i18n:Lance.4Heart.07{{expressionList}}}}\"/pause 600/faceDirection Lance 3/pause 750/shake Lance 600/pause 150/showFrame Lance 13/pause 300/showFrame Lance 16/pause 500/speak Lance \"{{i18n:Lance.4Heart.08{{expressionList}}}}\"/pause 750/showFrame Lance 17/showFrame Lance 18/pause 750/shake Lance 500/pause 500/screenFlash 2/playSound wand/warp Lance 89 94/showFrame Lance 0/positionOffset Lance 20 25/pause 1600/faceDirection farmer 2/pause 1500/showFrame farmer 3/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 88 94/viewport 90 95 clamp/faceDirection farmer 2/positionOffset farmer 0 15/pause 1500/faceDirection Lance 3/pause 750/faceDirection farmer 1/pause 500/speak Lance \"{{i18n:Lance.4Heart.09{{expressionList}}}}\"/pause 1250/faceDirection Lance 2 /pause 1000/faceDirection farmer 2/pause 1000/speak Lance \"{{i18n:Lance.4Heart.10{{expressionList}}}}\"/pause 500/globalFade/viewport 109 109 clamp/viewport move -1 0 7250/pause 5000/globalFade/viewport 0 109 clamp/viewport move 1 0 7250/pause 5000/globalFade/viewport 90 95 clamp/faceDirection farmer 3/faceDirection Lance 3/pause 3500/speak Lance \"{{i18n:Lance.4Heart.11{{expressionList}}}}\"/pause 1250/speak Lance \"{{i18n:Lance.4Heart.12{{expressionList}}}}\"/pause 650/faceDirection farmer 2/pause 250/faceDirection farmer 1/pause 600/startJittering/pause 600/stopJittering/pause 500/speak Lance \"{{i18n:Lance.4Heart.13{{expressionList}}}}\"/pause 850/showFrame Lance 13/pause 100/shake Lance 500/pause 150/showFrame Lance 16 /pause 500/showFrame Lance 17/pause 500/showFrame Lance 18/pause 500/shake Lance 400/pause 400/screenFlash 2/playSound wand/showFrame Lance 4/warp Lance 80 87/positionOffset Lance -10 -12/pause 1500/faceDirection farmer 2/pause 1500/showFrame farmer 3/pause 500/startJittering/pause 500/screenFlash 2/playSound wand/stopJittering/warp farmer 82 87/viewport 81 88 clamp/faceDirection farmer 2/pause 1200/faceDirection farmer 3/pause 650/speak Lance \"{{i18n:Lance.4Heart.14{{expressionList}}}}\"/pause 750/speed farmer 1/move farmer -1 0 3/pause 500/showFrame farmer 7/pause 100/startJittering/pause 300/playSound dwop/pause 150/stopJittering/pause 100/showFrame farmer 6 false/faceDirection farmer 3/pause 500/message \"{{i18n:Lance.4Heart.15{{expressionList}}}}\"/pause 1000/speak Lance \"{{i18n:Lance.4Heart.16{{expressionList}}}}\"/pause 750/faceDirection Lance 2/pause 650/playSound wand/warp Lance -100 -100/globalFade/viewport -1000 -1000/pause 500/end"
+            },
+        },
+        ///////////////////////////////// DEBUG THIS EVENT NEXT DUMBASS
+        { //Lance 5 heart EVENT - Camilla's Appearance
+            "LogName": "Heart Event - 5",
+            "Action": "EditData",
+            "Target": "data/events/Custom_Highlands",
+            "Entries": {
+                "LECamillaAppearance/e 7775926/f Lance 1250/": "continue/-1000 -1000/farmer -100 -100 2 Lance 129 113 0/skippable/playSound doorClose/viewport 129 111 clamp true/emote Lance 40/warp farmer 129 124/move farmer 0 -9 0/pause 50/emote farmer 4/faceDirection Lance 2/pause 50/emote Lance 16/speak Lance \"{{i18n:Lance.5Heart.01 {{expressionList}} }}\"/shake Lance 100/emote farmer 40/emote Lance 16/message \"{{i18n:Lance.5Heart.02 {{expressionList}} }}\"/pause 200/shake Lance 100/speak Lance \"{{i18n:Lance.5Heart.03 {{expressionList}} }}\"/pause 300/emote farmer 40/message \"{{i18n:Lance.5Heart.04}}\"/pause 300/shake Lance 100/textAboveHead Lance \"{{i18n:Lance.5Heart.05}}\"/pause 300/speak Lance \"{{i18n:Lance.5Heart.06 {{expressionList}} }}\"/end",
+            }
+        },
+
+        { //Lance 6 heart EVENT - Elemental War Recollection
+            "LogName": "Heart Event - 6",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "Entries": {
+                "LEWarRecollection/e LECamillaAppearance/f Lance 1500/w rainy": "continue/-1000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance 84 17/warp farmer 64 15/faceDirection Lance 2/pause 2000/playSound doorClose/pause 500/move Lance -20 0 1/emote farmer 8/pause 300/faceDirection Lance 0/emote Lance 16/pause 300/speak Lance \"{{i18n:Lance.6Heart.01 {{expressionList}}}}\"/pause 300/message \"{{i18n:Lance.6Heart.02 {{expressionList}}}}\"/speak Lance \"{{i18n:Lance.6Heart.03 {{expressionList}}}}\"/pause 300/message \"{{i18n:Lance.6Heart.04 {{expressionList}}}}\"/speak Lance \"{{i18n:Lance.6Heart.05 {{expressionList}}}}\"/pause 300/message \"{{i18n:Lance.6Heart.06 {{expressionList}}}}\"/speak Lance \"{{i18n:Lance.6Heart.07 {{expressionList}}}}\" /pause 1000/question fork0 \"{{i18n:Lance.6Heart.08.response.q {{expressionList}} }}#{{i18n:Lance.6Heart.08.response.y {{expressionList}} }}#{{i18n:Lance.6Heart.08.response.n {{expressionList}} }}#\"/fork yes/pause 1000/emote Lance 28/speak Lance \"{{i18n:Lance.6Heart.08 {{expressionList}}}}\"/message \"{{i18n:Lance.6Heart.09 {{expressionList}}}}\"/end dialogue Lance \"{{i18n:Lance.6Heart.10 {{expressionList}}}}\"",
+                "yes": "pause 200/emote Lance 40/pause 500/speak Lance \"{{i18n:Lance.6Heart.07.yes.1 {{expressionList}} }}\"/message \"{{i18n:Lance.6Heart.07.yes.2 {{expressionList}} }}\"/pause 500/speak Lance \"{{i18n:Lance.6Heart.07.yes.3 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.6Heart.07.yes.4 {{expressionList}} }}\"/pause 200/speak Lance \"{{i18n:Lance.6Heart.07.yes.5 {{expressionList}} }}\"/message \"{{i18n:Lance.6Heart.07.yes.6 {{expressionList}} }}\"/pause 600/speak Lance \"{{i18n:Lance.6Heart.07.yes.7 {{expressionList}} }}\"/end",
+            }
+        },
+        { //Lance 7 heart EVENT - An Adventurer's Creed
+            "LogName": "Heart Event - 7",
+            "Action": "EditData",
+            "Target": "data/events/AdventureGuild",
+            "Entries": {
+                "LECreed/e LEWarRecollection/f Lance 1750/": "continue/-1000 -1000/farmer -100 -100 0 Lance -100 -100 0 MarlonFay 4 11 2/skippable/viewport 6 20 clamp/warp Lance 6 13/shake Lance 300/textAboveHead Lance \"{{i18n:Lance.7Heart.01 {{expressionList}} }}\"/pause 500/playSound doorClose/warp farmer 6 19/speak Lance \"{{i18n:Lance.7Heart.02 {{expressionList}} }}\"/pause 400/speak Marlon \"{{i18n:Lance.7Heart.03 {{expressionList}} }}\"/pause 300/shake Lance 200/faceDirection Lance 2/speak Lance \"{{i18n:Lance.7Heart.04 {{expressionList}} }}\"/quickQuestion {{i18n:Lance.7Heart.05.q}}(break)switchEvent LECreed_wandering(break)switchEvent LECreed_gil(break)switchEvent LECreed_resupply",
+                "LECreed_wandering": "pause 200/speak Lance \"{{i18n:Lance.7Heart.06 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.7Heart.09 {{expressionList}} }}\"/end invisible Lance",
+                "LECreed_gil": "pause 200/speak Lance \"{{i18n:Lance.7Heart.07 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.7Heart.09 {{expressionList}} }}\"/end invisible Lance",
+                "LECreed_resupply": "pause 200/speak Lance \"{{i18n:Lance.7Heart.08 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.7Heart.09 {{expressionList}} }}\"/end invisible Lance",
+            }
+        },
+        {
+            //Lance 8 heart event - (Island) - The First Slash
+            "Action": "EditData",
+            "Target": "data/events/IslandWest",
+            "When": {
+                "HasFlag |contains=Island_UpgradeHouse": true,
+            },
+            "Entries": {
+                "LEFirstSlash/e LECreed/f Lance 2000": "continue/-500 -500/farmer 77 40 2 Lance 77 42 0 Martin -30 -30 0 Claire -31 -31 0 Andy -32 -32 0 Victor -33 -33 0/showFrame Victor 56 true/showFrame Andy 39 true/showFrame Claire 56 true/showFrame Martin 27 true/addTemporaryActor Brianna 16 32 -100 -100 2/addTemporaryActor Drake 16 32 -99 -99 2/addTemporaryActor Gale 16 32 -98 -98 2/addTemporaryActor Edmund 16 32 -97 -97 2/addTemporaryActor Jolyne 16 32 -96 -96 2/makeInvisible 77 42 19 1/viewport 77 41 true/skippable/pause 1000/speak Lance \"{{i18n:Lance8Hearts.01{{expressionList}} }}\"/pause 500/jump farmer/pause 900/speak Lance \"{{i18n:Lance8hearts.02{{expressionList}} }}\"/pause 800/faceDirection Lance 1 true/pause 500/move Lance 10 0 1 true/pause 400/move farmer 0 2 2 true/pause 1000/move farmer 6 0 1 true/pause 750/globalFade/viewport -1000 -1000/playMusic jungle_ambience/changeLocation Custom_LanceSecretWarp/pause 1000/warp farmer 21 20/faceDirection farmer 0 true/warp Lance 19 18/viewport 20 13 true/move Lance 0 -4 0 true/move farmer 0 -6 0 true/pause 4000/speak Lance \"{{i18n:Lance8hearts.03{{expressionList}} }}\"/pause 500/faceDirection Lance 1 true/pause 650/faceDirection farmer 3 true/pause 500/speak Lance \"{{i18n:Lance8hearts.04{{expressionList}} }}\"/pause 750/faceDirection Lance 0 true/pause 500/viewport move 0 -1 1500 true/move Lance 0 -1 1/move Lance 1 0 0/move Lance 0 -1 0 true/pause 200/faceDirection farmer 0 true/pause 650/faceDirection Lance 1 true/pause 250/faceDirection Lance 2 true/pause 650/shake Lance 500/pause 500/screenFlash 1/playSound wand/warp Lance -20 -20/pause 1250/move farmer 0 -2 3/move farmer -1 0 3/pause 350/faceDirection farmer 2 true/pause 500/startJittering/pause 550/screenFlash 1/warp farmer -21 -21/playsound wand/pause 2000/globalFade/viewport -1000 -1000/playMusic tropical_island_day_ambient/changeLocation Custom_FableReef/warp Lance 34 43/faceDirection Lance 3 true/warp farmer 32 43/faceDirection farmer 1 true/viewport 84 71 clamp true/viewport move -2 -2 6500 true/pause 4000/globalFade/viewport -1000 -1000/viewport 49 27 true/viewport move -2 2 8000/pause 7900/speak Lance \"{{i18n:Lance8hearts.05{{expressionList}} }}\"/pause 750/faceDirection Lance 2 true/pause 250/faceDirection Lance 1 true/pause 500/move Lance 9 0 0 true/pause 450/move farmer 8 0 1 true/pause 750/globalFade/viewport -1000 -1000/pause 500/playSound doorClose/pause 750/playSound doorClose/pause 500/changeLocation Custom_FirstSlashGuild/playMusic FlashShifter.StardewValleyExpandedCP_FirstSlashTheme/pause 750/warp Brianna 20 17/faceDirection Brianna 1 true/warp Drake 22 20/faceDirection Drake 0 true/warp Edmund 9 16/faceDirection Edmund 3 true/warp Gale 9 18/faceDirection Gale 3 true/warp Jolyne 14 15/faceDirection Jolyne 0 true/warp Lance 15 28/warp farmer 14 28/viewport 14 10 true/viewport move 0 1 8000 true/pause 4000/move Lance 0 -9 0 true/pause 500/move farmer 0 -9 0 true/pause 4700/faceDirection Jolyne 1 true/pause 250/faceDirection Jolyne 2 true/pause 250/emote Jolyne 16 true/pause 400/speak Jolyne \"{{i18n:Lance8hearts.06{{expressionList}} }}\"/pause 400/faceDirection Drake 3 true/pause 250/faceDirection Gale 2 true/pause 250/faceDirection Gale 1 true/pause 100/faceDirection Edmund 2 true/pause 100/faceDirection Brianna 2 true/pause 150/emote Drake 16 true/pause 100/faceDirection Brianna 3 true/pause 100/faceDirection Edmund 1 true/pause 100/speed Gale 1/move Gale 2 0 1 true/pause 100/jump Brianna/pause 100/move Drake -5 0 0 true/pause 100/faceDirection farmer 3 true/pause 400/move Edmund 3 0 2 true/pause 200/faceDirection Lance 1 true/pause 550/move Brianna -2 0 2 true/pause 50/textAboveHead Brianna \"{{i18n:lance8hearts.07{{expressionList}} }}\"/pause 700/faceDirection farmer 0 true/pause 300/textAboveHead Edmund \"{{i18n:Lance8hearts.08{{expressionList}} }}\"/move Brianna 0 1 3 true/pause 200/move Drake 0 -1 3 true/pause 750/emote Drake 32 true/pause 400/emote Lance 32 true/pause 1300/faceDirection Lance 0 true/pause 500/speak Jolyne \"{{i18n:Lance8hearts.09{{expressionList}} }}\"/pause 500/speak Lance \"{{i18n:Lance8hearts.10{{expressionList}} }}\"/pause 250/shake Brianna 500/textAboveHead Brianna \"{{i18n:Lance8hearts.11{{expressionList}} }}\"/pause 400/shake Gale 500/textAboveHead Gale \"{{i18n:Lance8hearts.12{{expressionList}} }}\"/pause 100/speed Jolyne 1/move Jolyne 0 1 2/pause 250/speak Jolyne \"{{i18n:Lance8hearts.13{{expressionList}} }}\"/pause 500/faceDirection Jolyne 1 true/pause 250/speed Jolyne 1/move Jolyne 1 0 1/pause 250/faceDirection Jolyne 2 true/pause 350/speak Jolyne \"{{i18n:Lance8hearts.14{{expressionList}} }}\"/pause 200/speak Lance \"{{i18n:Lance8hearts.15{{expressionList}} }}\"/pause 400/faceDirection Lance 3 true/pause 500/faceDirection farmer 1 true/pause 250/speak Lance \"{{i18n:Lance8hearts.16{{expressionList}} }}\"/pause 500/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 500/move farmer -2 0 3/pause 250/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 500/faceDirection Lance 0 true/pause 250/faceDirection Lance 1 true/pause 400/move Lance 1 0 1/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 16 18 FlashShifter.StardewValleyExpandedCP_Monster_Fruit/warp Martin 16 18/positionOffset Martin -11 16 true/pause 300/showFrame Lance 8 true/pause 250/emote Gale 16 true/pause 250/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 15 18 FlashShifter.StardewValleyExpandedCP_Monster_Mushroom/warp Claire 15 18/positionOffset Claire -4 16 true/pause 150/shake Drake 525/textAboveHead Drake \"{{i18n:Lance8hearts.17{{expressionList}} }}\"/pause 150/showFrame Lance 8 true/pause 500/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 400/shake Lance 500/showFrame Lance 9 true/pause 300/playSound slime/addObject 14 18 FlashShifter.StardewValleyExpandedCP_Slime_Berry/warp Andy 14 18/positionOffset Andy 0 9 true/pause 300/showFrame Lance 8 true/pause 250/textAboveHead Edmund \"{{i18n:Lance8hearts.18{{expressionList}} }}\"/pause 250/faceDirection Lance 3 true/pause 300/move Lance -1 0 3/pause 250/faceDirection Lance 0 true/pause 200/jump Brianna/pause 200/shake Lance 500/showFrame Lance 9 true/pause 200/textAboveHead Brianna \"{{i18n:Lance8hearts.19{{expressionList}} }}\"/pause 100/playSound slime/addObject 13 18 FlashShifter.StardewValleyExpandedCP_Void_Root/warp Victor 13 18/positionOffset Victor -19 16 true/pause 150/emote Gale 40 true/pause 150/showFrame Lance 8 true/pause 500/faceDirection Lance 1 true/pause 300/move Lance 1 0 2/move Lance 0 2 2/pause 250/faceDirection Lance 1 true/pause 250/faceDirection Lance 0 true/pause 450/speak Lance \"{{i18n:Lance8hearts.20{{expressionList}} }}\"/pause 250/shake Edmund 500/textAboveHead Edmund \"{{i18n:Lance8hearts.21{{expressionList}} }}\"/pause 400/emote Drake 40 true/pause 300/speed Jolyne 1/move Jolyne 0 1 2 true/pause 400/jump Brianna/pause 400/textAboveHead Gale \"{{i18n:Lance8hearts.22{{expressionList}} }}\"/pause 200/speed Drake 1/move Drake -1 0 0 true/pause 350/shake Jolyne 500/textAboveHead Jolyne \"{{i18n:Lance8hearts.23{{expressionList}} }}\"/pause 500/faceDirection Edmund 1 true/pause 250/speed Edmund 1/move Edmund 1 0 2/speed Edmund 1/move Edmund 0 1 2 true/globalfade/viewport -1000 -1000/stopMusic/pause 1500/message \"{{i18n:Lance8hearts.24{{expressionList}} }}\"/pause 1000/end dialogue Lance \"{{i18n:Lance8hearts.25{{expressionList}} }}\""
+            }
+        },
+        {
+            //Lance 8 heart event - (farm) - not on grandpa's farm
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasFlag |contains=Island_UpgradeHouse": true,
+                "HasSeenEvent": "LECreed",
+                "HasSeenEvent": "!LEFirstSlash",
+            },
+            "Entries": {
+                "LEFirstInvitation/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01{{expressionList}} }}\"/pause 500/changeLocation farm/warp farmer 64 15/warp Lance 64 17/viewport 64 16 true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02{{expressionList}} }}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03{{expressionList}} }}\""
+            }
+        },
+        /*
+    {
+      //Lance 8 heart event - (farm) - on grandpa's farm
+      "Action": "EditData",
+      "Target": "data/events/farmhouse",
+      "When": {
+        "HasFlag |contains=Island_UpgradeHouse": true,
+        "HasMod|contains=flashshifter.GrandpasFarm": true,
+        "FarmType": "Standard",
+		"HasSeenEvent": "LECreed",
+		"HasSeenEvent": "!LEFirstSlash",
+      },
+      "Entries": {
+        "LEFirstInvitation/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01{{expressionList}} }}\"/pause 500/changeLocation farm/warp farmer 95 49/warp Lance 95 50/viewport 95 48 true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02{{expressionList}} }}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03{{expressionList}} }}\""
+      }
+    },
+*/
+        {
+            //Lance 8 heart event - (farm) - on Tiny Farm
+            "Action": "EditData",
+            "Target": "data/events/farmhouse",
+            "When": {
+                "HasFlag |contains=Island_UpgradeHouse": true,
+                "HasMod |contains=harvz.TinyFarm": true,
+                "FarmType": "Standard",
+                "HasSeenEvent": "LECreed",
+                "HasSeenEvent": "!LEFirstSlash",
+            },
+            "Entries": {
+                "LEFirstInvitation/f Lance 2000/t 600 2600": "continue/-500 -500/farmer -40 -40 2 Lance -39 -39 0/pause 1000/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 600/playSound stoneStep/playSound stoneStep/pause 650/message \"{{i18n:Lance8hearts2.01{{expressionList}} }}\"/pause 500/changeLocation farm/warp farmer 27 7/warp Lance 27 9/viewport 27 8 clamp true/pause 1200/speak Lance \"{{i18n:Lance8hearts2.02{{expressionList}} }}\"/pause 500/end dialogue Lance \"{{i18n:Lance8hearts2.03{{expressionList}} }}\""
+            }
+        },
+        {
+            //Wizard gives player access to his First Slash warp rune
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "HasSeenEvent": "LEFirstInvitation"
+            },
+            "Entries": {
+                "LEWizardWarp/e LEFirstSlash": "continue/-500 -500/farmer -30 -30 0 Wizard -29 -29 0/pause 1250/speak Wizard \"{{i18n:LanceWizardRune.01}}\"/pause 400/emote farmer 32/end dialogue Wizard \"{{i18n:LanceWizardRune.02}}\"",
+            }
+        },
+        {
+            //Fable Reef music que
+            "Action": "EditMap",
+            "Target": "Maps/Custom_FableReef",
+            "When": {
+                "Weather": "Rain",
+                "LocationContext": "Island"
+            },
+            "MapProperties": {
+                "Music": "rain"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_WizardBasement",
+            "FromFile": "assets/Maps/FirstSlashWizardBasementWarp.tbin",
+            "When": {
+                "HasSeenEvent": "LEWizardWarp"
+            },
+            "ToArea": {
+                "X": 14,
+                "Y": 18,
+                "Width": 1,
+                "Height": 1
+            },
+            "Update": "OnLocationChange",
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarlonFay",
+            "Entries": {
+                "LanceMetKrobus": "{{i18n:LanceKrobus.Marlon}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "LanceMetKrobus": "{{i18n:LanceKrobus.Krobus}}"
+            }
+        },
+
+        { //Lance 9 heart EVENT - Jolyne's Concerns
+            "LogName": "Heart Event - 9",
+            "Action": "EditData",
+            "Target": "data/events/Custom_FirstSlashGuestRoom",
+            "Entries": {
+                "LEJolyne/e LEFirstSlash/": "continue/-500 -500/farmer 5 9 0 Jolyne -30 -30 0/pause 500/viewport 5 6 true/skippable/move farmer 0 -3 0/pause 1000/faceDirection farmer 1 true/pause 1150/faceDirection farmer 0 true/pause 250/faceDirection farmer 3 true/pause 450/move farmer -1 0 3/pause 300/faceDirection farmer 0 true/pause 500/emote farmer 40/pause 400/playSound doorOpen/warp Jolyne 5 9/pause 500/speed Jolyne 1/move Jolyne 0 -1 0 true/pause 300/speak Jolyne \"{{i18n:Lance.9Heart.01}}\"/pause 350/faceDirection farmer 1 true/pause 250/faceDirection farmer 2 true/pause 250/emote farmer 16 true/pause 1500/speak Jolyne \"{{i18n:Lance.9Heart.02}}\"/pause 500/end dialogue Jolyne \"{{i18n:Lance.9Heart.03}}\"/end",
+            }
+        },
+        {
+            //Lance 10 heart event - part 1
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "When": {
+                "Weather:Island |contains=Sun": true,
+            },
+            "Entries": {
+                "LEAnInvitation/e LEJolyne/f Lance 2500/t 600 1100": "continue/-100 -100/farmer -10 -10 2 Lance -12 -12 0/skippable/pause 1250/speak Lance \"{{i18n:Lance10hearts1.01{{expressionList}} }}\"/pause 200/emote farmer 32/pause 250/speak Lance \"{{i18n:Lance10hearts1.02{{expressionList}} }}\"/pause 500/end dialogue Lance \"{{i18n:Lance10hearts1.03{{expressionList}} }}\""
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Island_W",
+            "FromFile": "assets/Maps/IslandWestLanceSecretWarpPath.tmx",
+            "When": {
+                "HasSeenEvent": "LEAnInvitation"
+            },
+            "ToArea": {
+                "X": 71,
+                "Y": 0,
+                "Width": 8,
+                "Height": 8
+            },
+            "Update": "OnLocationChange"
+        },
+        { //Lance 10 pt 2 heart EVENT - A Mage's Workday
+            "LogName": "Heart Event - 10.1",
+            "Action": "EditData",
+            "Target": "data/events/Custom_FableReef",
+            "Entries": {
+                "LEWorkday/e LEAnInvitation/f Lance 2500/t 600 1800/w sunny/": "tropical_island_day_ambient/-500 -500/farmer 32 44 1 Lance 44 44 2/addTemporaryActor Lance_Beach 16 32 -102 -102 0/addTemporaryActor Brianna 16 32 -100 -100 2/addTemporaryActor Drake 16 32 -99 -99 2/addTemporaryActor Gale 16 32 -98 -98 2/addTemporaryActor Edmund 16 32 -97 -97 2/addTemporaryActor Jolyne 16 32 -96 -96 2/addTemporaryActor TorpedoTroutActor1 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor2 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor3 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor4 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor5 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor6 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor7 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor8 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor9 42 32 -30 -30 2 false/addTemporaryActor TorpedoTroutActor10 42 32 -30 -30 2 false/addTemporaryActor CampfireActor 14 25 -30 -30 2 false/addTemporaryActor CoralActor 28 28 -25 -25 2 false/pause 850/skippable/viewport 39 44 true/viewport move 1 0 4000 true/move farmer 9 0 1 true/pause 2550/faceDirection Lance 3 true/pause 450/speak Lance \"{{i18n:Lance10hearts2.01{{expressionList}} }}\"/pause 500/move Lance -1 0 3/pause 500/speak Lance \"{{i18n:Lance10hearts2.02{{expressionList}} }}\"/pause 400/emote farmer 32/pause 300/speak Lance \"{{i18n:Lance10hearts2.03{{expressionList}} }}\"/pause 350/globalFade/viewport -1000 -1000/stopMusic/playMusic moonlightJellies/pause 3000/warp Lance 35 23/faceDirection Lance 1 true/warp farmer 33 23/faceDirection farmer 1 true/makeInvisible 30 32 16 3/viewport 39 23 true/viewport move 1 0 7500 true/move Lance 15 0 1 true/move farmer 15 0 1 true/pause 5000/globalFade/viewport -1000 -1000/pause 1000/warp Lance 44 58/faceDirection Lance 2 true/warp farmer 42 58/faceDirection farmer 2 true/positionOffset Lance -30 -10 true/positionOffset farmer 30 0 true/warp TorpedoTroutActor1 48 66/positionOffset TorpedoTroutActor1 0 0 true/speed TorpedoTroutActor1 5/move TorpedoTroutActor1 -80 0 3 true/warp TorpedoTroutActor2 50 61/positionOffset TorpedoTroutActor2 0 0 true/speed TorpedoTroutActor2 6/move TorpedoTroutActor2 -80 0 3 true/warp TorpedoTroutActor3 53 64/positionOffset TorpedoTroutActor3 0 0 true/speed TorpedoTroutActor3 6/move TorpedoTroutActor3 -80 0 3 true/warp TorpedoTroutActor4 60 62/positionOffset TorpedoTroutActor4 0 0 true/speed TorpedoTroutActor4 7/move TorpedoTroutActor4 -80 0 3 true/warp TorpedoTroutActor5 63 67/positionOffset TorpedoTroutActor5 0 0 true/speed TorpedoTroutActor5 6/move TorpedoTroutActor5 -80 0 3 true/warp TorpedoTroutActor6 67 63/positionOffset TorpedoTroutActor6 0 0 true/speed TorpedoTroutActor6 6/move TorpedoTroutActor6 -80 0 3 true/warp TorpedoTroutActor7 73 65/positionOffset TorpedoTroutActor7 0 0 true/speed TorpedoTroutActor7 6/move TorpedoTroutActor7 -80 0 3 true/warp TorpedoTroutActor8 76 61/positionOffset TorpedoTroutActor8 0 0 true/speed TorpedoTroutActor8 5/move TorpedoTroutActor8 -80 0 3 true/warp TorpedoTroutActor9 79 66/positionOffset TorpedoTroutActor9 0 0 true/speed TorpedoTroutActor9 6/move TorpedoTroutActor9 -80 0 3 true/warp TorpedoTroutActor10 83 63/positionOffset TorpedoTroutActor10 0 0 true/speed TorpedoTroutActor10 6/move TorpedoTroutActor10 -80 0 3 true/makeInvisible 35 53 19 7/viewport 43 62 clamp true/showFrame Lance 43 true/pause 2000/emote farmer 16 true/pause 1000/showFrame Lance 0 true/pause 2000/showFrame Lance 42 true/globalFade/viewport -1000 -1000/warp TorpedoTroutActor1 -100 -100/warp TorpedoTroutActor2 -100 -100/warp TorpedoTroutActor3 -100 -100/warp TorpedoTroutActor4 -100 -100/warp TorpedoTroutActor5 -100 -100/warp TorpedoTroutActor6 -100 -100/warp TorpedoTroutActor7 -100 -100/warp TorpedoTroutActor8 -100 -100/warp TorpedoTroutActor9 -100 -100/warp TorpedoTroutActor10 -100 -100/changeLocation Custom_FirstSlashGuild/warp CoralActor 7 18/positionOffset CoralActor -20 5 true/warp Lance 7 19/faceDirection Lance 3 true/warp farmer 6 19/faceDirection farmer 1 true/warp Jolyne 14 15/faceDirection Jolyne 2 true/warp Edmund 20 17/faceDirection Edmund 1 true/warp Drake 17 19/faceDirection Drake 3 true/warp Brianna 15 19/faceDirection Brianna 1 true/positionOffset Lance 11 29 true/positionOffset farmer 20 40 true/warp Gale 11 14/speed Gale 1/move Gale 0 9 2 true/viewport 8 19 true/pause 2000/shake Lance 500/textAboveHead Lance \"{{i18n:Lance10hearts2.04{{expressionList}} }}\"/pause 3000/faceDirection farmer 0 true/pause 750/faceDirection Lance 0 true/pause 1000/globalFade/viewport -1000 -1000/changeLocation Custom_FableReef/warp CoralActor -40 -40/warp Edmund -30 -30/warp Drake -30 -30/warp Jolyne 18 35/warp farmer 19 31/warp Brianna 26 31/warp Lance 18 33/faceDirection Brianna 1 true/faceDirection farmer 3 true/faceDirection Jolyne 3 true/faceDirection Lance 3 true/positionOffset Lance -20 10 true/positionOffset Jolyne -8 14 true/makeInvisible 17 29 9 9/positionOffset farmer 0 25 true/warp Gale -30 -30/viewport 22 32 clamp true/speed Brianna 1/move Brianna -4 0 3 true/pause 1500/shake Brianna 800/textAboveHead Brianna \"{{i18n:Lance10hearts2.05{{expressionList}} }}\"/pause 1000/faceDirection farmer 2 true/pause 250/faceDirection farmer 1 true/pause 2000/shake Brianna 400/textAboveHead Brianna \"{{i18n:Lance10hearts2.06{{expressionList}} }}\"/pause 1800/animate farmer false false 6000 97/pause 500/globalFade/viewport -1000 -1000/stopAnimation farmer/pause 500/warp Lance 61 47/faceDirection Lance 0 true/positionOffset Lance -40 0 true/warp farmer 59 47/faceDirection farmer 0 true/positionOffset farmer -12 15 true/warp Gale 61 46/faceDirection Gale 3 true/positionOffset Gale 12 -5 true/warp Edmund 60 44/faceDirection Edmund 2 true/positionOffset Edmund 10 -3 true/warp Brianna 57 46/faceDirection Brianna 1 true/positionOffset Brianna 5 25 true/warp Drake 57 45/faceDirection Drake 1 true/positionOffset Drake 30 5 true/warp CampfireActor 59 46/positionOffset CampfireActor 32 -32 true/animate CampfireActor false true 150 0 1 2 3/ambientLight 120 150 130/addLantern 31 59 45 2/addLantern 31 60 45 2/addLantern 31 59 46 2/addLantern 31 60 46 2/makeInvisible 62 38 6 15/warp Jolyne 53 44/move Jolyne 6 0 2 true/viewport 52 39 true/viewport move 1 1 10000 true/pause 1000/textAboveHead Jolyne \"{{i18n:Lance10hearts2.07{{expressionList}} }}\"/pause 750/shake Brianna 550/pause 950/shake Drake 450/pause 2500/faceDirection Lance 3 true/pause 1500/faceDirection farmer 1 true/pause 800/globalFade/viewport -1000 -1000/warp Jolyne -30 -30/warp Brianna -29 -29/warp Edmund -28 -28/warp Drake -27 -27/warp Gale -26 -26/warp farmer -25 -25/warp Lance -24 -24/warp CampfireActor -23 -23/changeLocation Custom_FirstSlashHallway/viewport 15 7 true/viewport move 1 0 6500 true/pause 4000/globalFade/viewport -1000 -1000/changeLocation Custom_FirstSlashGuestRoom/warp Lance 5 5/warp farmer 5 7/faceDirection Lance 2 true/faceDirection farmer 0 true/viewport 5 6 true/pause 1250/showFrame Lance 41 true/pause 150/shake Lance 500/pause 300/speak Lance \"{{i18n:Lance10hearts2.08{{expressionList}} }}\"/pause 800/showFrame Lance 0 true/pause 600/faceDirection Lance 1 true/pause 250/showFrame Lance 8 true/pause 1250/shake Lance 400/pause 390/playSound dwop/shake Lance_Beach 350/warp Lance_Beach 5 5/changePortrait Lance Beach/warp Lance -50 -50/pause 1000/faceDirection Lance_Beach 1 true/pause 250/faceDirection Lance_Beach 2 true/pause 900/speak Lance \"{{i18n:Lance10hearts2.09{{expressionList}} }}\"/pause 1000/question fork0 \"{{i18n:Lance10hearts2.10 {{expressionList}} }}#{{i18n:Lance10hearts2.10.y {{expressionList}} }}#{{i18n:Lance10hearts2.10.n {{expressionList}} }}#\"/fork LEWorkday_cuddle/pause 400/speak Lance \"{{i18n:Lance10hearts2.11{{expressionList}} }}\"/pause 1000/globalFade/viewport -1000 -1000/pause 1500/end dialogue Lance \"{{i18n:Lance10hearts2.12{{expressionList}} }}\"",
+            }
+        },
+        {
+            //Lance 10 heart question fork
+            "Action": "EditData",
+            "Target": "data/events/Custom_FirstSlashGuestRoom",
+            "Entries": {
+                "LEWorkday_cuddle": "pause 500/changePortrait Lance Beach/speak Lance \"{{i18n:Lance10hearts2.13{{expressionList}} }}\"/pause 500/globalFade/viewport -1000 -1000/warp Lance_Beach 7 5/faceDirection Lance_Beach 3/warp farmer 6 5/faceDirection farmer 1 true/positionOffset farmer -4 20 true/positionOffset Lance_Beach -1 12 true/viewport 5 6 true/pause 1000/speak Lance \"{{i18n:Lance10hearts2.14{{expressionList}} }}\"/pause 1000/shake Lance_Beach 500/pause 900/speak Lance \"{{i18n:Lance10hearts2.15{{expressionList}} }}\"/pause 1000/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/animate farmer false false 10000 101/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/positionOffset farmer 1 0/pause 100/positionOffset Lance_Beach -1 0/showFrame Lance_Beach 19 true/playSound dwop/specificTemporarySprite heart 7 4/pause 2250/globalFade/viewport -1000 -1000/pause 2000/end dialogue Lance \"{{i18n:Lance10hearts2.16{{expressionList}} }}\""
+            }
+        },
+        {
+            //Lance 10 pt3 miss heart event - player didn't arrive in time.
+            "Action": "EditData",
+            "Target": "data/events/Custom_FableReef",
+            "Entries": {
+                "LEMissed/e LEAnInvitation/k LEWorkday/f Lance 2500/t 1810 2600/w sunny": "spring_night_ambient/-500 -500/farmer 36 43 1 Lance 44 43 2/pause 500/viewport 43 43 true/move farmer 6 0 1 true/pause 1500/faceDirection Lance 3 true/pause 1000/speak Lance \"{{i18n:Lance10hearts3.01{{expressionList}} }}\"/pause 500/emote farmer 28/pause 500/speak Lance \"{{i18n:Lance10hearts3.02{{expressionList}} }}\"/pause 500/end dialogue Lance \"{{i18n:Lance10hearts3.03{{expressionList}} }}\""
+            }
+        },
+
+        ///////load entities
+        { //Load fallen female
+            "LogName": "Fallen Adv Female",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerFemale",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen female
+            "LogName": "Fallen Adv Female",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerFemale1",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen female
+            "LogName": "Fallen Adv Female",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerFemale2",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen female
+            "LogName": "Fallen Adv Female",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerFemale3",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen male
+            "LogName": "Fallen Adv Male",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerMale",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen male
+            "LogName": "Fallen Adv Male",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerMale1",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen male
+            "LogName": "Fallen Adv Male",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerMale2",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load fallen male
+            "LogName": "Fallen Adv Male",
+            "Action": "Load",
+            "Target": "Characters/FallenAdventurerMale3",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load lance magic
+            "LogName": "Green Flame",
+            "Action": "Load",
+            "Target": "Characters/gFlame",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load lance magic
+            "LogName": "Green Flame",
+            "Action": "Load",
+            "Target": "Characters/gFlame1",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load lance magic
+            "LogName": "Green Flame",
+            "Action": "Load",
+            "Target": "Characters/gFlame2",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Load lance magic
+            "LogName": "Green Flame",
+            "Action": "Load",
+            "Target": "Characters/gFlame3",
+            "FromFile": "assets/{{Target}}.png",
+        },
+        { //Lance 11 heart EVENT - War Recollections
+            "LogName": "Heart Event - 11",
+            "Action": "EditData",
+            "Target": "data/events/farm",
+            "Entries": {
+                "LEBattleground/e LEWorkday/f Lance 2750/": "continue/-500 -500/farmer -100 -100 0/skippable/addTemporaryActor MarlonFay 16 32 -100 -100 0 true/speak MarlonFay \"{{i18n:Lance.11Hearts.pre{{expressionList}} }}\"/removeTemporarySprites/changeLocation Custom_CastleVillageOutpost/viewport 48 15 clamp true/makeInvisible 48 8 64 64/pause 400/addTemporaryActor Lance 16 32 46 14 0 true/addTemporaryActor FallenAdventurerMale 16 32 45 8 2/addTemporaryActor FallenAdventurerMale1 16 32 48 8 2/addTemporaryActor FallenAdventurerMale2 16 32 43 11 2/addTemporaryActor FallenAdventurerMale3 16 32 45 10 2/addTemporaryActor FallenAdventurerFemale 16 32 46 10 2/addTemporaryActor FallenAdventurerFemale1 16 32 52 12 2/addTemporaryActor FallenAdventurerFemale2 16 32 48 11 2/addTemporaryActor FallenAdventurerFemale3 16 32 45 13 2/addTemporaryActor gFlame 28 28 45 14 2/addTemporaryActor gFlame1 28 28 46 15 2/addTemporaryActor gFlame2 28 28 47 14 2/addTemporaryActor gFlame3 28 28 -100 -100 2/ignoreCollisions Lance/ignoreCollisions gFlame/ignoreCollisions gFlame1/ignoreCollisions gFlame2/ignoreCollisions FallenAdventurerMale/ignoreCollisions FallenAdventurerMale1/ignoreCollisions FallenAdventurerMale2/ignoreCollisions FallenAdventurerMale3/ignoreCollisions FallenAdventurerFemale/ignoreCollisions FallenAdventurerFemale1/ignoreCollisions FallenAdventurerFemale2/ignoreCollisions FallenAdventurerFemale3/ignoreCollisions Lance/ignoreCollisions farmer/playSound clank/pause 750/warp farmer 55 27/playSound clubhit/pause 100/message \"{{i18n:Lance.11Hearts.00{{expressionList}} }}\"/playSound coldSpell/move farmer 0 -11 3/move farmer -4 0 3/positionOffset gFlame 1 0/positionOffset gFlame 0 0/positionOffset gFlame1 1 0/positionOffset gFlame1 0 0/positionOffset gFlame2 1 0/positionOffset gFlame 0 0/pause 300/speak Lance \"{{i18n:Lance.11Hearts.01{{expressionList}} }}\"/pause 300/playSound flameSpell/shake Lance 300/positionOffset gFlame -2 -2/warp gFlame -100 -100/pause 100/showFrame FallenAdventurerMale2 16/showFrame FallenAdventurerMale2 17/showFrame FallenAdventurerMale2 18/showFrame FallenAdventurerMale2 19/playSound flameSpell/positionOffset gFlame1 0 -4/showFrame FallenAdventurerFemale 16/showFrame FallenAdventurerFemale 17/showFrame FallenAdventurerFemale 18/showFrame FallenAdventurerFemale 19/pause 300/showFrame Lance 14/move Lance 4 0 3/move Lance 0 2 3/move farmer 1 0 3/pause 100/shake Lance 100/pause 300/message \"{{i18n:Lance.11Hearts.02{{expressionList}} }}\"/pause 300/shake Lance 300/positionOffset FallenAdventurerMale 1 1/positionOffset FallenAdventurerMale1 1 1/positionOffset FallenAdventurerMale3 1 1/positionOffset FallenAdventurerFemale1 1 1/positionOffset FallenAdventurerFemale2 1 1/positionOffset FallenAdventurerFemale3 1 1/positionOffset gFlame2 1 0/positionOffset gFlame2 0 0/pause 300/message \"{{i18n:Lance.11Hearts.03{{expressionList}} }}\"/playSound flameSpellHit/positionOffset gFlame2 2 -1/warp gFlame2 -100 -100/showFrame FallenAdventurerFemale2 16/showFrame FallenAdventurerFemale2 17/showFrame FallenAdventurerFemale2 18/shake Lance 300/startJittering/pause 300/stopJittering/pause 300/speak Lance \"{{i18n:Lance.11Hearts.04{{expressionList}} }}\"/message \"{{i18n:Lance.11Hearts.05{{expressionList}} }}\"/move FallenAdventurerFemale1 0 2 0/faceDirection Lance 1/shake Lance 100/message \"{{i18n:Lance.11Hearts.06{{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.11Hearts.07{{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.11Hearts.08{{expressionList}} }}\"/playSound flameSpellHit/warp gFlame3 52 15/showFrame Lance 5/jump farmer 3/showFrame farmer 60/pause 100/positionOffset gFlame3 3 0/showFrame FallenAdventurerFemale1 16/showFrame FallenAdventurerFemale1 17/showFrame FallenAdventurerFemale1 18/shake Lance 300/startJittering/pause 300/stopJittering/showFrame farmer 89/startJittering/pause 300/stopJittering/warp gFlame3 -100 -100/move Lance 1 0 1/shake Lance 300/playSound wand/removeTemporarySprites/changeLocation custom_HighlandsOutpost/viewport 7 9 clamp/warp farmer 7 5/faceDirection farmer 2/warp Lance 7 7/faceDirection Lance 0/playSound wand/pause 1000/shake Lance 100/startJittering/pause 300/stopJittering/textAboveHead Lance \"{{i18n:Lance.11Hearts.08.5{{expressionList}}}}\"/pause 1200/speak Lance \"{{i18n:Lance.11Hearts.09{{expressionList}}}}\"/pause 300/speak Lance \"{{i18n:Lance.11Hearts.10{{expressionList}}}}\"/pause 300/shake Lance 200/showframe Lance 3/jump farmer 5/globalFade/pause 500/warp Lance 4 6/showFrame Lance 3/warp farmer 6 6/faceDirection farmer 3/faceDirection Lance 1/speak Lance \"{{i18n:Lance.11Hearts.11{{expressionList}}}}\"/pause 300/emote Lance 40/message \"{{i18n:Lance.11Hearts.12{{expressionList}}}}\"/pause 300/speak Lance \"{{i18n:Lance.11Hearts.13{{expressionList}}}}\"/shake Lance 300/playSound wand/warp Lance -100 -100/message \"{{i18n:Lance.11Hearts.14{{expressionList}}}}\"/end",
+            }
+        },
+
+        {
+            //Lance 12 heart event - part 1 - "The Return Scepter" changing his tone to be less of a demanding asshole and more of a confident asshole (:
+            "Action": "EditData",
+            "Target": "Data/Events/farmhouse",
+            "When": {
+                "FarmhouseUpgrade": 3,
+                "HasFlag": "ReturnScepter",
+            },
+            "Entries": {
+                "LEReturn/e LEBattleground/O Lance/f Lance 3000/t 2000 2600": "none/-500 -500/farmer 29 24 3 Lance 22 24 0/addMailReceived LanceMeetsKrobus/skippable/makeInvisible 7 14 8 1/pause 1000/ignoreCollisions farmer/ignoreCollisions Lance/viewport 22 24 true/move farmer -5 0 3/pause 800/faceDirection Lance 1 true/pause 500/message \"{{i18n:Lance12hearts1.01 {{expressionList}} }}\"/pause 300/emote farmer 20/pause 500/speak Lance \"{{i18n:Lance12hearts1.02 {{expressionList}} }}\"/pause 300/emote farmer 8/pause 450/move Lance 1 0 1/pause 500/message \"{{i18n:Lance12hearts1.03 {{expressionList}} }}\"/pause 600/emote farmer 40/pause 100/emote farmer 40/speak Lance \"{{i18n:Lance12hearts1.04 {{expressionList}} }}\"/pause 2000/speak Lance \"{{i18n:Lance12hearts1.05 {{expressionList}} }}\"/pause 650/showFrame farmer 97 true/pause 300/emote farmer 40/pause 100/emote farmer 40/pause 200/showFrame farmer 6 true/pause 500/speak Lance \"{{i18n:Lance12hearts1.06 {{expressionList}} }}\"/pause 500/emote farmer 40/pause 250/speak Lance \"{{i18n:Lance12hearts1.07 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 200/globalFade/viewport -1000 -1000/pause 500/end dialogue Lance \"{{i18n:Lance12hearts1.08 {{expressionList}} }}\"",
+            }
+        },
+        {
+            //Lance 12 heart event - part 2 - "The Shadow Person In The Sewers" adding more conversation between krobus and lance because it's cute
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "When": {
+                "HasFlag": "LanceMeetsKrobus",
+            },
+            "Entries": {
+                "LEKrobus/e LEReturn/f Lance 3000/O Lance": "continue/-500 -500/farmer 34 101 0 Lance 35 101 0 Krobus -30 -30 2 MarlonFay -50 -50 2/addConversationTopic LanceMetKrobus 10/skippable/showFrame MarlonFay 27/move farmer 0 -4 0 true/pause 350/viewport 35 97 true/move Lance 0 -4 0 true/pause 3000/faceDirection farmer 1 true/pause 850/faceDirection Lance 3 true/pause 750/speak Lance \"{{i18n:Lance12hearts2.01 {{expressionList}} }}\"/pause 500/jump farmer/pause 1500/faceDirection farmer 0 true/pause 750/faceDirection Lance 0 true/pause 400/showFrame farmer 13 true/pause 200/startJittering/pause 200/playSound trashcanlid/pause 450/stopJittering/pause 200/showFrame farmer 12 true/pause 1000/playSound stairsdown/warp farmer -20 -20/pause 1100/warp Lance -20 -20/playSound stairsdown/pause 1000/globalFade/viewport -1000 -1000/playMusic Icicles/changeLocation Sewer/warp Lance 24 21/warp farmer 26 21/warp Krobus 31 16/viewport 31 19 true/move farmer 4 0 0 true/move Lance 8 0 0 true/pause 2000/move farmer 0 -2 0 true/pause 2050/move Lance 0 -2 0 true/pause 1000/emote Lance 16/pause 200/move Krobus 0 1 2/pause 650/shake Krobus 600/pause 600/speak Krobus \"{{i18n:Lance12hearts2.02 {{expressionList}} }}\"/pause 400/speak Lance \"{{i18n:Lance12hearts2.03 {{expressionList}} }}\"/pause 500/speak Krobus \"{{i18n:Lance12hearts2.04 {{expressionList}} }}\"/pause 250/faceDirection farmer 1 true/pause 750/faceDirection Lance 3 true/pause 1425/faceDirection farmer 0 true/pause 500/faceDirection Lance 0 true/pause 250/speak Lance \"{{i18n:Lance12hearts2.05 {{expressionList}} }}\"/pause 300/shake Krobus 500/pause 400/speak Krobus \"{{i18n:Lance12hearts2.06 {{expressionList}} }}\"/pause 500/shake Lance 20/speak Lance \"{{i18n:Lance12hearts2.07 {{expressionList}} }}\"/pause 500/speed Lance 1/move Lance 0 -2 0 true/pause 1200/faceDirection Krobus 1 true/pause 1000/faceDirection Lance 3 true/pause 650/emote Lance 40/pause 200/speak Lance \"{{i18n:Lance12hearts2.08 {{expressionList}} }}\"/pause 400/jump Krobus/pause 600/speak Krobus \"{{i18n:Lance12hearts2.09 {{expressionList}} }}\"/pause 300/shake Lance 500/pause 400/speak Lance \"{{i18n:Lance12hearts2.10 {{expressionList}} }}\"/pause 650/faceDirection Lance 2 true/pause 500/showFrame Lance 41 true/pause 400/shake Lance 400/pause 400/screenFlash 1/warp Lance -30 -30/playSound wand/pause 1500/faceDirection Krobus 2 true/speak Krobus \"{{i18n:Lance12hearts2.11 {{expressionList}} }}\"/pause 400/emote farmer 32/pause 350/screenFlash 1/playSound wand/warp Lance 32 19/pause 500/faceDirection farmer 1 true/pause 400/showFrame Lance 0 true/pause 600/faceDirection Lance 3 true/pause 250/faceDirection Lance 0 true/pause 500/speak Lance \"{{i18n:Lance12hearts2.12 {{expressionList}} }}\"/pause 500/move Lance 0 -1 3/pause 500/showFrame Lance 15 true/pause 250/shake Lance 500/pause 150/playSound slime/addObject 31 17 FlashShifter.StardewValleyExpandedCP_Void_Root/warp MarlonFay 31 17/positionOffset MarlonFay -19 16 true/pause 250/showFrame Lance 12 true/pause 600/faceDirection Lance 2 true/pause 250/move Lance 0 1 2/pause 250/faceDirection Lance 3 true/pause 250/faceDirection Lance 0 true/pause 800/showFrame Krobus 17 true/pause 350/emote Krobus 8/pause 500/shake Krobus 600/pause 200/showFrame Krobus 18 true/pause 400/playSound eat/removeSprite 31 17/warp MarlonFay -50 -50/pause 750/showFrame Krobus 17 true/pause 300/showFrame Krobus 0 true/pause 600/speak Krobus \"{{i18n:Lance12hearts2.13 {{expressionList}} }}\"/pause 650/shake Krobus 500/pause 500/animate Krobus false true 200 20 21 22 23/pause 1000/emote Krobus 20 true/pause 1500/end dialogue Lance \"{{i18n:Lance12hearts2.14 {{expressionList}} }}\"",
+            }
+        },
+        {
+            //Patches light at Lance and Krobus meet
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "When": {
+                "Time": "{{Range: 2000, 2600}}",
+                "Spouse": "Lance",
+                "Day": "10, 24",
+                "HasSeenEvent": "252653021"
+            },
+            "Update": "OnLocationChange",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Light"
+                    ],
+                    "Value": "97 92 4",
+                    "Delimiter": " "
+                },
+            ]
+        },
+        {
+            //Patches lantern at Lance and Krobus meet
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "FromFile": "Assets/Maps/MapPatches/LanceLantern.tbin",
+            "When": {
+                "Time": "{{Range: 2000, 2600}}",
+                "Spouse": "Lance",
+                "Day": "10, 24",
+                "HasSeenEvent": "LEKrobus"
+            },
+            "ToArea": {
+                "X": 97,
+                "Y": 92,
+                "Width": 1,
+                "Height": 1
+            },
+            "Update": "OnLocationChange"
+        },
+
+        { //Lance 13 pt 1 heart EVENT - Elemental War Scars //ask question at start of farm, farmer "..." to tell story //jump lance, ramifications of setting all shadowpeople free //another "..." to tell story about how cursed by apophis // lance surprise jump 'wdym apophis how you know that name' // agrees to visit shadowpeople in sewer // have a good time // end cutscene
+            "LogName": "Heart Event - 13.1",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "Entries": {
+                "LEShadowpeople/e 1090507/f Lance 3250/O Lance/": "continue/-500 -500/farmer -100 -100 2 Lance -100 -100 0/skippable/playSound doorClose/pause 300/speak Lance \"{{i18n:Lance.13Heart.01 {{expressionList}} }}\"/jump farmer 8/startJittering/pause 50/stopJittering/pause 500/emote farmer 40/message \"{{i18n:Lance.13Heart.02 {{expressionList}} }}\"/jump Lance 8/shake Lance 300/speak Lance \"{{i18n:Lance.13Heart.03 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.04}}\"/pause 300/jump Lance 8/shake Lance 100/speak Lance \"{{i18n:Lance.13Heart.05 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.06 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.13Heart.07 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.08 {{expressionList}} }}\"/pause 300/addTemporaryActor Krobus 16 24 -100 -100 0 true/globalFade/viewport -1000 -1000/changeLocation Sewer/playMusic Icicles/warp Lance 24 21/warp farmer 26 21/warp Krobus 31 16/viewport 31 19 true/move farmer 4 0 0 true/move Lance 8 0 0 true/pause 2000/move farmer 0 -2 0 true/pause 2050/move Lance 0 -2 0 true/pause 1000/move Krobus 0 1 2/pause 650/shake Krobus 50/pause 600/speak Krobus \"{{i18n:Lance.13Heart.09 {{expressionList}} }}\"/pause 300/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.10 {{expressionList}} }}\"/pause 500/message \"{{i18n:Lance.13Heart.11 {{expressionList}} }}\"/beginSimultaneousCommand/shake Krobus 50/jump Lance 8/endSimultaneousCommand/pause 500/emote Lance 32/globalFade/pause 300/message \"{{i18n:Lance.13Heart.12 {{expressionList}} }}\"/pause 50/emote Krobus 32/pause 300/speak Lance \"{{i18n:Lance.13Heart.13 {{expressionList}} }}\"/jump farmer 8/pause 800/faceDirection farmer 1/emote farmer 60/faceDirection Lance 3/emote Lance 20/pause 300/speak Lance \"{{i18n:Lance.13Heart.14 {{expressionList}} }}\"/pause 300/emote farmer 20/move farmer 0 2 0 true/pause 50/emote Lance 40/move Lance 0 2 0 true/emote Krobus 32/end"
+            }
+        },
+
+        { //Lance 13 pt 2 heart EVENT - Camilla's Tutelage // step out of farm, camilla warps in angry and shaking // lance appears afterwards, jump lance // camilla starts yelling at lance about soulbond paperwork // lance shy surprise about soulbond // camilla a n g e r y soulbonding not taken lightly //lance apologizes // camilla forgives, but need to talk to magnus
+            "LogName": "Heart Event - 13.2",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "Entries": {
+                "LECamillaTutelage/e LEShadowpeople/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound wand/addTemporaryActor Camilla 16 32 -100 -100 0 true/warp Camilla 64 19/pause 300/shake Camilla 100/pause 300/speak Camilla \"{{i18n:Lance.13Heart.15 {{expressionList}} }}\"/jump farmer 8/pause 300/emote farmer 8/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.13Heart.16 {{expressionList}} }}\"/jump Lance 8/pause 300/shake Lance 50/beginSimultaneousCommand/move farmer -1 0 1 true/move Camilla 0 -1 0 true/endSimultaneousCommand/shake Camilla 100/speak Camilla \"{{i18n:Lance.13Heart.17 {{expressionList}} }}\"/jump Lance 3/shake Lance 100/pause 300/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.18 {{expressionList}} }}\"/shake Camilla 100/emote Camilla 12/speak Camilla \"{{i18n:Lance.13Heart.19 {{expressionList}} }}\"/pause 300/emote Lance 40/pause 300/faceDirection Lance 1/emote Lance 40/pause 300/faceDirection Lance 2/speak Lance \"{{i18n:Lance.13Heart.20 {{expressionList}} }}\"/pause 300/move Lance -1 0 2/move Lance 0 1 2/pause 300/showFrame Lance 22/shake Lance 50/emote Lance 40/pause 300/speak Lance \"{{i18n:Lance.13Heart.21 {{expressionList}} }}\"/startJittering/pause 30/stopJittering/emote farmer 20/message \"{{i18n:Lance.13Heart.22 {{expressionList}} }}\"/pause 300/emote Lance 20/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.23 {{expressionList}} }}\"/pause 300/emote Camilla 40/pause 200/speak Camilla \"{{i18n:Lance.13Heart.24 {{expressionList}} }}\"/shake Lance 50/textAboveHead Lance \"{{i18n:Lance.13Heart.25 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.13Heart.26 {{expressionList}} }}\"/end"
+            }
+        },
+
+        { //Lance 13 pt 3 heart EVENT - Magnus' Tutelage RRRR INSTALLED // magnus in front of cauldron brewing potion, camilla slams door, she walks with a talking bubble saying "RAZ WE'RE HERE FOR GUIDANCE" // magnus grumbles and walks to the threshold [IF MORGAN IS THERE, MORGAN SAYS HELLO TO EVERYONE] // camilla shoves lance to tell magnus what he has planned // magnus sighs and says he already knows // farmer and camilla both jump // lance explains magnus was the first he went to since founding member of ministry // magnus asks lance to do oath spell to tell truth of plan with farmer, lance agrees // lance tells farmer he wishes to extend his vitality and magic to the farmer through a soulbound, but not planes practitioner, his lifespan would be cut shorter, wants to live his whole life with farmer // farmer agrees and lance is ecstatic, says he'll be able to teach farmer combat magic once they're soulbound // needs a week for preparation
+            "LogName": "Heart Event - 13.3",
+            "Action": "EditData",
+            "Target": "data/events/Wizardhouse",
+            "Entries": {
+                "LEMagnusTutelage/e LECamillaTutelage/": "continue/-500 -500/farmer 7 28 0 Wizard 10 17 2 Lance 7 29 0 Camilla 7 30 0/skippable/viewport 7 18 true/move farmer 0 -12 1 true/pause 10/move Lance 0 -12 1 true/pause 10/move Camilla 0 -12 1 true/pause 500/textAboveHead Camilla \"{{i18n:Lance.13Heart.27 {{expressionList}} }}\"/pause 1000/textAboveHead Wizard \"{{i18n:Lance.13Heart.28 {{expressionList}} }}\"/pause 500/faceDirection Wizard 3/speak Wizard \"{{i18n:Lance.13Heart.29 {{expressionList}} }}\"/pause 500/emote Camilla 40/pause 300/shake Camilla 100/speak Camilla \"{{i18n:Lance.13Heart.30 {{expressionList}} }}\"/pause 300/textAboveHead Wizard \"{{i18n:Lance.13Heart.31 {{expressionList}} }}\"/pause 300/speak Wizard \"{{i18n:Lance.13Heart.32 {{expressionList}} }}\"/pause 300/jump Camilla 8/shake Camilla 100/speak Camilla \"{{i18n:Lance.13Heart.33 {{expressionList}} }}\"/pause 100/emote Camilla 12/pause 300/textAboveHead Lance \"{{i18n:Lance.13Heart.31 {{expressionList}} }}\"/pause 1000/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.34 {{expressionList}} }}\"/pause 500/emote Wizard 40/pause 400/shake Wizard 50/speak Wizard \"{{i18n:Lance.13Heart.35 {{expressionList}} }}\"/pause 500/jump farmer 8/emote farmer 8/pause 500/shake Wizard 100/speak Wizard \"{{i18n:Lance.13Heart.36 {{expressionList}} }}\"/pause 500/emote Wizard 40/speak Wizard \"{{i18n:Lance.13Heart.37 {{expressionList}} }}\"/pause 300/emote farmer 16/faceDirection farmer 2/pause 300/emote farmer 60/faceDirection Lance 0/speak Lance \"{{i18n:Lance.13Heart.38 {{expressionList}} }}\"/pause 500/emote farmer 40/pause 500/message \"{{i18n:Lance.13Heart.39 {{expressionList}} }}\"/pause 1000/emote farmer 20/pause 300/shake Lance 200/jump Lance 4/pause 300/speak Lance \"{{i18n:Lance.13Heart.40 {{expressionList}} }}\"/pause 300/faceDirection Lance 1/jump Lance 8/shake Lance 300/shake Wizard 100/shake Camilla 300/pause 300/message \"{{i18n:Lance.13Heart.41 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.13Heart.42 {{expressionList}} }}\""
+            }
+        },
+
+        { //Load lance magic
+            "LogName": "Ritual Circle",
+            "Action": "Load",
+            "Target": "Characters/ritualcircle",
+            "FromFile": "assets/{{Target}}.png",
+        },
+
+        { //Lance 13 pt 4 heart EVENT - Lance's Gift // help from marlon, clint, magnus, camilla, and alesia, lance created the defensive artifact for himself for first part of ritual // gets farmer to imbue magic into it as the farmer pierces his other ear // once ritual is done, lance tells farmer next part will come soon
+            "LogName": "Heart Event - 13.4",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "When": {
+                "Spice": "light",
+            },
+            "Entries": {
+                "LELanceVow/e LEMagnusTutelage/u 28/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.13Heart.43 {{expressionList}} }}\"/jump farmer 4/faceDirection farmer 0/pause 300/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.13Heart.44 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 300/move Lance 0 1 2/pause 300/message \"{{i18n:Lance.13Heart.45 {{expressionList}} }}\"/pause 300/shake Lance 900/startJittering/globalFade/playSound wand/stopJittering/viewport -1000 -1000/changeLocation custom_FableReef/viewport 38 42 clamp/makeInvisible 0 0 1000 1000/addTemporaryActor ritualcircle 53 51 47 52 0 false/ignoreCollisions ritualcircle/playSound wand/warp farmer 31 41/move farmer 1 0 1 true/warp Lance 31 41/move Lance 0 1 1 true/pause 400/emote Lance 20/speak Lance \"{{i18n:Lance.13Heart.46 {{expressionList}} }}\"/pause 300/emote farmer 20/pause 400/move farmer 5 0 2 Lance 3 0 2/globalFade/viewport 47 52 clamp/warp farmer 46 52/warp Lance 50 52/faceDirection farmer 1/faceDirection Lance 3/pause 500/speak Lance \"{{i18n:Lance.13Heart.47 {{expressionList}} }}\"/pause 300/showFrame Lance 18/pause 600/emote Lance 60/shake Lance 100/speak Lance \"{{i18n:Lance.13Heart.48 {{expressionList}} }}\"/pause 800/shake Lance 100/showFrame Lance 18/pause 500/message \"{{i18n:Lance.13Heart.49 {{expressionList}} }}\"/pause 500/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.50 {{expressionList}} }}\"/playSound junimoMeep1/playSound junimoMeep1/pause 500/shake Lance 100/textAboveHead Lance \"{{i18n:Lance.13Heart.25{{expressionList}} }}\"/pause 1500/glow 10 10 10/pause 1000/shake Lance 800/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.51 {{expressionList}} }}\"/move Lance 0 2 3 farmer 0 2 1/pause 100/move Lance -2 0 3 farmer 1 0 1/showFrame Lance 23/faceDirection farmer 1/showFrame farmer 11/shake Lance 100/startJittering/message \"{{i18n:Lance.13Heart.52 {{expressionList}} }}\"/stopJittering/pause 1300/showFrame Lance 21/speak Lance \"{{i18n:Lance.13Heart.53 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.54 {{expressionList}} }}\"/pause 300/pause 300/speak Lance \"{{i18n:Lance.13Heart.55 {{expressionList}} }}\"/pause 600/faceDirection farmer 1/showFrame farmer 89/pause 400/emote farmer 20/showFrame Lance 13/positionOffset Lance -2 0/message \"{{i18n:Lance.13Heart.56 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/speak Lance \"{{i18n:Lance.13Heart.57 {{expressionList}} }}\"/end newDay"
+            }
+        },
+        { //Lance 13 pt 4 heart EVENT - Lance's Gift // help from marlon, clint, magnus, camilla, and alesia, lance created the defensive artifact for himself for first part of ritual // gets farmer to imbue magic into it as the farmer pierces his other ear // once ritual is done, lance tells farmer next part will come soon
+            "LogName": "Heart Event - 13.4",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "When": {
+                "Spice": "moderate",
+            },
+            "Entries": {
+                "LELanceVow/e LEMagnusTutelage/u 28/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.13Heart.43 {{expressionList}} }}\"/jump farmer 4/faceDirection farmer 0/pause 300/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.13Heart.44 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 300/move Lance 0 1 2/pause 300/message \"{{i18n:Lance.13Heart.45 {{expressionList}} }}\"/pause 300/shake Lance 900/startJittering/globalFade/playSound wand/stopJittering/viewport -1000 -1000/changeLocation custom_FableReef/viewport 38 42 clamp/makeInvisible 0 0 1000 1000/addTemporaryActor ritualcircle 53 51 47 52 0 false/ignoreCollisions ritualcircle/playSound wand/warp farmer 31 41/move farmer 1 0 1 true/warp Lance 31 41/move Lance 0 1 1 true/pause 400/emote Lance 20/speak Lance \"{{i18n:Lance.13Heart.46 {{expressionList}} }}\"/pause 300/emote farmer 20/pause 400/move farmer 5 0 2 Lance 3 0 2/globalFade/viewport 47 52 clamp/warp farmer 46 52/warp Lance 50 52/faceDirection farmer 1/faceDirection Lance 3/pause 500/speak Lance \"{{i18n:Lance.13Heart.47 {{expressionList}} }}\"/pause 300/showFrame Lance 18/pause 600/emote Lance 60/shake Lance 100/speak Lance \"{{i18n:Lance.13Heart.48 {{expressionList}} }}\"/pause 800/shake Lance 100/showFrame Lance 18/pause 500/message \"{{i18n:Lance.13Heart.49 {{expressionList}} }}\"/pause 500/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.50 {{expressionList}} }}\"/playSound junimoMeep1/playSound junimoMeep1/pause 500/shake Lance 100/textAboveHead Lance \"{{i18n:Lance.13Heart.25{{expressionList}} }}\"/pause 1500/glow 10 10 10/pause 1000/shake Lance 800/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.51 {{expressionList}} }}\"/move Lance 0 2 3 farmer 0 2 1/pause 100/move Lance -2 0 3 farmer 1 0 1/showFrame Lance 23/faceDirection farmer 1/showFrame farmer 11/shake Lance 100/startJittering/message \"{{i18n:Lance.13Heart.52 {{expressionList}} }}\"/stopJittering/pause 1300/showFrame Lance 21/speak Lance \"{{i18n:Lance.13Heart.53 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.54 {{expressionList}} }}\"/pause 300/pause 300/speak Lance \"{{i18n:Lance.13Heart.55 {{expressionList}} }}\"/pause 600/faceDirection farmer 1/showFrame farmer 89/pause 400/emote farmer 20/showFrame Lance 13/positionOffset Lance -2 0/message \"{{i18n:Lance.13Heart.56 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/speak Lance \"{{i18n:Lance.13Heart.57 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.13Heart.habanero.1 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.habanero.2 {{expressionList}} }}\"/mail Mail.13Heart/end newDay"
+            }
+        },
+        { //Lance 13 pt 4 heart EVENT - Lance's Gift // help from marlon, clint, magnus, camilla, and alesia, lance created the defensive artifact for himself for first part of ritual // gets farmer to imbue magic into it as the farmer pierces his other ear // once ritual is done, lance tells farmer next part will come soon
+            "LogName": "Heart Event - 13.4",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "When": {
+                "Spice": "spicy",
+            },
+            "Entries": {
+                "LELanceVow/e LEMagnusTutelage/u 28/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.13Heart.43 {{expressionList}} }}\"/jump farmer 4/faceDirection farmer 0/pause 300/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.13Heart.44 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 300/move Lance 0 1 2/pause 300/message \"{{i18n:Lance.13Heart.45 {{expressionList}} }}\"/pause 300/shake Lance 900/startJittering/globalFade/playSound wand/stopJittering/viewport -1000 -1000/changeLocation custom_FableReef/viewport 38 42 clamp/makeInvisible 0 0 1000 1000/addTemporaryActor ritualcircle 53 51 47 52 0 false/ignoreCollisions ritualcircle/playSound wand/warp farmer 31 41/move farmer 1 0 1 true/warp Lance 31 41/move Lance 0 1 1 true/pause 400/emote Lance 20/speak Lance \"{{i18n:Lance.13Heart.46 {{expressionList}} }}\"/pause 300/emote farmer 20/pause 400/move farmer 5 0 2 Lance 3 0 2/globalFade/viewport 47 52 clamp/warp farmer 46 52/warp Lance 50 52/faceDirection farmer 1/faceDirection Lance 3/pause 500/speak Lance \"{{i18n:Lance.13Heart.47 {{expressionList}} }}\"/pause 300/showFrame Lance 18/pause 600/emote Lance 60/shake Lance 100/speak Lance \"{{i18n:Lance.13Heart.48 {{expressionList}} }}\"/pause 800/shake Lance 100/showFrame Lance 18/pause 500/message \"{{i18n:Lance.13Heart.49 {{expressionList}} }}\"/pause 500/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.50 {{expressionList}} }}\"/playSound junimoMeep1/playSound junimoMeep1/pause 500/shake Lance 100/textAboveHead Lance \"{{i18n:Lance.13Heart.25{{expressionList}} }}\"/pause 1500/glow 10 10 10/pause 1000/shake Lance 800/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.51 {{expressionList}} }}\"/move Lance 0 2 3 farmer 0 2 1/pause 100/move Lance -2 0 3 farmer 1 0 1/showFrame Lance 23/faceDirection farmer 1/showFrame farmer 11/shake Lance 100/startJittering/message \"{{i18n:Lance.13Heart.52 {{expressionList}} }}\"/stopJittering/pause 1300/showFrame Lance 21/speak Lance \"{{i18n:Lance.13Heart.53 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.54 {{expressionList}} }}\"/pause 300/pause 300/speak Lance \"{{i18n:Lance.13Heart.55 {{expressionList}} }}\"/pause 600/faceDirection farmer 1/showFrame farmer 89/pause 400/emote farmer 20/showFrame Lance 13/positionOffset Lance -2 0/message \"{{i18n:Lance.13Heart.56 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/speak Lance \"{{i18n:Lance.13Heart.57 {{expressionList}} }}\"/pause 300/changePortrait Lance Beach/speak Lance \"{{i18n:Lance.13Heart.carolina.1 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.2 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.3 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.4 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.5 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.6 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.7 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.8 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.9 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.10 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.11 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.12 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.13 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.14 {{expressionList}} }}\"/mail Mail.13Heart/end newDay"
+            }
+        },
+        ////////////need to actually write the pain variant but i'm not in any mood
+        { //Lance 13 pt 4 heart EVENT - Lance's Gift // help from marlon, clint, magnus, camilla, and alesia, lance created the defensive artifact for himself for first part of ritual // gets farmer to imbue magic into it as the farmer pierces his other ear // once ritual is done, lance tells farmer next part will come soon
+            "LogName": "Heart Event - 13.4",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "When": {
+                "Spice": "pain",
+            },
+            "Entries": {
+                "LELanceVow/e LEMagnusTutelage/u 28/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/skippable/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.13Heart.43 {{expressionList}} }}\"/jump farmer 4/faceDirection farmer 0/pause 300/emote farmer 8/pause 300/speak Lance \"{{i18n:Lance.13Heart.44 {{expressionList}} }}\"/pause 300/emote farmer 32/pause 300/move Lance 0 1 2/pause 300/message \"{{i18n:Lance.13Heart.45 {{expressionList}} }}\"/pause 300/shake Lance 900/startJittering/globalFade/playSound wand/stopJittering/viewport -1000 -1000/changeLocation custom_FableReef/viewport 38 42 clamp/makeInvisible 0 0 1000 1000/addTemporaryActor ritualcircle 53 51 47 52 0 false/ignoreCollisions ritualcircle/playSound wand/warp farmer 31 41/move farmer 1 0 1 true/warp Lance 31 41/move Lance 0 1 1 true/pause 400/emote Lance 20/speak Lance \"{{i18n:Lance.13Heart.46 {{expressionList}} }}\"/pause 300/emote farmer 20/pause 400/move farmer 5 0 2 Lance 3 0 2/globalFade/viewport 47 52 clamp/warp farmer 46 52/warp Lance 50 52/faceDirection farmer 1/faceDirection Lance 3/pause 500/speak Lance \"{{i18n:Lance.13Heart.47 {{expressionList}} }}\"/pause 300/showFrame Lance 18/pause 600/emote Lance 60/shake Lance 100/speak Lance \"{{i18n:Lance.13Heart.48 {{expressionList}} }}\"/pause 800/shake Lance 100/showFrame Lance 18/pause 500/message \"{{i18n:Lance.13Heart.49 {{expressionList}} }}\"/pause 500/shake Lance 50/speak Lance \"{{i18n:Lance.13Heart.50 {{expressionList}} }}\"/playSound junimoMeep1/playSound junimoMeep1/pause 500/shake Lance 100/textAboveHead Lance \"{{i18n:Lance.13Heart.25{{expressionList}} }}\"/pause 1500/glow 10 10 10/pause 1000/shake Lance 800/emote Lance 40/speak Lance \"{{i18n:Lance.13Heart.51 {{expressionList}} }}\"/move Lance 0 2 3 farmer 0 2 1/pause 100/move Lance -2 0 3 farmer 1 0 1/showFrame Lance 23/faceDirection farmer 1/showFrame farmer 11/shake Lance 100/startJittering/message \"{{i18n:Lance.13Heart.52 {{expressionList}} }}\"/stopJittering/pause 1300/showFrame Lance 21/speak Lance \"{{i18n:Lance.13Heart.53 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.13Heart.54 {{expressionList}} }}\"/pause 300/pause 300/speak Lance \"{{i18n:Lance.13Heart.55 {{expressionList}} }}\"/pause 600/faceDirection farmer 1/showFrame farmer 89/pause 400/emote farmer 20/showFrame Lance 13/positionOffset Lance -2 0/message \"{{i18n:Lance.13Heart.56 {{expressionList}} }}\"/globalFade/viewport -1000 -1000/speak Lance \"{{i18n:Lance.13Heart.57 {{expressionList}} }}\"/pause 300/changePortrait Lance Beach/speak Lance \"{{i18n:Lance.13Heart.carolina.1 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.2 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.3 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.4 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.5 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.6 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.7 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.8 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.9 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.10 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.11 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.12 {{expressionList}} }}\"/speak Lance \"{{i18n:Lance.13Heart.carolina.13 {{expressionList}} }}\"/message \"{{i18n:Lance.13Heart.carolina.14 {{expressionList}} }}\"/end newDay"
+            }
+        },
+
+        { //Lance 14 pt1 heart EVENT - A Soul Bonding // good morning, ritual is ready, meet at summit at 6pm NEEDS NEXUS UNLOCKED BECAUSE UH DUH
+            "LogName": "Heart Event - 14.1",
+            "Action": "EditData",
+            "Target": "data/events/Farm",
+            "Entries": {
+                "LESoulBonding/e 908072/e LELanceVow/f Lance 3500/O Lance/t 600 700/": "continue/-10000 -1000/farmer -100 -100 2 Lance -100 -100 2/warp Lance -100 -100/warp farmer -100 -100/faceDirection Lance 2/viewport 64 15 clamp true/pause 2000/playSound doorClose/warp farmer 64 15/pause 500/move farmer 0 2 2/pause 300/playSound doorClose/warp Lance 64 15/pause 300/speak Lance \"{{i18n:Lance.14Hearts.01 {{expressionList}} }}\"/jump farmer 4/faceDirection farmer 0/pause 300/emote farmer 20/speak Lance \"{{i18n:Lance.14Hearts.02 {{expressionList}} }}\"/end dialogue Lance \"{{i18n:Lance.14Hearts.03 {{expressionList}} }}\""
+            }
+        },
+
+        { //Lance 14 pt2 heart EVENT - In Sickness And In Health // go to the summit, they said, it'll be fun they said
+            "LogName": "Heart Event - 14.2",
+            "Action": "EditData",
+            "Target": "data/events/Railroad",
+            "Entries": {
+                "LESickness/e LESoulBonding/t 1800 2600": "continue/-10000 -1000/farmer 10 29 0 Lance 11 13 0/changeLocation Custom_SVESummit/viewport 14 18/pause 1000/speak Lance \"{{i18n:Lance.14Hearts.Pt2.01 {{expressionList}} }}\"/advancedMove farmer false 0 -14 -1 0 0 -2 1 0 1 5000/emote farmer 8/speak Lance \"{{i18n:Lance.14Hearts.Pt2.02 {{expressionList}} }}\"/pause 100/emote farmer 12/shake Lance 300/emote Lance 32/faceDirection Lance 3/showFrame Lance 19/pause 2500/shake Lance 200/textAboveHead Lance \"{{i18n:Lance.14Hearts.chuckle}}\"/showFrame Lance 12/speak Lance \"{{i18n:Lance.14Hearts.Pt2.03 {{expressionList}} }}\"/emote farmer 12/showFrame Lance 19/pause 1100/shake Lance 200/textAboveHead Lance \"{{i18n:Lance.14Hearts.chuckle}}\"/showFrame Lance 12/speak Lance \"{{i18n:Lance.14Hearts.Pt2.04 {{expressionList}} }}\"/pause 1000/faceDirection Lance 3/showFrame Lance 18/shake Lance 300/playSound healSound/glow 10 10 10/shake Lance 300/pause 2500/faceDirection Lance 3/speak Lance \"{{i18n:Lance.14Hearts.Pt2.05 {{expressionList}} }}\"/pause 800/faceDirection farmer 1/emote farmer 20/message \"{{i18n:Lance.14Hearts.Pt2.06 {{expressionList}} }}\"/stopAdvancedMoves/advancedMove farmer false -1 0 0 2 1 0 0 14 1 5000/move Lance -2 0 2/move Lance 0 2 2/move Lance 1 0 2/move Lance 0 14 2/globalFade/viewport -1000 -1000/faceDirection Lance 0/changeToTemporaryMap Railroad false/bgColor 0 0 0/ambientLight 0 0 0/switchEvent LEForsakingAllOthers",
+            }
+        },
+
+        { //Lance 14 pt5 THANK YOU TO MELE ON SDV DISCORD FOR HELPING ME WITH THIS GOD AWFUL MAP CHANGING AND TELLING ME TO PUT IT INTO TEMP MAPS LORD HAVE MERCY I AM LIMITLESS
+            "LogName": "Heart Event - 14.3",
+            "Action": "EditData",
+            "Target": "data/events/temp",
+            "Entries": {
+                "LEForsakingAllOthers": "pause 1500/playmusic sweet/viewport 17 23 clamp false/warp farmer 18 23/warp Lance 17 23/faceDirection farmer 0/faceDirection Lance 0/pause 1500/emote Lance 40/message \"{{i18n:Lance.14Hearts.Pt3.01 {{expressionList}} }}\"/pause 1500/speak Lance \"{{i18n:Lance.14Hearts.Pt3.02 {{expressionList}} }}\"/pause 200/jump farmer 8/emote farmer 16/faceDirection farmer 3/startJittering/emote farmer 12/stopJittering/emote farmer 28/pause 800/showFrame Lance 16/pause 2500/shake Lance 200/textAboveHead Lance \"{{i18n:Lance.14Hearts.chuckle}}\"/showFrame Lance 4/speak Lance \"{{i18n:Lance.14Hearts.Pt3.03 {{expressionList}} }}\"/pause 300/showFrame Lance 16/pause 1500/emote farmer 8/speak Lance \"{{i18n:Lance.14Hearts.Pt3.04 {{expressionList}} }}\"/shake Lance 500/showFrame Lance 16/pause 800/textAboveHead Lance \"{{i18n:Lance.14Hearts.Pt3.05 {{expressionList}} }}\"/pause 800/showFrame Lance 4/speak Lance \"{{i18n:Lance.14Hearts.Pt3.06 {{expressionList}} }}\"/showFrame Lance 16/jump farmer 8/pause 300/emote farmer 28/pause 800/shake Lance 200/showFrame Lance 4/speak Lance \"{{i18n:Lance.14Hearts.Pt3.07 {{expressionList}} }}\"/jump farmer 8/emote farmer 16/startJittering/pause 300/stopJittering/pause 800/ignoreCollisions Lance/ignoreCollisions farmer/positionOffset farmer -1 0/positionOffset farmer -1 0/positionOffset farmer 0 1/positionOffset farmer 0 1/positionOffset farmer 0 1/showFrame farmer 89 true/showFrame Lance 20/positionOffset farmer -1 0/pause 50/positionOffset farmer -1 0/pause 800/message \"{{i18n:Lance.14Hearts.Pt3.08 {{expressionList}} }}\"/pause 800/shake Lance 200/speak Lance \"{{i18n:Lance.14Hearts.Pt3.09 {{expressionList}} }}\"/faceDirection farmer 3/showFrame Lance 16/pause 1100/shake Lance 200/textAboveHead Lance \"{{i18n:Lance.14Hearts.chuckle}}\"/showFrame Lance 4/pause 900/speak Lance \"{{i18n:Lance.14Hearts.Pt3.10 {{expressionList}} }}\"/showFrame Lance 16/pause 900/faceDirection Lance 0/pause 900/showFrame Lance 27/playSound healSound/glow 10 10 10/pause 1900/faceDirection Lance 1/pause 600/showFrame Lance 20/speak Lance \"{{i18n:Lance.14Hearts.Pt3.11 {{expressionList}} }}\"/pause 600/emote farmer 20/showFrame farmer 89 true/globalFade/viewport -1000 -1000/changeToTemporaryMap Town false/bgColor 0 0 0/ambientLight 0 0 0/switchEvent LEToLovenCherish",
+
+                "LEToLovenCherish": "pause 1500/playmusic sweet/viewport 26 31 clamp false/warp farmer 41 32/warp Lance 42 32/faceDirection farmer 3/advancedMove farmer false -15 0 0 -3 4 5000/move Lance -17 0 3/move Lance 0 -3 0/pause 1500/emote Lance 40/beginSimultaneousCommand/speak Lance \"{{i18n:Lance.14Hearts.Pt4.01 {{expressionList}} }}\"/faceDirection Lance 1/faceDirection farmer 3/endSimultaneousCommand/pause 900/message \"{{i18n:Lance.14Hearts.Pt4.02 {{expressionList}} }}\"/pause 300/showFrame Lance 16/pause 300/shake Lance 100/pause 300/speak Lance \"{{i18n:Lance.14Hearts.Pt4.03 {{expressionList}} }}\"/pause 800/emote farmer 8/pause 300/message \"{{i18n:Lance.14Hearts.Pt4.04 {{expressionList}} }}\"/pause 400/showFrame Lance 4/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt4.05 {{expressionList}} }}\"/pause 400/jump farmer 8/emote farmer 16/pause 300/emote farmer 8/pause 600/message \"{{i18n:Lance.14Hearts.Pt4.06}}\"/pause 600/emote Lance 40/pause 300/speak Lance \"{{i18n:Lance.14Hearts.Pt4.07 {{expressionList}} }}\"/pause 600/emote farmer 16/startJittering/message \"{{i18n:Lance.14Hearts.Pt4.08 {{expressionList}} }}\"/pause 300/stopJittering/showFrame Lance 16/shake Lance 500/showFrame Lance 4/pause 300/jump Lance 3/speak Lance \"{{i18n:Lance.14Hearts.Pt4.09 {{expressionList}} }}\"/pause 700/showFrame Lance 16/beginSimultaneousCommand/shake Lance 1000/eyes 1 -1000/startJittering/pause 700/message \"{{i18n:Lance.14Hearts.Pt4.10 {{expressionList}} }}\"/pause 300/endSimultaneousCommand/stopJittering/showFrame Lance 4/pause 500/speak Lance \"{{i18n:Lance.14Hearts.Pt4.11 {{expressionList}} }}\"/pause 500/jump farmer 8/startJittering/emote farmer 60/pause 900/stopJittering/showFrame Lance 16/pause 300/showFrame Lance 16/speak Lance \"{{i18n:Lance.14Hearts.Pt4.12 {{expressionList}} }}\"/pause 400/startJittering/jump farmer 8/emote farmer 12/pause 200/message \"{{i18n:Lance.14Hearts.Pt4.13 {{expressionList}} }}\"/showFrame Lance 20/ignoreCollisions farmer/ignoreCollisions Lance/positionOffset Lance 1 0/positionOffset Lance 1 0/positionOffset Lance 1 0/showFrame farmer 89 true/positionOffset Lance 1 0/positionOffset Lance 1 0/playSound dwoop/pause 200/shake Lance 1500/speak Lance \"{{i18n:Lance.14Hearts.Pt4.14 {{expressionList}} }}\"/pause 900/stopJittering/emote farmer 32/emote Lance 32/message \"{{i18n:Lance.14Hearts.Pt4.15 {{expressionList}} }}\"/eyes 1 -1000/positionOffset farmer -1 0/positionOffset farmer -1 0/pause 200/message \"{{i18n:Lance.14Hearts.Pt4.16 {{expressionList}} }}\"/pause 500/emote Lance 20/pause 200/speak Lance \"{{i18n:Lance.14Hearts.Pt4.17 {{expressionList}} }}\"/pause 600/startJittering/pause 300/stopJittering/showFrame farmer 48 true/playsound dwoop/pause 20/showFrame farmer 49 true/pause 20/showFrame farmer 50 true/pause 200/showFrame farmer 89 true/pause 40/showFrame Lance 20/shake Lance 300/emote Lance 28/emote Lance 16/message \"{{i18n:Lance.14Hearts.Pt4.18 {{expressionList}} }}\"/pause 400/emote farmer 12/pause 600/speak Lance \"{{i18n:Lance.14Hearts.Pt4.19 {{expressionList}} }}\"/startJittering/emote farmer 56/pause 300/shake Lance 200/stopJittering/pause 600/message \"{{i18n:Lance.14Hearts.Pt4.20 {{expressionList}} }}\"/pause 300/emote farmer 56/positionOffset farmer -1 0/positionOffset farmer -1 0/positionOffset farmer -1 0/positionOffset farmer -1 0/playSound dwoop/eyes 1 -1000/pause 500/positionOffset farmer 1 0/positionOffset Lance -1 0/speak Lance \"{{i18n:Lance.14Hearts.Pt4.21 {{expressionList}} }}\"/pause 600/message \"{{i18n:Lance.14Hearts.Pt4.22 {{expressionList}} }}\"/emote farmer 56/eyes 1 -2000/playSound dwoop/showFrame farmer 89 true/positionOffset farmer -1 0/positionOffset Lance 1 0/pause 700/faceDirection farmer 3/speak Lance \"{{i18n:Lance.14Hearts.Pt4.23 {{expressionList}} }}\"/pause 400/shake Lance 300/faceDirection Lance 0/pause 600/showFrame Lance 27/playsound healSound/pause 300/glow 10 10 10/pause 900/showFrame Lance 4/pause 800/showFrame Lance 20/pause 300/showFrame farmer 89 true/pause 600/emote farmer 20/emote Lance 20/globalFade/viewport -1000 -1000/faceDirection farmer 0/showFrame Lance 22/changeToTemporaryMap custom_EnchantedGrove false/bgColor 0 0 0/ambientLight 0 0 0/switchEvent LEUntilDeath",
+
+                "LEUntilDeath": "pause 1500/playmusic sweet/viewport 30 28 clamp false/warp farmer 30 28/warp Lance 30 27/speak Lance \"{{i18n:Lance.14Hearts.Pt5.01 {{expressionList}} }}\"/pause 600/showFrame Lance 23/shake Lance 200/emote farmer 16/startJittering/pause 200/stopJittering/message \"{{i18n:Lance.14Hearts.Pt5.02 {{expressionList}} }}\"/pause 600/showFrame Lance 22/pause 200/speak Lance \"{{i18n:Lance.14Hearts.Pt5.03 {{expressionList}} }}\"/pause 400/emote Lance 40/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt5.04 {{expressionList}} }}\"/pause 200/emote farmer 16/ignoreCollisions farmer/ignoreCollisions Lance/showFrame farmer 63 false/message \"{{i18n:Lance.14Hearts.Pt5.05 {{expressionList}} }}\"/positionOffset farmer 0 -1/positionOffset farmer 0 -1/playsound dwoop/pause 300/emote Lance 20/pause 100/emote farmer 20/pause 700/speak Lance \"{{i18n:Lance.14Hearts.Pt5.06 {{expressionList}} }}\"/pause 300/emote farmer 60/pause 500/message \"{{i18n:Lance.14Hearts.Pt5.07 {{expressionList}} }}\"/pause 600/shake Lance 200/speak Lance \"{{i18n:Lance.14Hearts.Pt5.08 {{expressionList}} }}\"/pause 600/emote farmer 16/pause 200/emote farmer 60/shake Lance 200/textAboveHead Lance \"{{i18n:Lance.14Hearts.chuckle}}\"/pause 600/playsound dwoop/startJittering/pause 200/stopJittering/message \"{{i18n:Lance.14Hearts.Pt5.09 {{expressionList}} }}\"/pause 500/speak Lance \"{{i18n:Lance.14Hearts.Pt5.10 {{expressionList}} }}\"/startJittering/pause 100/stopJittering/emote farmer 32/pause 700/speak Lance \"{{i18n:Lance.14Hearts.Pt5.11 {{expressionList}} }}\"/pause 400/message \"{{i18n:Lance.14Hearts.Pt5.12 {{expressionList}} }}\"/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt5.13 {{expressionList}} }}\"/pause 400/message \"{{i18n:Lance.14Hearts.Pt5.14 {{expressionList}} }}\"/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt5.15 {{expressionList}} }}\"/pause 400/message \"{{i18n:Lance.14Hearts.Pt5.16 {{expressionList}} }}\"/shake Lance 200/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt5.17 {{expressionList}} }}\"/pause 400/message \"{{i18n:Lance.14Hearts.Pt5.18 {{expressionList}} }}\"/pause 100/playsound junimoMeep1/playsound junimoMeep1/playsound junimoMeep1/playsound healSound/glow 10 10 10/pause 400/showFrame Lance 23/pause 400/shake Lance 100/speak Lance \"{{i18n:Lance.14Hearts.Pt5.19 {{expressionList}} }}\"/beginSimultaneousCommand/pause 400/showFrame Lance 22/shake Lance 200/startJittering/pause 400/message \"{{i18n:Lance.14Hearts.Pt5.20 {{expressionList}} }}\"/pause 100/stopJittering/endSimultaneousCommand/pause 900/emote Lance 40/pause 200/speak Lance \"{{i18n:Lance.14Hearts.Pt5.21 {{expressionList}} }}\"/playsound junimoMeep1/playsound junimoMeep1/pause 200/glow 10 10 10/playsound healSound/message \"{{i18n:Lance.14Hearts.Pt5.22 {{expressionList}} }}\"/showFrame Lance 23/shake Lance 300/emote Lance 32/pause 300/showFrame Lance 22/pause 400/speak Lance \"{{i18n:Lance.14Hearts.Pt5.23 {{expressionList}} }}\"/positionOffset farmer 0 -1/positionOffset farmer 0 -1/positionOffset farmer 0 -1/positionOffset farmer 0 -1/playsound dwoop/shake Lance 100/pause 600/speak Lance \"{{i18n:Lance.14Hearts.Pt5.25 {{expressionList}} }}\"/pause 300/shake Lance 1300/startJittering/beginSimultaneousCommand/globalFade/playsound wand/faceDirection farmer 3/faceDirection Lance 1/stopJittering/viewport -1000 -1000/endSimultaneousCommand/pause 1500/message \"{{i18n:Lance.14Hearts.Pt5.26 {{expressionList}} }}\"/addMailReceived wearEarrings/pause 1500/playsound doorClose/switchEvent LEDeathly",
+            }
+        },
+        { //Lance 14 pt6 rated e for everyone
+            "LogName": "Heart Event - 14.3",
+            "Action": "EditData",
+            "Target": "data/events/temp",
+            "When": {
+                "Spice": "light",
+            },
+            "Entries": {
+                "LEDeathly": "pause 1500/changePortrait Lance Beach/message \"{{i18n:Lance.14Hearts.spicecloser.1 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 100/speak Lance \"{{i18n:Lance.14Hearts.spicecloser.2 {{expressionList}} }}\"/pause 100/playsound dwoop/message \"{{i18n:Lance.14Hearts.spicecloser.3 {{expressionList}} }}\"/end",
+            }
+        },
+        { //Lance 14 pt6 the "take ya clothes off" peppered rice kinda feel
+            "LogName": "Heart Event - 14.3",
+            "Action": "EditData",
+            "Target": "data/events/temp",
+            "When": {
+                "Spice": "moderate",
+            },
+            "Entries": {
+                "LEDeathly": "pause 1500/changePortrait Lance Beach/speak Lance \"{{i18n:Lance.14Hearts.pepper.1 {{expressionList}} }}\"/playsound leafrustle/speak Lance \"{{i18n:Lance.14Hearts.pepper.2 {{expressionList}} }}\"/pause 300/playsound leafrustle/pause 300/message \"{{i18n:Lance.14Hearts.pepper.3 {{expressionList}} }}\"/playsound leafrustle/pause 300/speak Lance \"{{i18n:Lance.14Hearts.pepper.4 {{expressionList}} }}\"/playsound dwoop/pause 200/playsound leafrustle/pause 200/message \"{{i18n:Lance.14Hearts.pepper.5 {{expressionList}} }}\"/playsound dwoop/playsound leafrustle/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.6 {{expressionList}} }}\"/pause 300/message \"{{i18n:Lance.14Hearts.spicecloser.1 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 100/speak Lance \"{{i18n:Lance.14Hearts.spicecloser.2 {{expressionList}} }}\"/pause 100/playsound dwoop/message \"{{i18n:Lance.14Hearts.spicecloser.3 {{expressionList}} }}\"/end",
+            }
+        },
+        { //Lance 14 pt6 the slightly less sound effects but still quite annoying, amore
+            "LogName": "Heart Event - 14.3",
+            "Action": "EditData",
+            "Target": "data/events/temp",
+            "When": {
+                "Spice": "spicy",
+            },
+            "Entries": {
+                "LEDeathly": "pause 1500/changePortrait Lance Beach/speak Lance \"{{i18n:Lance.14Hearts.pepper.1 {{expressionList}} }}\"/playsound leafrustle/speak Lance \"{{i18n:Lance.14Hearts.pepper.2 {{expressionList}} }}\"/pause 300/playsound leafrustle/pause 300/message \"{{i18n:Lance.14Hearts.pepper.3 {{expressionList}} }}\"/playsound leafrustle/pause 300/speak Lance \"{{i18n:Lance.14Hearts.pepper.4 {{expressionList}} }}\"/playsound dwoop/pause 200/playsound leafrustle/pause 200/message \"{{i18n:Lance.14Hearts.pepper.5 {{expressionList}} }}\"/playsound dwoop/playsound leafrustle/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.6 {{expressionList}} }}\"/pause 300/playsound dwoop/pause 200/playsound dwoop/pause 100/pause 200/message \"{{i18n:Lance.14Hearts.pepper.7 {{expressionList}} }}\"/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.8 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 200/message \"{{i18n:Lance.14Hearts.pepper.9 {{expressionList}} }}\"/playsound leafrustle/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.10 {{expressionList}} }}\"/pause 400/playsound dwoop/pause 100/message \"{{i18n:Lance.14Hearts.pepper.11 {{expressionList}} }}\"/pause 100/playsound dwoop/speak Lance \"{{i18n:Lance.14Hearts.pepper.12 {{expressionList}} }}\"/pause 300/playsound dwoop/pause 200/message \"{{i18n:Lance.14Hearts.pepper.13 {{expressionList}} }}\"/message \"{{i18n:Lance.14Hearts.spicecloser.1 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 100/speak Lance \"{{i18n:Lance.14Hearts.spicecloser.2 {{expressionList}} }}\"/pause 100/playsound dwoop/message \"{{i18n:Lance.14Hearts.spicecloser.3 {{expressionList}} }}\"/end",
+            }
+        },
+        { //Lance 14 pt6 the spiciest of spice, THE MOST SOUND EFFECTS EVER
+            "LogName": "Heart Event - 14.3",
+            "Action": "EditData",
+            "Target": "data/events/temp",
+            "When": {
+                "Spice": "pain",
+            },
+            "Entries": {
+                "LEDeathly": "pause 1500/changePortrait Lance Beach/speak Lance \"{{i18n:Lance.14Hearts.pepper.1 {{expressionList}} }}\"/playsound leafrustle/speak Lance \"{{i18n:Lance.14Hearts.pepper.2 {{expressionList}} }}\"/pause 300/playsound leafrustle/pause 300/message \"{{i18n:Lance.14Hearts.pepper.3 {{expressionList}} }}\"/playsound leafrustle/pause 300/speak Lance \"{{i18n:Lance.14Hearts.pepper.4 {{expressionList}} }}\"/playsound dwoop/pause 200/playsound leafrustle/pause 200/message \"{{i18n:Lance.14Hearts.pepper.5 {{expressionList}} }}\"/playsound dwoop/playsound leafrustle/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.6 {{expressionList}} }}\"/pause 300/playsound dwoop/pause 200/playsound dwoop/pause 100/playsound slimeHit/pause 200/message \"{{i18n:Lance.14Hearts.pepper.7 {{expressionList}} }}\"/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.8 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 200/message \"{{i18n:Lance.14Hearts.pepper.9 {{expressionList}} }}\"/playsound leafrustle/pause 200/speak Lance \"{{i18n:Lance.14Hearts.pepper.10 {{expressionList}} }}\"/pause 400/playsound dwoop/pause 100/message \"{{i18n:Lance.14Hearts.pepper.11 {{expressionList}} }}\"/pause 100/playsound dwoop/speak Lance \"{{i18n:Lance.14Hearts.pepper.12 {{expressionList}} }}\"/pause 300/playsound dwoop/pause 200/message \"{{i18n:Lance.14Hearts.pepper.13 {{expressionList}} }}\"/pause 200/playsound breathin/pause 100/playsound breathout/pause 200/playsound leafrustle/pause 100/playsound dwoop/pause 300/speak Lance \"{{i18n:Lance.14Hearts.pepper.14 {{expressionList}} }}\"/pause 200/playsound breathin/pause 100/playsound leafrustle/message \"{{i18n:Lance.14Hearts.pepper.15 {{expressionList}} }}\"/pause 300/speak Lance \"{{i18n:Lance.14Hearts.pepper.16 {{expressionList}} }}\"/playsound dwoop/pause 100/pause 300/message \"{{i18n:Lance.14Hearts.pepper.17 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 100/playsound dwoop/speak Lance \"{{i18n:Lance.14Hearts.pepper.18 {{expressionList}} }}\"/pause 100/playsound dwoop/playsound leafrustle/pause 300/message \"{{i18n:Lance.14Hearts.pepper.19 {{expressionList}} }}\"/pause 100/playsound breathout/speak Lance \"{{i18n:Lance.14Hearts.pepper.20 {{expressionList}} }}\"/pause 100/playsound slimedead/pause 400/message \"{{i18n:Lance.14Hearts.spicecloser.1 {{expressionList}} }}\"/pause 100/playsound leafrustle/pause 100/speak Lance \"{{i18n:Lance.14Hearts.spicecloser.2 {{expressionList}} }}\"/pause 100/playsound dwoop/message \"{{i18n:Lance.14Hearts.spicecloser.3 {{expressionList}} }}\"/end",
+            }
+        },
+
+
+        /*
+///////////////////////////moved qi event to heart event for clarity
+///1925179 ORIGINAL QI EVENT <
+		/// ///CUSTOM SVE QI EVENTS/// ///
+		{ //??? - ADAPTED FROM ORIGINAL QI EVENT. Still plays the original to maintain event code log with SVE, but turned off for Lance edition. The timing has been slightly adjusted to allow for a better experience.
+			"LogName": "Qi Event: Start",
+			"Action": "EditData",
+			"Target": "data/events/forest",
+			"When": {
+				"HasFlag": "qiCave, galaxySword",
+				"Spouse |contains=Lance": true,
+				"Darker Plot Events(Y4)": true,
+				"HavingChild |contains=@{{playerName}}": false
+			},
+			"Entries": {
+				"19251790/e 1925178/Season Winter/!FestivalDay/u 5 6 7 8 9 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 26 27 28/y 4/t 600 1500/O Lance/w sunny": "playful/-500 -500/farmer 83 25 1 MrQi -505 -400 5 Marnie -200 -200 2 Lance -200 -205 3 Harvey -400 -400 2/skippable/showFrame MrQi 12/pause 100/viewport 83 25 true/viewport move 2 0 4000 true/move farmer 8 0 1/playSound wand/pause 50/playSound wand/screenFlash 1/warp MrQi 92 25/pause 200/emote farmer 16 true/stopMusic/pause 100/speak MrQi \"{{i18n:Qi.Start.01 {{expressionList}} }}\"/pause 400/playSound wand/screenFlash 2/warp farmer -100 -100/warp MrQi -101 -101/pause 2000/viewport move 0 -2 3000 true/pause 2000/warp Marnie 90 16/playSound doorClose/pause 800/move Marnie 0 1 2/pause 1000/move Marnie 0 0 3/pause 900/move Marnie 0 0 2/pause 100/move Marnie 0 0 1/pause 1000/move Marnie 0 0 2/pause 500/emote Marnie 8/pause 600/move Marnie 0 -1 0/pause 500/warp Marnie -300 -300/playSound doorClose/pause 1000/globalFade/viewport -1000 -1000/pause 300/changeLocation Custom_Void/warp farmer 2 3/warp MrQi 2 0/showFrame MrQi 8/faceDirection farmer 2/showFrame farmer 5/pause 300/playMusic Upper_Ambient/pause 1000/viewport 2 2 true/pause 3200/showFrame farmer 4/pause 1300/faceDirection farmer 2/pause 1200/faceDirection farmer 0/pause 1000/startJittering/pause 800/stopJittering/pause 800/speak MrQi \"{{i18n:Qi.Start.02 {{expressionList}} }}\"/pause 1500/speak MrQi \"{{i18n:Qi.Start.03 {{expressionList}} }}\"/pause 1500/speak MrQi \"{{i18n:Qi.Start.04 {{expressionList}} }}\"/pause 1500/stopMusic/speak MrQi \"{{i18n:Qi.Start.05 {{expressionList}} }}\"/pause 1200/showFrame MrQi 0/pause 1000/speak MrQi \"{{i18n:Qi.Start.06 {{expressionList}} }}\"/pause 1500/speak MrQi \"{{i18n:Qi.Start.07 {{expressionList}} }}\"/pause 2000/speak MrQi \"{{i18n:Qi.Start.08 {{expressionList}} }}\"/pause 500/showFrame MrQi 1/pause 200/showFrame MrQi 2/pause 200/showFrame MrQi 3/pause 600/startJittering/playSound healSound/screenFlash .5/pause 400/playSound healSound/screenFlash .8/pause 500/showFrame MrQi 3/pause 200/showFrame MrQi 2/pause 200/showFrame MrQi 1/pause 200/showFrame MrQi 0/pause 800/stopJittering/pause 1100/speak MrQi \"{{i18n:Qi.Start.09 {{expressionList}} }}\"/pause 1000/speak MrQi \"{{i18n:Qi.Start.10 {{expressionList}} }}\"/pause 500/playSound wand/playSound wand/screenFlash 2/pause 200/viewport -1000 -1000/warp MrQi -300 -300/warp farmer 34 100/showframe Lance 16/changeLocation Custom_ForestWest/ambientLight 120 150 130/playMusic nightTime/pause 2200/faceDirection farmer 2 true/showFrame farmer 5/pause 400/viewport 34 100 true/pause 2500/playSound wand/screenFlash 1/warp Lance 41 100/pause 1000/showframe Lance 0/pause 1500/faceDirection Lance 3/pause 200/emote Lance 16/speak Lance \"{{i18n:Qi.Start.11 {{expressionList}} }}\"/speed Lance 4/move Lance -7 0 3 true/pause 300/globalFade/viewport -1000 -1000/speak Lance \"{{i18n:Qi.Start.12 {{expressionList}} }}\"/halt/stopMusic/pause 1500/playSound wand/warp Lance -403 -403/warp farmer -195 -195/pause 1600/playSound doorClose/pause 2000/message \"{{i18n:Qi.Start.13 {{expressionList}} }}\"/pause 1500/message \"{{i18n:Qi.Start.14 {{expressionList}} }}\"/pause 1500/message \"{{i18n:Qi.Start.15 {{expressionList}} }}\"/pause 1200/changeLocation Town/pause 200/showFrame farmer 0 true/faceDirection farmer 2 true/viewport 36 58 true/pause 2000/faceDirection Lance 2/speed Lance 2/warp Lance 36 56/playSound doorClose/pause 800/move Lance 0 3 2/positionOffset Lance 0 10/move Lance -1 0 1/pause 200/warp farmer 36 56/playSound doorClose/pause 1500/move farmer 0 3 0 true/pause 1000/warp Harvey 36 56/playSound doorClose/pause 400/speak Harvey \"{{i18n:Qi.Start.16 {{expressionList}} }}\"/pause 900/move Harvey 0 0 0/pause 500/warp Harvey -100 -100/playSound doorClose/pause 1200/move farmer 0 0 1/pause 100/move farmer 0 0 2/pause 1200/emote farmer 40/pause 500/speak Lance \"{{i18n:Qi.Start.17 {{expressionList}} }}\"/faceDirection farmer 3/pause 1400/emote farmer 40/pause 500/speak Lance \"{{i18n:Qi.Start.18 {{expressionList}} }}\"/pause 500/emote farmer 12/pause 800/speak Lance \"{{i18n:Qi.Start.19 {{expressionList}} }}\"/pause 500/faceDirection Lance 2/shake Lance 800/pause 1500/emote Lance 40/pause 1000/faceDirection Lance 1/pause 200/speak Lance \"{{i18n:Qi.Start.20 {{expressionList}} }}\"/pause 500/emote farmer 60/pause 400/faceDirection Lance 2/showframe Lance 21/textAboveHead Lance \"{{i18n:Qi.Start.21 {{expressionList}} }}\"/pause 800/shake Lance 800/pause 1000/emote farmer 28/pause 500/showframe Lance 0/faceDirection Lance 1/pause 500/speak Lance \"{{i18n:Qi.Start.22 {{expressionList}} }}\"/pause 500/playSound pickUpItem/positionOffset farmer -10 0/positionOffset Lance 10 0/showframe Lance 32/showframe farmer 35 true/pause 500/emote farmer 60/pause 600/speak Lance \"{{i18n:Qi.Start.23 {{expressionList}} }}\"/pause 1500/globalFade/viewport -1000 -1000/pause 1200/message \"{{i18n:Qi.Start.24 {{expressionList}} }}\"/pause 1500/message \"{{i18n:Qi.Start.25 {{expressionList}} }}\"/pause 1500/message \"{{i18n:Qi.Start.26 {{expressionList}} }}\"/pause 1500/end dialogue MrQi \"{{i18n:Qi.Start.27 {{expressionList}} }}\""
+			},
+
+		},
+		//Married to Lance, post Qi dialogue
+		{
+			"LogName": "Qi Event: Lance Reaction",
+			"Action": "EditData",
+			"Target": "Data/Events/forest",
+			"When": {
+				"Darker Plot Events(Y4)": "true"
+			},
+			"Entries": {
+				"19251791/e 19251790/O Lance": "none/-500 -500/farmer -100 -100 0/addConversationTopic paranoidLance 15/addConversationTopic paranoidLanceTimer 14/addConversationTopic paranoidLanceMinistry 4/end dialogue Lance \"{{i18n:Qi.LanceConvo.01 {{expressionList}} }}\""
+			},
+		},
+
+		{
+			"LogName": "Load Qi Lance Map",
+			"Action": "Load",
+			"Target": "Data/Events/temp",
+			"FromFile": "assets/Maps/QiNutRoomEvent.tmx",
+		},
+
+		{ //??? - 
+			"LogName": "Qi Event: Start",
+			"Action": "EditData",
+			"Target": "data/events/custom_AdventurerSummit",
+			"When": {
+				"HasFlag": "qiCave, galaxySword",
+				"Spouse |contains=Lance": true,
+				"Darker Plot Events(Y4)": true,
+				"HavingChild |contains=@{{playerName}}": false
+			},
+			"Entries": {
+				"LanceQi/Season Winter/!FestivalDay/u 5 6 7 8 9 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 26 27 28/y 4/t 600 1500/O Lance/w sunny": "continue/-500 -500/farmer 32 32 0 MrQi -1000 -1000 0/viewport player clamp true/move farmer 0 -10 0/waitForAllStationary/playSound doorOpen/pause 300/beginSimultaneousCommand/playsound wand/warp MrQi 33 22/facedirection MrQi 3/pause 300/jump farmer 8/startJittering/endSimultaneousCommand/pause 200/end"
+			},
+		},
+*/
+
+    ]
+}
